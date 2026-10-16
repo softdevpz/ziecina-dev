@@ -17,8 +17,7 @@ export const site = {
   email: "piotr@ziecina.dev",
   github: "https://github.com/softdevpz",
   linkedin: "https://www.linkedin.com/in/piotr-ziecina",
-  // TODO: point to the site's own repo once it's created on GitHub.
-  sourceRepo: "https://github.com/softdevpz",
+  sourceRepo: "https://github.com/softdevpz/ziecina-dev",
   cv: "/cv/Piotr-Ziecina-CV.pdf",
   stajnia: "https://stajnialauden.pl",
   buildBudgetDemo: "https://build-budget-app-web.vercel.app",

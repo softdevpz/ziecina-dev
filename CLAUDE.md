@@ -15,7 +15,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
   - Testimonial: lorem ipsum placeholder until the owner sends the real one.
   - Screenshots are approved (task board on tablet, ordering on phone, feed-room screen, billing). Piotr is first reviewing the layout of elements in the app; screenshots come after that.
 - **Build Budget** is public: github.com/softdevpz/build-budget-app, demo at build-budget-app-web.vercel.app.
-- **The site's repo is public** (it's a business card, not a product). The footer links to it. Never commit anything private to it (Stajnia Lauden code or real data).
+- **The site's repo is public**: github.com/softdevpz/ziecina-dev (not created yet on 2026-10-16) (it's a business card, not a product). The footer links to it. Never commit anything private to it (Stajnia Lauden code or real data).
 - **Visual direction:** minimal and typographic, one accent colour: orange (inspired by Goku's gi; it isn't meant to read as anime). Light theme by default, with a dark-mode toggle (the user personally prefers dark, so polish it just as much).
 - **Dragon Ball:** subtle nods only, never the main theme, and NO official artwork, logos or characters (copyright). Ideas for stage 3: an easter egg (Konami code or 7 clicks on the logo → "power level: over 9000" aura), a themed 404 page, one sentence about the hobby in About.
 - The user makes all git commits themselves. Claude edits files and suggests a commit message.
@@ -37,8 +37,8 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - Theme: inline `themeScript` in `<head>` (no flash) + `ThemeToggle` (localStorage `theme`).
 - Easter egg `PowerLevel`: Konami code or 7 quick clicks on the logo → orange aura on the portrait + "Power level: over 9000!".
 - Commands: `npm run dev`, `npm run build` (→ `out/`), `npm run preview` (serves `out/` on :4173), `npm run lint`.
-- Public assets: `public/images/portrait.png` (cutout), `og-avatar.jpg`, `icon.svg`, `public/cv/Piotr-Ziecina-CV.pdf` (copied from the Desktop; confirm it's the latest).
-- Open TODOs in code: `site.sourceRepo` should point to the site's own GitHub repo once it exists; real testimonial; screenshots (device mocks are placeholders); the portrait PNG is 450 KB (optimise in stage 5).
+- Public assets: `public/images/portrait.png` (cutout), `og-avatar.jpg`, `icon.svg`, `public/cv/Piotr-Ziecina-CV.pdf` (latest CV as of 2026-10-16, source: `~/Desktop/CV/Proby/Piotr_Ziecina.pdf`; one English CV for both languages).
+- Open TODOs in code: real testimonial; screenshots (device mocks are placeholders); the portrait PNG is 450 KB (optimise in stage 5).
 
 ## Plan
 0. Decisions ✅ · 1. Copy ✅ (v1 approved) · 2. Visual mockup ✅ (further changes happen in code) · 3. Implementation (v1 built, builds clean) ·
