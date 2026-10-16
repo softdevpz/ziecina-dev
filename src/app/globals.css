@@ -1,0 +1,320 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens. Light is the default; dark comes from the OS setting unless the
+ * visitor picked a theme with the toggle (data-theme on <html>).
+ * Accent orange is a quiet nod to Goku's gi.
+ */
+:root {
+  --bg: #fbfaf8;
+  --surface: #f3f1ed;
+  --line: #e4e0d9;
+  --fg: #1b1916;
+  --muted: #6b655c;
+  --accent: #c2470c; /* text and links */
+  --accent-fill: #f07a1e; /* buttons and blocks */
+  --on-accent: #1d0f04;
+  --ok: #1f8a4c;
+  --danger: #d64545;
+  --photo-bg: #e9e4dc;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131211;
+    --surface: #1c1a18;
+    --line: #2e2b27;
+    --fg: #eeebe6;
+    --muted: #a39c92;
+    --accent: #ff9447;
+    --accent-fill: #f58025;
+    --ok: #4cc27f;
+    --danger: #e86a6a;
+    --photo-bg: #2c2925;
+    color-scheme: dark;
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #131211;
+  --surface: #1c1a18;
+  --line: #2e2b27;
+  --fg: #eeebe6;
+  --muted: #a39c92;
+  --accent: #ff9447;
+  --accent-fill: #f58025;
+  --ok: #4cc27f;
+  --danger: #e86a6a;
+  --photo-bg: #2c2925;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-fill: var(--accent-fill);
+  --color-on-accent: var(--on-accent);
+  --color-ok: var(--ok);
+  --color-danger: var(--danger);
+  --color-photo-bg: var(--photo-bg);
+
+  --font-display: var(--font-bricolage), "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-sans: var(--font-instrument), "Helvetica Neue", "Segoe UI", system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* One type ladder for every heading. */
+  --text-hero: clamp(44px, 6vw, 72px);
+  --text-hero--line-height: 1.05;
+  --text-h2: clamp(30px, 3.2vw, 40px);
+  --text-h2--line-height: 1.1;
+  --text-h3: clamp(24px, 2.2vw, 28px);
+  --text-h3--line-height: 1.15;
+  --text-h4: 19px;
+  --text-h4--line-height: 1.35;
+  --text-lede: 19px;
+  --text-lede--line-height: 1.6;
+  --text-label: 12.5px;
+  --text-label--line-height: 1.4;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+  }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    transition:
+      background-color 0.25s,
+      color 0.25s;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  :focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation: none !important;
+      transition: none !important;
+    }
+  }
+}
+
+@utility wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  @media (min-width: 720px) {
+    padding-left: max(32px, env(safe-area-inset-left, 0px));
+    padding-right: max(32px, env(safe-area-inset-right, 0px));
+  }
+}
+
+@utility eyebrow {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 18px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1;
+    white-space: nowrap;
+    transition:
+      transform 0.15s,
+      border-color 0.15s,
+      background-color 0.15s;
+  }
+  .btn:hover {
+    border-color: var(--fg);
+    transform: translateY(-1px);
+  }
+  .btn-primary {
+    background: var(--accent-fill);
+    border-color: var(--accent-fill);
+    color: var(--on-accent);
+  }
+  .btn-primary:hover {
+    border-color: var(--accent-fill);
+    background: color-mix(in srgb, var(--accent-fill) 88%, var(--fg));
+  }
+  .btn-sm {
+    padding: 8px 14px;
+    font-size: 14px;
+  }
+  .icon-btn {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    transition: border-color 0.15s;
+  }
+  .icon-btn:hover {
+    border-color: var(--accent);
+  }
+  .arrow {
+    display: inline-block;
+    transition: transform 0.15s;
+  }
+  a:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .chip {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    padding: 4px 9px;
+    border-radius: 999px;
+    border: 1px solid var(--line);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .chip-live {
+    color: var(--ok);
+    border-color: color-mix(in srgb, var(--ok) 40%, transparent);
+  }
+  .chip-live::before {
+    content: "● ";
+  }
+
+  .ticks {
+    display: grid;
+    gap: 8px;
+    max-width: 70ch;
+  }
+  .ticks > li {
+    position: relative;
+    padding-left: 20px;
+  }
+  .ticks > li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.62em;
+    width: 7px;
+    height: 7px;
+    border-radius: 2px;
+    background: var(--accent-fill);
+  }
+
+  .status-dot {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--ok);
+  }
+  .status-dot::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 999px;
+    background: var(--ok);
+    animation: ping 2s ease-out infinite;
+  }
+
+  .portrait::before {
+    content: "";
+    position: absolute;
+    inset: 18px -18px -18px 18px;
+    border-radius: 10px;
+    background: var(--accent-fill);
+    transition: box-shadow 0.4s;
+  }
+
+  /* Easter egg: power level over 9000. */
+  :root[data-power="on"] .portrait::before {
+    animation: aura 0.9s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  80%,
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+@keyframes aura {
+  from {
+    box-shadow:
+      0 0 24px 6px color-mix(in srgb, var(--accent-fill) 70%, transparent),
+      0 0 60px 18px color-mix(in srgb, #ffd23f 40%, transparent);
+  }
+  to {
+    box-shadow:
+      0 0 40px 14px color-mix(in srgb, var(--accent-fill) 90%, transparent),
+      0 0 110px 40px color-mix(in srgb, #ffd23f 55%, transparent);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* Theme toggle shows the icon of the theme you would switch to. */
+.icon-when-dark {
+  display: none;
+}
+:root[data-theme="dark"] .icon-when-dark {
+  display: block;
+}
+:root[data-theme="dark"] .icon-when-light {
+  display: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .icon-when-dark {
+    display: block;
+  }
+  :root:not([data-theme="light"]) .icon-when-light {
+    display: none;
+  }
+}
