@@ -7,7 +7,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 ## Decisions made so far
 - **Bilingual PL + EN**: EN at `/en` (default), PL at `/pl`, with a language switcher.
 - **Stack:** Next.js (static export) + TypeScript + Tailwind CSS, matching the CV.
-- **Hosting:** Cloudflare **Workers with static assets** (decided 2026-10-22; the new dashboard steers new projects to Workers instead of Pages). Config in `wrangler.jsonc` (assets from `out/`, `404-page`, `force-trailing-slash`). Deployed through Workers Builds connected to GitHub: build `npm run build`, deploy `npx wrangler deploy`. Verified locally with `wrangler dev`: /en → 307 /en/, unknown URL → 404 Namek page. The domain's DNS is already on Cloudflare.
+- **Hosting:** Cloudflare **Workers with static assets** (decided 2026-10-22; the new dashboard steers new projects to Workers instead of Pages). Config in `wrangler.jsonc` (assets from `out/`, `404-page`, `force-trailing-slash`). Deployed through Workers Builds connected to GitHub: build `npm run build`, deploy `npx wrangler deploy`. Verified locally with `wrangler dev`: /en → 307 /en/, unknown URL → 404 Namek page. Live since 2026-10-22 at https://ziecina-dev.softdevpz.workers.dev (Worker `ziecina-dev`, auto-deploys on push to `main`). https://ziecina.dev attached and working (2026-10-22). `www.ziecina.dev` has no DNS record yet: add it as a custom domain on the Worker, then a Redirect Rule www → apex (301). MX/SPF/DMARC verified untouched. The domain's DNS is already on Cloudflare.
 - **DNS:** add only records for `ziecina.dev` / `www`. NEVER touch MX/SPF/DKIM/DMARC, because piotr@ziecina.dev depends on them.
 - **Sections:** hero → projects (case studies) → experience → skills → about → contact. No blog, no skill bars.
 - **Stajnia Lauden** (~/Projects/stadnina-app): may be shown publicly, but the **owner must approve the content before publishing**. The repo is **private** (kept as a product), so never link to the code. Screenshots use demo data only.
@@ -31,7 +31,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 ## Code (stage 3, started 2026-10-16)
 - **Next.js 16.4** (App Router, Turbopack) + React 19 + Tailwind v4 + TypeScript. This is newer than the model's training data: read `node_modules/next/dist/docs/` before using a Next API.
 - `next.config.ts`: `output: "export"`, `trailingSlash`, `experimental.globalNotFound`, `turbopack.root` (a stray `~/package-lock.json` exists).
-- Routes: `src/app/[lang]/` (root layout with `<html lang>`, home page, `projects/stajnia-lauden/`), `src/app/(root)/page.tsx` (`/` → JS redirect to /pl/ or /en/ by browser language), `src/app/global-not-found.tsx` (bilingual "Namek" 404).
+- Routes: `src/app/[lang]/` (root layout with `<html lang>`, home page, `projects/stajnia-lauden/`), `src/app/(root)/page.tsx` (`/` → JS redirect to /pl/ or /en/ by browser language), `src/app/global-not-found.tsx` (bilingual "Namek" 404 with `NamekExplosion`: a canvas-drawn green planet that cracks, explodes and re-forms on a 7.5 s loop; static planet with reduced motion).
 - `src/lib/site.ts`: locales, links (email, GitHub, LinkedIn, CV path), paths. `src/lib/metadata.ts`: canonical + hreflang + OG.
 - Design tokens are CSS variables in `src/app/globals.css`, mapped to Tailwind colours (`bg-bg`, `text-muted`, `text-accent`, `bg-accent-fill`…) and the type ladder (`text-hero/h2/h3/h4/lede`).
 - Theme: inline `themeScript` in `<head>` (no flash) + `ThemeToggle` (localStorage `theme`).
@@ -42,4 +42,4 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 
 ## Plan
 0. Decisions ✅ · 1. Copy ✅ (v1 approved) · 2. Visual mockup ✅ (further changes happen in code) · 3. Implementation (v1 built, builds clean) ·
-4. Deploy + DNS · 5. SEO/OG/Lighthouse/analytics · 6. Link the site from the CV, LinkedIn and GitHub profile
+4. Deploy ✅ (workers.dev) + DNS (custom domain pending) · 5. SEO/OG/Lighthouse/analytics · 6. Link the site from the CV, LinkedIn and GitHub profile
