@@ -65,7 +65,7 @@ export const en: Dictionary = {
       privateNote:
         "Commercial product. Source code is private; I'm happy to walk through it during an interview.",
       screenshot: {
-        src: "/images/stajnia/task-board.png",
+        src: "/images/stajnia/task-board.webp",
         alt: "Stajnia Lauden staff task board: a grid of numbered boxes with open tasks highlighted",
         label: "demo data · details blurred",
       },
@@ -241,7 +241,7 @@ export const en: Dictionary = {
     codePrivate: "Code is private",
     problem: {
       heading: "The problem",
-      body: "A stable with 60+ boxes, its staff and many horse owners. Every request (“extra hay for box 12”, “turn him out at 10 tomorrow”) went through phone calls, messages and memory. Billing for extra services was done by hand at the end of the month.",
+      body: "A stable with 60+ boxes, its staff and many horse owners. Every request (“extra hay for box 12”, “turn him out at 10 tomorrow”) went through social media messengers and memory. Billing for extra services was done by hand at the end of the month.",
     },
     role: {
       heading: "My role",
@@ -312,11 +312,12 @@ export const en: Dictionary = {
       heading: "Screens",
       note: "Screenshots from the demo environment. Names, e-mails, horse names and amounts are blurred.",
       items: [
-        { src: "/images/stajnia/task-board.png", alt: "Staff task board with numbered boxes and open tasks", caption: "Staff · task board on a tablet" },
-        { src: "/images/stajnia/owner-boxes.png", alt: "Horse owner's home screen with stable announcements, leases and boxes", caption: "Horse owner · boxes and announcements" },
-        { src: "/images/stajnia/order-service.png", alt: "Ordering a one-off service from the catalogue", caption: "Horse owner · ordering a service" },
-        { src: "/images/stajnia/admin-users.png", alt: "Admin list of users with roles and balances", caption: "Admin · users and balances" },
-        { src: "/images/stajnia/billing.png", alt: "Billing view for one client with balances and payment history", caption: "Admin · billing for one client" },
+        { src: "/images/stajnia/task-board.webp", alt: "Staff task board with numbered boxes and open tasks", caption: "Staff · task board on a tablet", wide: true },
+        { src: "/images/stajnia/feed-room.webp", alt: "Wall-mounted feed-room screen with breakfast, lunch and dinner changes per box", caption: "Feed room · wall screen with today's feeding changes", wide: true },
+        { src: "/images/stajnia/owner-boxes.webp", alt: "Horse owner's home screen with stable announcements, leases and boxes", caption: "Horse owner · boxes and announcements" },
+        { src: "/images/stajnia/order-service.webp", alt: "Ordering a one-off service from the catalogue", caption: "Horse owner · ordering a service" },
+        { src: "/images/stajnia/admin-users.webp", alt: "Admin list of users with roles and balances", caption: "Admin · users and balances" },
+        { src: "/images/stajnia/billing.webp", alt: "Billing view for one client with balances and payment history", caption: "Admin · billing for one client" },
       ],
     },
     next: { label: "Next project", name: "Build Budget" },

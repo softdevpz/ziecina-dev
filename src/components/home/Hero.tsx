@@ -43,7 +43,9 @@ export function Hero({ dict }: { dict: Dictionary }) {
         <figure className="portrait relative order-first mr-[22px] mb-[22px] w-full max-w-[240px] justify-self-start min-[820px]:order-none min-[820px]:max-w-[320px] min-[820px]:justify-self-end">
           {/* eslint-disable-next-line @next/next/no-img-element -- static export, image is pre-sized */}
           <img
-            src="/images/portrait.png"
+            src="/images/portrait.webp"
+            srcSet="/images/portrait-480.webp 480w, /images/portrait.webp 640w"
+            sizes="(min-width: 820px) 320px, 240px"
             alt={t.portraitAlt}
             width={640}
             height={800}

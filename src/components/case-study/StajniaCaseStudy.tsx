@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary } from "@/content/types";
 import { type Locale, paths, site } from "@/lib/site";
+import { screenshotAttrs } from "@/lib/images";
 import { Rich } from "../Rich";
 
 function CsSection({ heading, children }: { heading: string; children: React.ReactNode }) {
@@ -128,13 +129,19 @@ export function StajniaCaseStudy({ dict, locale }: { dict: Dictionary; locale: L
 
           <CsSection heading={c.screens.heading}>
             <p className="text-[15px] text-muted">{c.screens.note}</p>
-            {/* First screenshot full width, the rest in a 2-column grid. Each opens full size. */}
+            {/* Wide screenshots span both columns, the rest form a 2-column grid. Each opens full size. */}
             <div className="grid gap-x-3.5 gap-y-6 min-[640px]:grid-cols-2">
-              {c.screens.items.map((item, i) => (
-                <figure key={item.src} className={i === 0 ? "min-[640px]:col-span-2" : undefined}>
+              {c.screens.items.map((item) => (
+                <figure key={item.src} className={item.wide ? "min-[640px]:col-span-2" : undefined}>
                   <a href={item.src} target="_blank" rel="noopener" className="block overflow-hidden rounded-[10px] border border-line bg-white transition-shadow hover:shadow-lg">
                     {/* eslint-disable-next-line @next/next/no-img-element -- static export, images are pre-sized */}
-                    <img src={item.src} alt={item.alt} loading="lazy" className="block h-auto w-full" />
+                    <img
+                      {...screenshotAttrs(item.src)}
+                      sizes={item.wide ? "(min-width: 900px) 820px, 100vw" : "(min-width: 900px) 410px, (min-width: 640px) 50vw, 100vw"}
+                      alt={item.alt}
+                      loading="lazy"
+                      className="block h-auto w-full"
+                    />
                   </a>
                   <figcaption className="mt-2.5 text-sm text-muted">{item.caption}</figcaption>
                 </figure>

@@ -65,7 +65,7 @@ export const pl: Dictionary = {
       privateNote:
         "Produkt komercyjny, kod źródłowy jest prywatny. Chętnie pokażę go i omówię na rozmowie rekrutacyjnej.",
       screenshot: {
-        src: "/images/stajnia/task-board.png",
+        src: "/images/stajnia/task-board.webp",
         alt: "Tablica zadań personelu w Stajni Lauden: siatka ponumerowanych boksów z wyróżnionymi zadaniami",
         label: "dane demo · szczegóły zamazane",
       },
@@ -240,7 +240,7 @@ export const pl: Dictionary = {
     codePrivate: "Kod jest prywatny",
     problem: {
       heading: "Problem",
-      body: "Stajnia z ponad 60 boksami, personel i wielu właścicieli koni. Każda prośba („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez telefony, wiadomości i pamięć. Dodatkowe usługi rozliczano ręcznie na koniec miesiąca.",
+      body: "Stajnia z ponad 60 boksami, personel i wielu właścicieli koni. Każda prośba („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez komunikatory w mediach społecznościowych i pamięć. Dodatkowe usługi rozliczano ręcznie na koniec miesiąca.",
     },
     role: {
       heading: "Moja rola",
@@ -314,11 +314,12 @@ export const pl: Dictionary = {
       heading: "Ekrany",
       note: "Zrzuty ze środowiska demo. Imiona, e-maile, imiona koni i kwoty są zamazane.",
       items: [
-        { src: "/images/stajnia/task-board.png", alt: "Tablica zadań personelu z ponumerowanymi boksami i zadaniami", caption: "Personel · tablica zadań na tablecie" },
-        { src: "/images/stajnia/owner-boxes.png", alt: "Ekran główny właściciela konia z ogłoszeniami, dzierżawami i boksami", caption: "Właściciel konia · boksy i ogłoszenia" },
-        { src: "/images/stajnia/order-service.png", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Właściciel konia · zamawianie usługi" },
-        { src: "/images/stajnia/admin-users.png", alt: "Lista użytkowników w panelu administratora z rolami i saldami", caption: "Administrator · użytkownicy i salda" },
-        { src: "/images/stajnia/billing.png", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Administrator · rozliczenia klienta" },
+        { src: "/images/stajnia/task-board.webp", alt: "Tablica zadań personelu z ponumerowanymi boksami i zadaniami", caption: "Personel · tablica zadań na tablecie", wide: true },
+        { src: "/images/stajnia/feed-room.webp", alt: "Ekran w paszarni ze zmianami w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · ekran ścienny ze zmianami w karmieniu na dziś", wide: true },
+        { src: "/images/stajnia/owner-boxes.webp", alt: "Ekran główny właściciela konia z ogłoszeniami, dzierżawami i boksami", caption: "Właściciel konia · boksy i ogłoszenia" },
+        { src: "/images/stajnia/order-service.webp", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Właściciel konia · zamawianie usługi" },
+        { src: "/images/stajnia/admin-users.webp", alt: "Lista użytkowników w panelu administratora z rolami i saldami", caption: "Administrator · użytkownicy i salda" },
+        { src: "/images/stajnia/billing.webp", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Administrator · rozliczenia klienta" },
       ],
     },
     next: { label: "Następny projekt", name: "Build Budget" },

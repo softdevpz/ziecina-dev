@@ -42,6 +42,15 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - CV links: sticky header + "Full CV" under Experience (removed from Contact on 2026-10-22).
 - Open TODOs in code: real testimonial; the portrait PNG is 450 KB (optimise in stage 5).
 
+## Stage 5 (SEO & performance), 2026-10-22
+- Images are WebP with 480/700 px variants and `srcset` (`src/lib/images.ts` holds screenshot sizes). Total image weight went from ~1.8 MB to ~300 KB.
+- Open Graph: `public/og/{en,pl}.png` (1200×630) rendered from `scripts/og/template.html` with `npm run og`; `summary_large_image`.
+- `src/app/sitemap.ts` (with hreflang alternates) and `robots.ts`, both `force-static`.
+- `PersonJsonLd` on the home page (schema.org Person, sameAs GitHub/LinkedIn).
+- `public/_headers`: nosniff, referrer policy, permissions policy, X-Frame-Options DENY, immutable cache for `/_next/static/*`. Verified on `wrangler dev`.
+- Lighthouse mobile, local: home 92/100/100/100, case study 96/100/100/100. LCP element is the hero portrait (render delay under simulated throttling).
+- Pending on Piotr's side: Cloudflare Web Analytics (cookieless) and Google Search Console (DNS TXT verification + submit sitemap).
+
 ## Plan
 0. Decisions ✅ · 1. Copy ✅ (v1 approved) · 2. Visual mockup ✅ (further changes happen in code) · 3. Implementation (v1 built, builds clean) ·
-4. Deploy + DNS ✅ (ziecina.dev, www → apex) · 5. SEO/OG/Lighthouse/analytics · 6. Link the site from the CV, LinkedIn and GitHub profile
+4. Deploy + DNS ✅ (ziecina.dev, www → apex) · 5. SEO/OG/Lighthouse ✅, analytics + Search Console pending · 6. Link the site from the CV, LinkedIn and GitHub profile

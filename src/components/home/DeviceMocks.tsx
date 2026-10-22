@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/content/types";
+import { screenshotAttrs } from "@/lib/images";
 
 /*
  * Frames for project previews: a drawn mock with demo data (Build Budget) and
@@ -33,7 +34,7 @@ export function ScreenshotFrame({ src, alt, label }: { src: string; alt: string;
       </span>
       <div className="rounded-[18px] border border-line bg-surface p-3 shadow-[0_24px_60px_-30px_rgb(0_0_0/0.35)]">
         {/* eslint-disable-next-line @next/next/no-img-element -- static export, image is pre-sized */}
-        <img src={src} alt={alt} width={1400} height={1405} loading="lazy" className="block h-auto w-full rounded-[9px] border border-line bg-white" />
+        <img {...screenshotAttrs(src)} sizes="(min-width: 900px) 520px, 100vw" alt={alt} loading="lazy" className="block h-auto w-full rounded-[9px] border border-line bg-white" />
       </div>
     </div>
   );

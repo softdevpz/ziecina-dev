@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- Open Graph card, 1200×630. Rendered to public/og/{en,pl}.png by generate.mjs (?lang=en|pl). -->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;500&family=JetBrains+Mono:wght@500&display=block&subset=latin-ext"
+    />
+    <style>
+      :root {
+        --bg: #131211;
+        --fg: #eeebe6;
+        --muted: #a39c92;
+        --line: #2e2b27;
+        --accent: #ff9447;
+        --fill: #f58025;
+        --photo: #2c2925;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      html,
+      body {
+        width: 1200px;
+        height: 630px;
+        overflow: hidden;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: "Instrument Sans", system-ui, sans-serif;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 1fr 330px;
+        gap: 64px;
+        align-items: center;
+        height: 100%;
+        padding: 0 88px 0 80px;
+      }
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font: 500 22px "JetBrains Mono", monospace;
+        color: var(--muted);
+      }
+      .eyebrow i {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        background: var(--fill);
+        box-shadow: 0 0 0 5px color-mix(in srgb, var(--fill) 22%, transparent);
+      }
+      h1 {
+        margin-top: 34px;
+        font: 800 92px/1 "Bricolage Grotesque", sans-serif;
+        letter-spacing: -0.035em;
+      }
+      .role {
+        margin-top: 14px;
+        font: 500 40px "Bricolage Grotesque", sans-serif;
+        color: var(--accent);
+        letter-spacing: -0.01em;
+      }
+      .tagline {
+        margin-top: 26px;
+        max-width: 30ch;
+        font-size: 27px;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+      .stack {
+        margin-top: 34px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .stack span {
+        font: 500 19px "JetBrains Mono", monospace;
+        padding: 7px 14px;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        color: var(--fg);
+      }
+      figure {
+        position: relative;
+        width: 300px;
+      }
+      figure::before {
+        content: "";
+        position: absolute;
+        inset: 22px -22px -22px 22px;
+        border-radius: 14px;
+        background: var(--fill);
+      }
+      figure img {
+        position: relative;
+        display: block;
+        width: 300px;
+        height: 375px;
+        object-fit: cover;
+        border-radius: 14px;
+        background: var(--photo);
+        border: 1px solid var(--line);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div>
+        <div class="eyebrow"><i></i>ziecina.dev</div>
+        <h1>Piotr Zięcina</h1>
+        <p class="role">Full Stack Developer</p>
+        <p class="tagline" id="tagline"></p>
+        <div class="stack">
+          <span>React</span><span>Next.js</span><span>Node.js</span><span>NestJS</span><span>TypeScript</span>
+        </div>
+      </div>
+      <figure><img src="../../public/images/portrait.webp" alt="" /></figure>
+    </main>
+    <script>
+      const lang = new URLSearchParams(location.search).get("lang") === "pl" ? "pl" : "en";
+      document.documentElement.lang = lang;
+      document.getElementById("tagline").textContent =
+        lang === "pl"
+          ? "Tworzę aplikacje webowe od rozmowy z klientem po wdrożenie na produkcję."
+          : "I build web apps end to end, from the first client conversation to production.";
+    </script>
+  </body>
+</html>

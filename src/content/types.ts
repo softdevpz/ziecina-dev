@@ -137,7 +137,8 @@ export type Dictionary = {
     screens: {
       heading: string;
       note: string;
-      items: { src: string; alt: string; caption: string }[];
+      /** `wide` items span the full width of the gallery. */
+      items: { src: string; alt: string; caption: string; wide?: boolean }[];
     };
     next: { label: string; name: string };
   };

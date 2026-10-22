@@ -13,7 +13,8 @@ Source of my portfolio site, **[ziecina.dev](https://ziecina.dev)**: who I am, w
 - **Two languages, one layout.** Every page lives under `src/app/[lang]/` and is pre-rendered for `/en/` and `/pl/`. The copy is in `src/content/en.ts` and `pl.ts`, both typed by `src/content/types.ts`, so a missing translation fails the build.
 - **Language on first visit.** A static host can't read `Accept-Language`, so `/` uses a tiny inline script to send Polish browsers to `/pl/` and everyone else to `/en/`.
 - **Dark mode without a flash.** An inline script in `<head>` applies the saved theme before the first paint. Colours are CSS variables mapped to Tailwind tokens, so components never branch on the theme.
-- **SEO basics.** Canonical URLs, `hreflang` alternates and Open Graph tags are generated per page and language.
+- **SEO.** Canonical URLs, `hreflang` alternates, Open Graph cards per language, `sitemap.xml` with language alternates, `robots.txt` and schema.org `Person` data.
+- **Fast by default.** WebP images with `srcset`, long-lived caching for hashed assets (`public/_headers`), no client-side data fetching. Lighthouse (mobile): 92–96 performance, 100 accessibility, best practices and SEO.
 - **No tracking, no cookies, no client-side data fetching.** Only the theme toggle, copy-to-clipboard and one easter egg run in the browser.
 
 ## Running it
@@ -25,6 +26,7 @@ npm run build     # static site in out/
 npm run preview   # serve out/ on http://127.0.0.1:4173
 npm run lint
 npm run cf:dev    # build and serve on the Cloudflare runtime locally
+npm run og        # re-render the Open Graph images (public/og/*.png) from scripts/og/template.html
 ```
 
 ## Structure

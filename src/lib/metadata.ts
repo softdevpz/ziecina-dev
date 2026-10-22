@@ -29,9 +29,9 @@ export function pageMetadata({
       title,
       description,
       locale: locale === "pl" ? "pl_PL" : "en_US",
-      images: [{ url: "/images/og-avatar.jpg", width: 600, height: 600, alt: "Piotr Zięcina" }],
+      images: [{ url: `/og/${locale}.png`, width: 1200, height: 630, alt: "Piotr Zięcina — Full Stack Developer" }],
     },
-    twitter: { card: "summary", title, description, images: ["/images/og-avatar.jpg"] },
-    icons: { icon: "/icon.svg" },
+    twitter: { card: "summary_large_image", title, description, images: [`/og/${locale}.png`] },
+    icons: { icon: "/icon.svg", apple: "/apple-touch-icon.png" },
   };
 }

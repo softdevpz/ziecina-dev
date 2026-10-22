@@ -8,7 +8,8 @@
     "preview": "python3 -m http.server 4173 --bind 127.0.0.1 -d out",
     "lint": "eslint",
     "cf:dev": "next build && wrangler dev",
-    "deploy": "next build && wrangler deploy"
+    "deploy": "next build && wrangler deploy",
+    "og": "node scripts/og/generate.mjs"
   },
   "dependencies": {
     "next": "16.4.2",

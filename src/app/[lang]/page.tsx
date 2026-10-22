@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/Header";
+import { PersonJsonLd } from "@/components/PersonJsonLd";
 import { About } from "@/components/home/About";
 import { Contact } from "@/components/home/Contact";
 import { Experience } from "@/components/home/Experience";
@@ -25,6 +26,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   return (
     <>
       <Header locale={lang} dict={dict} alternates={{ en: paths.home("en"), pl: paths.home("pl") }} />
+      <PersonJsonLd dict={dict} locale={lang} />
       <main>
         <Hero dict={dict} />
         <Projects dict={dict} locale={lang} />
