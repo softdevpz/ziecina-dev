@@ -32,7 +32,7 @@ export const pl: Dictionary = {
     portraitAlt: "Zdjęcie Piotra Zięciny",
     portraitCaption: [
       "React · Next.js",
-      "NodeJS · NestJS",
+      "Node.js · NestJS",
       "JavaScript · TypeScript",
       "MySQL · PostgreSQL",
     ],
