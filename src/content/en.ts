@@ -2,7 +2,8 @@ import type { Dictionary } from "./types";
 
 export const en: Dictionary = {
   meta: {
-    title: "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
+    title:
+      "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
       "Full Stack Developer from Wrocław with 4+ years of commercial experience. I build web apps end to end, from the first client conversation to production.",
     caseStudyTitle: "Stajnia Lauden case study — Piotr Zięcina",
@@ -29,7 +30,12 @@ export const en: Dictionary = {
     viewProjects: "View projects",
     location: "Wrocław, Poland · open to remote and hybrid",
     portraitAlt: "Portrait of Piotr Zięcina",
-    portraitCaption: ["React · Next.js · NestJS", "TypeScript · PostgreSQL"],
+    portraitCaption: [
+      "React · Next.js",
+      "NodeJS · NestJS",
+      "JavaScript · TypeScript",
+      "MySQL · PostgreSQL",
+    ],
   },
   projects: {
     eyebrow: "Projects",
@@ -38,8 +44,13 @@ export const en: Dictionary = {
       "Two products I designed, built and deployed on my own. One runs a real business every day; the other is open source.",
     stajnia: {
       name: "Stajnia Lauden",
-      tagline: "A production web app that runs the daily work of a horse boarding stable with 60+ boxes.",
-      labels: { production: "In production", client: "Real client", period: "2026 – present" },
+      tagline:
+        "A production web app that runs the daily work of a horse boarding stable with 60+ boxes.",
+      labels: {
+        production: "In production",
+        client: "Real client",
+        period: "2026 – present",
+      },
       short:
         "The stable used to coordinate services, feeding and turnout over phone calls and paper notes. I replaced that with one web app used every day by the owner, staff, trainers, horse owners and lessees on phones, tablets and wall-mounted screens.",
       facts: [
@@ -51,7 +62,8 @@ export const en: Dictionary = {
       stack:
         "Next.js · TypeScript · Tailwind CSS · NestJS · Prisma · PostgreSQL · PWA & Web Push · Docker · Caddy · GitHub Actions · Jest · Supertest",
       readCaseStudy: "Read the case study",
-      privateNote: "Commercial product. Source code is private; I'm happy to walk through it during an interview.",
+      privateNote:
+        "Commercial product. Source code is private; I'm happy to walk through it during an interview.",
       board: {
         title: "Today's tasks",
         meta: "Thu 16 Oct · staff",
@@ -59,7 +71,11 @@ export const en: Dictionary = {
           {
             title: "New · 3",
             tasks: [
-              { title: "Box 12 · extra hay", sub: "Today, evening feed", state: "hot" },
+              {
+                title: "Box 12 · extra hay",
+                sub: "Today, evening feed",
+                state: "hot",
+              },
               { title: "Box 31 · turnout", sub: "10:00 · paddock B" },
               { title: "Box 7 · fly spray", sub: "Subscription" },
             ],
@@ -83,7 +99,8 @@ export const en: Dictionary = {
     },
     buildBudget: {
       name: "Build Budget",
-      tagline: "Track a house build: stages, expenses against budget, documents and bank-ready PDF reports.",
+      tagline:
+        "Track a house build: stages, expenses against budget, documents and bank-ready PDF reports.",
       labels: { openSource: "Open source", liveDemo: "Live demo" },
       short:
         "People building a house juggle spreadsheets, receipts and bank reports. Build Budget keeps the budget, documents and construction diary in one place, shared in real time with everyone on the project.",
@@ -179,15 +196,28 @@ export const en: Dictionary = {
     eyebrow: "Skills",
     heading: "What I work with",
     groups: [
-      { name: "Frontend", items: "React, Next.js, Vue.js, TypeScript, Tailwind CSS, PWA, SSR/ISR" },
+      {
+        name: "Frontend",
+        items: "React, Next.js, Vue.js, TypeScript, Tailwind CSS, PWA, SSR/ISR",
+      },
       {
         name: "Backend",
         items:
           "Node.js, NestJS, Prisma, TypeORM, PostgreSQL, MySQL, REST, GraphQL, WebSockets, Redis, BullMQ, Scala (commercial)",
       },
-      { name: "Cloud & DevOps", items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS" },
-      { name: "Quality", items: "Jest, Supertest, unit and end-to-end testing, dependency auditing" },
-      { name: "Integrations", items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push" },
+      {
+        name: "Cloud & DevOps",
+        items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS",
+      },
+      {
+        name: "Quality",
+        items:
+          "Jest, Supertest, unit and end-to-end testing, dependency auditing",
+      },
+      {
+        name: "Integrations",
+        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push",
+      },
       { name: "Tools", items: "Figma, Jira, Git" },
     ],
   },
@@ -200,9 +230,16 @@ export const en: Dictionary = {
     ],
     facts: [
       { label: "Based in", value: "Wrocław, Poland" },
-      { label: "Education", value: "BSc, Electronics and Telecommunications, Wrocław University of Technology" },
+      {
+        label: "Education",
+        value:
+          "BSc, Electronics and Telecommunications, Wrocław University of Technology",
+      },
       { label: "Languages", value: "Polish (native) · English (B2)" },
-      { label: "Looking for", value: "Full stack or frontend role, remote or hybrid" },
+      {
+        label: "Looking for",
+        value: "Full stack or frontend role, remote or hybrid",
+      },
     ],
   },
   contact: {
@@ -217,8 +254,14 @@ export const en: Dictionary = {
   caseStudy: {
     back: "All projects",
     meta: [
-      { label: "Role", value: "Everything: requirements, UX, backend, frontend, deploy" },
-      { label: "Users", value: "Owner, staff, trainers, horse owners, lessees" },
+      {
+        label: "Role",
+        value: "Everything: requirements, UX, backend, frontend, deploy",
+      },
+      {
+        label: "Users",
+        value: "Owner, staff, trainers, horse owners, lessees",
+      },
       { label: "Devices", value: "Phones, tablets, wall-mounted screens" },
     ],
     linksLabel: "Links",

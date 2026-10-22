@@ -9,7 +9,12 @@ const WINDOW_MS = 2500;
 export function Logo({ href }: { href: string }) {
   const clicks = useRef<number[]>([]);
 
-  function onClick() {
+  function onClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    // Already on the home page: scroll up instead of reloading, so clicks can add up.
+    if (window.location.pathname === href) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
     const now = Date.now();
     clicks.current = [...clicks.current.filter((t) => now - t < WINDOW_MS), now];
     if (clicks.current.length >= CLICKS_NEEDED) {

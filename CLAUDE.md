@@ -7,7 +7,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 ## Decisions made so far
 - **Bilingual PL + EN**: EN at `/en` (default), PL at `/pl`, with a language switcher.
 - **Stack:** Next.js (static export) + TypeScript + Tailwind CSS, matching the CV.
-- **Hosting:** Cloudflare Pages (recommended; the domain's DNS is already on Cloudflare). Vercel is the fallback.
+- **Hosting:** Cloudflare **Workers with static assets** (decided 2026-10-22; the new dashboard steers new projects to Workers instead of Pages). Config in `wrangler.jsonc` (assets from `out/`, `404-page`, `force-trailing-slash`). Deployed through Workers Builds connected to GitHub: build `npm run build`, deploy `npx wrangler deploy`. Verified locally with `wrangler dev`: /en → 307 /en/, unknown URL → 404 Namek page. The domain's DNS is already on Cloudflare.
 - **DNS:** add only records for `ziecina.dev` / `www`. NEVER touch MX/SPF/DKIM/DMARC, because piotr@ziecina.dev depends on them.
 - **Sections:** hero → projects (case studies) → experience → skills → about → contact. No blog, no skill bars.
 - **Stajnia Lauden** (~/Projects/stadnina-app): may be shown publicly, but the **owner must approve the content before publishing**. The repo is **private** (kept as a product), so never link to the code. Screenshots use demo data only.
@@ -15,7 +15,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
   - Testimonial: lorem ipsum placeholder until the owner sends the real one.
   - Screenshots are approved (task board on tablet, ordering on phone, feed-room screen, billing). Piotr is first reviewing the layout of elements in the app; screenshots come after that.
 - **Build Budget** is public: github.com/softdevpz/build-budget-app, demo at build-budget-app-web.vercel.app.
-- **The site's repo is public**: github.com/softdevpz/ziecina-dev (not created yet on 2026-10-16) (it's a business card, not a product). The footer links to it. Never commit anything private to it (Stajnia Lauden code or real data).
+- **The site's repo is public**: github.com/softdevpz/ziecina-dev (created 2026-10-16, branch `main`). README.md is written for recruiters; `.gitattributes` keeps `design/` out of language stats; `.node-version` (22) is read by Cloudflare's build. (it's a business card, not a product). The footer links to it. Never commit anything private to it (Stajnia Lauden code or real data).
 - **Visual direction:** minimal and typographic, one accent colour: orange (inspired by Goku's gi; it isn't meant to read as anime). Light theme by default, with a dark-mode toggle (the user personally prefers dark, so polish it just as much).
 - **Dragon Ball:** subtle nods only, never the main theme, and NO official artwork, logos or characters (copyright). Ideas for stage 3: an easter egg (Konami code or 7 clicks on the logo → "power level: over 9000" aura), a themed 404 page, one sentence about the hobby in About.
 - The user makes all git commits themselves. Claude edits files and suggests a commit message.

@@ -3,7 +3,12 @@
  * translation is a type error. Strings may use **bold** markup (see <Rich>).
  */
 export type Dictionary = {
-  meta: { title: string; description: string; caseStudyTitle: string; caseStudyDescription: string };
+  meta: {
+    title: string;
+    description: string;
+    caseStudyTitle: string;
+    caseStudyDescription: string;
+  };
   nav: {
     projects: string;
     experience: string;
@@ -24,7 +29,8 @@ export type Dictionary = {
     viewProjects: string;
     location: string;
     portraitAlt: string;
-    portraitCaption: [string, string];
+    /** Lines shown in the badge on the portrait. */
+    portraitCaption: string[];
   };
   projects: {
     eyebrow: string;
@@ -42,7 +48,10 @@ export type Dictionary = {
       board: {
         title: string;
         meta: string;
-        columns: { title: string; tasks: { title: string; sub: string; state?: "hot" | "done" }[] }[];
+        columns: {
+          title: string;
+          tasks: { title: string; sub: string; state?: "hot" | "done" }[];
+        }[];
       };
     };
     buildBudget: {
@@ -75,7 +84,13 @@ export type Dictionary = {
       company: string;
       stack?: string;
       bullets?: string[];
-      products?: { name: string; description: string; duration: string; stack: string; bullets: string[] }[];
+      products?: {
+        name: string;
+        description: string;
+        duration: string;
+        stack: string;
+        bullets: string[];
+      }[];
     }[];
     fullCv: string;
   };
@@ -107,11 +122,30 @@ export type Dictionary = {
     problem: { heading: string; body: string };
     role: { heading: string; body: string };
     built: { heading: string; items: { title: string; body: string }[] };
-    users: { heading: string; body: string; rules: { value: string; label: string }[] };
+    users: {
+      heading: string;
+      body: string;
+      rules: { value: string; label: string }[];
+    };
     engineering: { heading: string; items: string[] };
-    decision: { heading: string; from: string; to: string; title: string; body: string };
-    testimonial: { heading: string; quote: string; author: string; placeholder?: string };
-    screens: { heading: string; items: { device: string; caption: string }[]; placeholder?: string };
+    decision: {
+      heading: string;
+      from: string;
+      to: string;
+      title: string;
+      body: string;
+    };
+    testimonial: {
+      heading: string;
+      quote: string;
+      author: string;
+      placeholder?: string;
+    };
+    screens: {
+      heading: string;
+      items: { device: string; caption: string }[];
+      placeholder?: string;
+    };
     next: { label: string; name: string };
   };
   easterEgg: { toast: string };

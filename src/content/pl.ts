@@ -2,7 +2,8 @@ import type { Dictionary } from "./types";
 
 export const pl: Dictionary = {
   meta: {
-    title: "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
+    title:
+      "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
       "Full Stack Developer z Wrocławia, ponad 4 lata doświadczenia komercyjnego. Tworzę aplikacje webowe od pierwszej rozmowy z klientem aż po produkcję.",
     caseStudyTitle: "Stajnia Lauden: case study — Piotr Zięcina",
@@ -29,7 +30,12 @@ export const pl: Dictionary = {
     viewProjects: "Zobacz projekty",
     location: "Wrocław · praca zdalna lub hybrydowa",
     portraitAlt: "Zdjęcie Piotra Zięciny",
-    portraitCaption: ["React · Next.js · NestJS", "TypeScript · PostgreSQL"],
+    portraitCaption: [
+      "React · Next.js",
+      "NodeJS · NestJS",
+      "JavaScript · TypeScript",
+      "MySQL · PostgreSQL",
+    ],
   },
   projects: {
     eyebrow: "Projekty",
@@ -40,7 +46,11 @@ export const pl: Dictionary = {
       name: "Stajnia Lauden",
       tagline:
         "Aplikacja produkcyjna, na której opiera się codzienna praca pensjonatu dla koni z ponad 60 boksami.",
-      labels: { production: "Na produkcji", client: "Prawdziwy klient", period: "2026 – obecnie" },
+      labels: {
+        production: "Na produkcji",
+        client: "Prawdziwy klient",
+        period: "2026 – obecnie",
+      },
       short:
         "Stajnia koordynowała usługi, karmienie i wyprowadzanie koni przez telefony i kartki. Zastąpiłem to jedną aplikacją webową. Codziennie korzystają z niej właścicielka, personel, trenerzy, właściciele koni i dzierżawcy, na telefonach, tabletach i ekranach na ścianach.",
       facts: [
@@ -61,7 +71,11 @@ export const pl: Dictionary = {
           {
             title: "Nowe · 3",
             tasks: [
-              { title: "Boks 12 · dodatkowe siano", sub: "Dziś, wieczorne karmienie", state: "hot" },
+              {
+                title: "Boks 12 · dodatkowe siano",
+                sub: "Dziś, wieczorne karmienie",
+                state: "hot",
+              },
               { title: "Boks 31 · wyprowadzenie", sub: "10:00 · padok B" },
               { title: "Boks 7 · spray na owady", sub: "Abonament" },
             ],
@@ -85,7 +99,8 @@ export const pl: Dictionary = {
     },
     buildBudget: {
       name: "Build Budget",
-      tagline: "Kontrola budowy domu: etapy, wydatki na tle budżetu, dokumenty i raporty PDF dla banku.",
+      tagline:
+        "Kontrola budowy domu: etapy, wydatki na tle budżetu, dokumenty i raporty PDF dla banku.",
       labels: { openSource: "Open source", liveDemo: "Demo na żywo" },
       short:
         "Budując dom, żongluje się arkuszami, paragonami i raportami dla banku. Build Budget trzyma budżet, dokumenty i dziennik budowy w jednym miejscu i na bieżąco udostępnia je wszystkim osobom w projekcie.",
@@ -181,15 +196,27 @@ export const pl: Dictionary = {
     eyebrow: "Umiejętności",
     heading: "Z czym pracuję",
     groups: [
-      { name: "Frontend", items: "React, Next.js, Vue.js, TypeScript, Tailwind CSS, PWA, SSR/ISR" },
+      {
+        name: "Frontend",
+        items: "React, Next.js, Vue.js, TypeScript, Tailwind CSS, PWA, SSR/ISR",
+      },
       {
         name: "Backend",
         items:
           "Node.js, NestJS, Prisma, TypeORM, PostgreSQL, MySQL, REST, GraphQL, WebSockets, Redis, BullMQ, Scala (komercyjnie)",
       },
-      { name: "Chmura i DevOps", items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS" },
-      { name: "Jakość", items: "Jest, Supertest, testy jednostkowe i e2e, audyt zależności" },
-      { name: "Integracje", items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push" },
+      {
+        name: "Chmura i DevOps",
+        items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS",
+      },
+      {
+        name: "Jakość",
+        items: "Jest, Supertest, testy jednostkowe i e2e, audyt zależności",
+      },
+      {
+        name: "Integracje",
+        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push",
+      },
       { name: "Narzędzia", items: "Figma, Jira, Git" },
     ],
   },
@@ -202,9 +229,16 @@ export const pl: Dictionary = {
     ],
     facts: [
       { label: "Miejsce", value: "Wrocław" },
-      { label: "Wykształcenie", value: "Inżynier elektroniki i telekomunikacji, Politechnika Wrocławska" },
+      {
+        label: "Wykształcenie",
+        value:
+          "Inżynier elektroniki i telekomunikacji, Politechnika Wrocławska",
+      },
       { label: "Języki", value: "polski (ojczysty) · angielski (B2)" },
-      { label: "Szukam", value: "Roli full stack lub frontend, zdalnie lub hybrydowo" },
+      {
+        label: "Szukam",
+        value: "Roli full stack lub frontend, zdalnie lub hybrydowo",
+      },
     ],
   },
   contact: {
@@ -219,8 +253,14 @@ export const pl: Dictionary = {
   caseStudy: {
     back: "Wszystkie projekty",
     meta: [
-      { label: "Rola", value: "Wszystko: wymagania, UX, backend, frontend, wdrożenie" },
-      { label: "Użytkownicy", value: "Właścicielka, personel, trenerzy, właściciele koni, dzierżawcy" },
+      {
+        label: "Rola",
+        value: "Wszystko: wymagania, UX, backend, frontend, wdrożenie",
+      },
+      {
+        label: "Użytkownicy",
+        value: "Właścicielka, personel, trenerzy, właściciele koni, dzierżawcy",
+      },
       { label: "Urządzenia", value: "Telefony, tablety, ekrany na ścianach" },
     ],
     linksLabel: "Linki",
@@ -268,7 +308,10 @@ export const pl: Dictionary = {
       rules: [
         { value: "18 px", label: "minimalny rozmiar tekstu" },
         { value: "48 px", label: "minimalny rozmiar przycisku" },
-        { value: "Aa", label: "status zawsze opisany tekstem, a nie samym kolorem" },
+        {
+          value: "Aa",
+          label: "status zawsze opisany tekstem, a nie samym kolorem",
+        },
       ],
     },
     engineering: {

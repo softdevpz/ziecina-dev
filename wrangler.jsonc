@@ -1,0 +1,13 @@
+// Cloudflare Workers config: serves the static export in out/ (no server code).
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ziecina-dev",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    // Unknown URLs get out/404.html with a 404 status.
+    "not_found_handling": "404-page",
+    // /en -> /en/, matching trailingSlash in next.config.ts.
+    "html_handling": "force-trailing-slash"
+  }
+}
