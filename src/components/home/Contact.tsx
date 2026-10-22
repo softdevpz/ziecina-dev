@@ -18,9 +18,6 @@ export function Contact({ dict }: { dict: Dictionary }) {
         <a href={site.github} target="_blank" rel="noopener noreferrer" className="btn">
           GitHub ↗
         </a>
-        <a href={site.cv} download className="btn">
-          {dict.nav.downloadCv}
-        </a>
       </div>
     </Section>
   );

@@ -1,8 +1,8 @@
 import type { Dictionary } from "@/content/types";
 
 /*
- * Drawn previews with demo data. They stand in for real screenshots until
- * those are ready (Stajnia Lauden screens may only ever show demo data).
+ * Frames for project previews: a drawn mock with demo data (Build Budget) and
+ * a real, redacted screenshot (Stajnia Lauden).
  */
 
 function Device({ title, meta, demoLabel, children }: { title: string; meta: string; demoLabel: string; children: React.ReactNode }) {
@@ -24,32 +24,18 @@ function Device({ title, meta, demoLabel, children }: { title: string; meta: str
   );
 }
 
-export function TaskBoardMock({ board, demoLabel }: { board: Dictionary["projects"]["stajnia"]["board"]; demoLabel: string }) {
+/** A real app screenshot in the same frame as the drawn mocks. */
+export function ScreenshotFrame({ src, alt, label }: { src: string; alt: string; label: string }) {
   return (
-    <Device title={board.title} meta={board.meta} demoLabel={demoLabel}>
-      <div className="grid grid-cols-3 gap-2.5 p-3 hyphens-auto max-[480px]:grid-cols-2 max-[480px]:[&>*:last-child]:hidden">
-        {board.columns.map((col) => (
-          <div key={col.title} className="min-w-0">
-            <h5 className="mb-2 font-mono text-[11px] font-medium tracking-[0.08em] text-muted uppercase">{col.title}</h5>
-            {col.tasks.map((task) => (
-              <div
-                key={task.title}
-                className={[
-                  "mb-[7px] rounded-[7px] border border-line bg-surface px-2.5 py-2 leading-[1.35]",
-                  task.state === "hot" && "border-l-[3px] border-l-accent-fill",
-                  task.state === "done" && "line-through opacity-55",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-              >
-                <b className="block text-[12.5px]">{task.title}</b>
-                <small className="text-[11px] text-muted">{task.sub}</small>
-              </div>
-            ))}
-          </div>
-        ))}
+    <div className="relative">
+      <span className="absolute -top-2.5 right-4.5 z-10 rounded-full bg-fg px-2.5 py-1 font-mono text-[11px] font-medium text-bg">
+        {label}
+      </span>
+      <div className="rounded-[18px] border border-line bg-surface p-3 shadow-[0_24px_60px_-30px_rgb(0_0_0/0.35)]">
+        {/* eslint-disable-next-line @next/next/no-img-element -- static export, image is pre-sized */}
+        <img src={src} alt={alt} width={1400} height={1405} loading="lazy" className="block h-auto w-full rounded-[9px] border border-line bg-white" />
       </div>
-    </Device>
+    </div>
   );
 }
 

@@ -45,14 +45,7 @@ export type Dictionary = {
       stack: string;
       readCaseStudy: string;
       privateNote: string;
-      board: {
-        title: string;
-        meta: string;
-        columns: {
-          title: string;
-          tasks: { title: string; sub: string; state?: "hot" | "done" }[];
-        }[];
-      };
+      screenshot: { src: string; alt: string; label: string };
     };
     buildBudget: {
       name: string;
@@ -143,8 +136,8 @@ export type Dictionary = {
     };
     screens: {
       heading: string;
-      items: { device: string; caption: string }[];
-      placeholder?: string;
+      note: string;
+      items: { src: string; alt: string; caption: string }[];
     };
     next: { label: string; name: string };
   };

@@ -52,7 +52,7 @@ export const en: Dictionary = {
         period: "2026 – present",
       },
       short:
-        "The stable used to coordinate services, feeding and turnout over phone calls and paper notes. I replaced that with one web app used every day by the owner, staff, trainers, horse owners and lessees on phones, tablets and wall-mounted screens.",
+        "The stable used to coordinate services, feeding and turnout over social media messengers. I replaced that with one web app used every day by the owners (admins), staff, trainers, horse owners and lessees on phones, tablets and wall-mounted screens.",
       facts: [
         { value: "5", label: "user roles" },
         { value: "130+", label: "unit tests" },
@@ -64,37 +64,10 @@ export const en: Dictionary = {
       readCaseStudy: "Read the case study",
       privateNote:
         "Commercial product. Source code is private; I'm happy to walk through it during an interview.",
-      board: {
-        title: "Today's tasks",
-        meta: "Thu 16 Oct · staff",
-        columns: [
-          {
-            title: "New · 3",
-            tasks: [
-              {
-                title: "Box 12 · extra hay",
-                sub: "Today, evening feed",
-                state: "hot",
-              },
-              { title: "Box 31 · turnout", sub: "10:00 · paddock B" },
-              { title: "Box 7 · fly spray", sub: "Subscription" },
-            ],
-          },
-          {
-            title: "Accepted · 2",
-            tasks: [
-              { title: "Box 18 · blanket on", sub: "Before 17:00" },
-              { title: "Box 44 · lunging", sub: "Trainer: Ola" },
-            ],
-          },
-          {
-            title: "Done · 4",
-            tasks: [
-              { title: "Box 3 · hoof check", sub: "08:40", state: "done" },
-              { title: "Box 22 · turnout", sub: "09:15", state: "done" },
-            ],
-          },
-        ],
+      screenshot: {
+        src: "/images/stajnia/task-board.png",
+        alt: "Stajnia Lauden staff task board: a grid of numbered boxes with open tasks highlighted",
+        label: "demo data · details blurred",
       },
     },
     buildBudget: {
@@ -260,7 +233,7 @@ export const en: Dictionary = {
       },
       {
         label: "Users",
-        value: "Owner, staff, trainers, horse owners, lessees",
+        value: "Owners (admins), staff, trainers, horse owners, lessees",
       },
       { label: "Devices", value: "Phones, tablets, wall-mounted screens" },
     ],
@@ -279,7 +252,7 @@ export const en: Dictionary = {
       items: [
         {
           title: "One app for five roles",
-          body: "Owner, staff, trainer, horse owner and lessee. Each role sees only what it needs, with role-based access control enforced on the API.",
+          body: "Admin, staff, trainer, horse owner and lessee. Each role sees only what it needs, with role-based access control enforced on the API.",
         },
         {
           title: "Service orders",
@@ -305,7 +278,7 @@ export const en: Dictionary = {
     },
     users: {
       heading: "Designed for real users",
-      body: "Some users are over 70, so the UI follows strict rules. Feed rooms and paddock exits have wall-mounted screens that show today's plan without anyone touching them.",
+      body: "Many users are older people, so the UI follows strict rules. Feed rooms and paddock exits have wall-mounted screens that show today's plan without anyone touching them.",
       rules: [
         { value: "18 px", label: "minimum text size" },
         { value: "48 px", label: "minimum touch target" },
@@ -337,13 +310,14 @@ export const en: Dictionary = {
     },
     screens: {
       heading: "Screens",
+      note: "Screenshots from the demo environment. Names, e-mails, horse names and amounts are blurred.",
       items: [
-        { device: "tablet", caption: "Staff task board" },
-        { device: "phone", caption: "Ordering a service" },
-        { device: "wall screen", caption: "Feed-room display" },
-        { device: "desktop", caption: "Billing" },
+        { src: "/images/stajnia/task-board.png", alt: "Staff task board with numbered boxes and open tasks", caption: "Staff · task board on a tablet" },
+        { src: "/images/stajnia/owner-boxes.png", alt: "Horse owner's home screen with stable announcements, leases and boxes", caption: "Horse owner · boxes and announcements" },
+        { src: "/images/stajnia/order-service.png", alt: "Ordering a one-off service from the catalogue", caption: "Horse owner · ordering a service" },
+        { src: "/images/stajnia/admin-users.png", alt: "Admin list of users with roles and balances", caption: "Admin · users and balances" },
+        { src: "/images/stajnia/billing.png", alt: "Billing view for one client with balances and payment history", caption: "Admin · billing for one client" },
       ],
-      placeholder: "placeholder · screenshots with demo data coming soon",
     },
     next: { label: "Next project", name: "Build Budget" },
   },

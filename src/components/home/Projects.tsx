@@ -3,7 +3,7 @@ import type { Dictionary } from "@/content/types";
 import { type Locale, paths, site } from "@/lib/site";
 import { LockIcon } from "../icons";
 import { Rich } from "../Rich";
-import { BudgetMock, TaskBoardMock } from "./DeviceMocks";
+import { BudgetMock, ScreenshotFrame } from "./DeviceMocks";
 import { Section, SectionHead } from "./SectionHead";
 
 const projectRow = "grid items-center gap-8 py-12 min-[900px]:grid-cols-2 min-[900px]:gap-16";
@@ -48,7 +48,7 @@ export function Projects({ dict, locale }: { dict: Dictionary; locale: Locale })
             {s.privateNote}
           </p>
         </div>
-        <TaskBoardMock board={s.board} demoLabel={t.demoData} />
+        <ScreenshotFrame {...s.screenshot} />
       </article>
 
       <article className={`${projectRow} border-t border-dashed border-line`}>

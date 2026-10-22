@@ -52,7 +52,7 @@ export const pl: Dictionary = {
         period: "2026 – obecnie",
       },
       short:
-        "Stajnia koordynowała usługi, karmienie i wyprowadzanie koni przez telefony i kartki. Zastąpiłem to jedną aplikacją webową. Codziennie korzystają z niej właścicielka, personel, trenerzy, właściciele koni i dzierżawcy, na telefonach, tabletach i ekranach na ścianach.",
+        "Stajnia koordynowała usługi, karmienie i wyprowadzanie koni przez komunikatory w mediach społecznościowych. Zastąpiłem to jedną aplikacją webową. Codziennie korzystają z niej właściciele (administratorzy), personel, trenerzy, właściciele koni i dzierżawcy, na telefonach, tabletach i ekranach na ścianach.",
       facts: [
         { value: "5", label: "ról użytkowników" },
         { value: "130+", label: "testów jednostkowych" },
@@ -64,37 +64,10 @@ export const pl: Dictionary = {
       readCaseStudy: "Przeczytaj case study",
       privateNote:
         "Produkt komercyjny, kod źródłowy jest prywatny. Chętnie pokażę go i omówię na rozmowie rekrutacyjnej.",
-      board: {
-        title: "Dzisiejsze zadania",
-        meta: "czw. 16 paź · personel",
-        columns: [
-          {
-            title: "Nowe · 3",
-            tasks: [
-              {
-                title: "Boks 12 · dodatkowe siano",
-                sub: "Dziś, wieczorne karmienie",
-                state: "hot",
-              },
-              { title: "Boks 31 · wyprowadzenie", sub: "10:00 · padok B" },
-              { title: "Boks 7 · spray na owady", sub: "Abonament" },
-            ],
-          },
-          {
-            title: "Przyjęte · 2",
-            tasks: [
-              { title: "Boks 18 · założyć derkę", sub: "Przed 17:00" },
-              { title: "Boks 44 · lonżowanie", sub: "Trener: Ola" },
-            ],
-          },
-          {
-            title: "Wykonane · 4",
-            tasks: [
-              { title: "Boks 3 · kontrola kopyt", sub: "08:40", state: "done" },
-              { title: "Boks 22 · wyprowadzenie", sub: "09:15", state: "done" },
-            ],
-          },
-        ],
+      screenshot: {
+        src: "/images/stajnia/task-board.png",
+        alt: "Tablica zadań personelu w Stajni Lauden: siatka ponumerowanych boksów z wyróżnionymi zadaniami",
+        label: "dane demo · szczegóły zamazane",
       },
     },
     buildBudget: {
@@ -259,7 +232,7 @@ export const pl: Dictionary = {
       },
       {
         label: "Użytkownicy",
-        value: "Właścicielka, personel, trenerzy, właściciele koni, dzierżawcy",
+        value: "Właściciele (administratorzy), personel, trenerzy, właściciele koni, dzierżawcy",
       },
       { label: "Urządzenia", value: "Telefony, tablety, ekrany na ścianach" },
     ],
@@ -278,7 +251,7 @@ export const pl: Dictionary = {
       items: [
         {
           title: "Jedna aplikacja dla pięciu ról",
-          body: "Właścicielka, personel, trener, właściciel konia i dzierżawca. Każda rola widzi tylko to, czego potrzebuje, a uprawnienia (RBAC) są pilnowane po stronie API.",
+          body: "Administrator, personel, trener, właściciel konia i dzierżawca. Każda rola widzi tylko to, czego potrzebuje, a uprawnienia (RBAC) są pilnowane po stronie API.",
         },
         {
           title: "Zamówienia usług",
@@ -304,7 +277,7 @@ export const pl: Dictionary = {
     },
     users: {
       heading: "Zaprojektowane dla prawdziwych użytkowników",
-      body: "Część użytkowników ma ponad 70 lat, więc interfejs trzyma się ścisłych zasad. W paszarni i przy wyjściu na padoki wiszą ekrany, które bez dotykania pokazują plan na dziś.",
+      body: "Wśród użytkowników jest wiele osób starszych, więc interfejs trzyma się ścisłych zasad. W paszarni i przy wyjściu na padoki wiszą ekrany, które bez dotykania pokazują plan na dziś.",
       rules: [
         { value: "18 px", label: "minimalny rozmiar tekstu" },
         { value: "48 px", label: "minimalny rozmiar przycisku" },
@@ -339,13 +312,14 @@ export const pl: Dictionary = {
     },
     screens: {
       heading: "Ekrany",
+      note: "Zrzuty ze środowiska demo. Imiona, e-maile, imiona koni i kwoty są zamazane.",
       items: [
-        { device: "tablet", caption: "Tablica zadań personelu" },
-        { device: "telefon", caption: "Zamawianie usługi" },
-        { device: "ekran ścienny", caption: "Ekran w paszarni" },
-        { device: "komputer", caption: "Rozliczenia" },
+        { src: "/images/stajnia/task-board.png", alt: "Tablica zadań personelu z ponumerowanymi boksami i zadaniami", caption: "Personel · tablica zadań na tablecie" },
+        { src: "/images/stajnia/owner-boxes.png", alt: "Ekran główny właściciela konia z ogłoszeniami, dzierżawami i boksami", caption: "Właściciel konia · boksy i ogłoszenia" },
+        { src: "/images/stajnia/order-service.png", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Właściciel konia · zamawianie usługi" },
+        { src: "/images/stajnia/admin-users.png", alt: "Lista użytkowników w panelu administratora z rolami i saldami", caption: "Administrator · użytkownicy i salda" },
+        { src: "/images/stajnia/billing.png", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Administrator · rozliczenia klienta" },
       ],
-      placeholder: "placeholder · zrzuty z danymi demo wkrótce",
     },
     next: { label: "Następny projekt", name: "Build Budget" },
   },
