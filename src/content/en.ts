@@ -5,7 +5,7 @@ export const en: Dictionary = {
     title:
       "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
-      "Full Stack Developer from Wrocław with 4+ years of commercial experience. I build web apps end to end, from the first client conversation to production.",
+      "Full Stack Developer from Wrocław with 4+ years of commercial experience. I build web apps end to end, from discovery workshops with clients to releases in production.",
   },
   nav: {
     projects: "Projects",
@@ -23,7 +23,7 @@ export const en: Dictionary = {
     badge: "Open to new opportunities",
     name: "Piotr Zięcina",
     role: "Full Stack Developer",
-    lede: "I build web applications end to end, from talking to the client to shipping to production. React, Next.js and Vue on the frontend; Node.js, NestJS and SQL on the backend. **4+ years of commercial experience**, most recently at SmartBear.",
+    lede: "I build web applications end to end, from discovery workshops with clients to releases in production. React, Next.js and Vue on the frontend; Node.js, NestJS and SQL on the backend. **4+ years of commercial experience**, most recently at SmartBear.",
     viewProjects: "View projects",
     location: "Wrocław, Poland · open to remote and hybrid",
     portraitAlt: "Portrait of Piotr Zięcina",
@@ -72,7 +72,7 @@ export const en: Dictionary = {
         "Track a house build: stages, expenses against budget, documents and bank-ready PDF reports.",
       labels: { openSource: "Open source", liveDemo: "Live demo" },
       short:
-        "People building a house juggle spreadsheets, receipts and bank reports. Build Budget keeps the budget, documents and construction diary in one place, shared in real time with everyone on the project.",
+        "I'm building my own house and wanted one place for everything about it. Build Budget splits the build into stages and keeps each stage's budget, receipts, documents and photos together, shared in real time with everyone on the project.",
       highlights: [
         "JWT access and refresh tokens in httpOnly cookies, with silent refresh. I found and fixed a race condition where parallel requests were refreshing the token at the same time.",
         "Stripe subscriptions with signature-verified webhooks. The free plan is limited to one project.",
@@ -112,50 +112,22 @@ export const en: Dictionary = {
         period: "2024 – present",
         role: "Software Developer",
         company: "SmartBear",
-        products: [
-          {
-            name: "Reflect",
-            description: "AI-powered automated testing platform",
-            duration: "15 months",
-            stack: "Vue.js · TypeScript · Scala · MySQL · AWS · Terraform",
-            bullets: [
-              "Added CSV upload for batch test runs with variable substitution, for clients running data-driven test suites.",
-              "Designed and built, frontend and backend, a test-data lookup that became the customer support team's main tool.",
-              "Implemented Amplitude analytics, centralising usage data across SmartBear products.",
-              "Built about 10 reusable UI components for the Reflect Design System from Figma specs.",
-            ],
-          },
-          {
-            name: "Visual Test",
-            description: "AI-powered visual comparison tool",
-            duration: "9 months",
-            stack: "React · Next.js · NestJS · MySQL · AWS",
-            bullets: [
-              "Cut security vulnerabilities by 40% through systematic dependency audits and upgrades.",
-              "Added unit tests across about 70% of the codebase, reducing technical debt by 35%.",
-              "Triaged customer issues with product managers and turned them into backlog items.",
-            ],
-          },
-        ],
+        summary: "Two AI-powered testing products: Reflect (Vue.js, Scala) and Visual Test (React, Next.js, NestJS).",
+        results: ["Designed and built a test-data lookup, frontend and backend, that became the customer support team's main tool.", "Cut security vulnerabilities by 40% through systematic dependency audits and upgrades."],
       },
       {
         period: "2022 – 2024",
         role: "Full Stack Developer",
         company: "Ampcasd",
-        stack: "Next.js · Strapi · NestJS · GraphQL · MySQL · Tailwind CSS",
-        bullets: [
-          "Led a team of 4 developers building a CMS and web platform for a cultural centre in Germany, from discovery to production launch in about a year.",
-          "Class registration, subscriptions, room booking and concert tickets, with PayPal, SEPA direct debit and German fiscal reporting integrations.",
-          "Grew the platform to 1,600+ users and 1,800+ subscriptions sold.",
-        ],
+        summary: "Led a team of 4 building a CMS and a booking and payments platform for a cultural centre in Germany, from discovery to launch in about a year.",
+        results: ["Grew the platform to 1,600+ users and 1,800+ subscriptions sold."],
       },
       {
         period: "2019 – 2022",
         role: "Electrical Supervisor",
         company: "KNAPP",
-        bullets: [
-          "Supervised construction of automated warehouse and shipping systems for clients such as Tiffany, Kroger, Adidas and M&S.",
-        ],
+        summary: "Supervised construction of automated warehouse and shipping systems for clients such as Tiffany, Kroger, Adidas and M&S.",
+        results: [],
       },
     ],
     fullCv: "Full CV (PDF)",
@@ -325,13 +297,13 @@ export const en: Dictionary = {
       meta: [{ label: "Role", value: "Everything: product, API, frontend, infrastructure, CI" }, { label: "Stack", value: "Next.js · NestJS · PostgreSQL · Redis" }, { label: "Hosting", value: "Vercel (web) · Railway (API)" }],
       links: [{ label: "Live demo", href: "https://build-budget-app-web.vercel.app" }, { label: "GitHub", href: "https://github.com/softdevpz/build-budget-app" }],
       linksNote: "Code is public",
-      problem: { heading: "The problem", body: "People building a house juggle spreadsheets, receipts and bank reports. The budget lives in one file, invoices in a folder of photos, and the bank wants its own report format. Everyone on the project, from a partner to the site manager, works from a different copy." },
+      problem: { heading: "The problem", body: "I'm building my own house, and a build produces a lot of information: contractors' phone numbers, photos from the site, receipts, invoices and permits. Each stage has its own pile, and in practice it ended up scattered across spreadsheets, a phone gallery and paper folders. I wanted one place to store all of it, organised by stage and next to the budget, so I can find anything in seconds and share it with everyone involved." },
       role: { heading: "My role", body: "Everything, end to end: product scope, the NestJS API, the Next.js frontend, infrastructure and CI. I built it as a complete SaaS product rather than a CRUD demo, with proper auth, payments, background jobs, file storage and real-time updates." },
       built: {
         heading: "What I built",
         items: [
-          { title: "Budget per stage", body: "Projects split into stages with a planned budget. Expenses are tracked against the plan, with a summary chart and a warning on every stage that goes over." },
-          { title: "Documents and construction diary", body: "Files go straight from the browser to S3 through presigned URLs, so the API never handles the bytes. Each stage has a diary with photos." },
+          { title: "Budget per stage", body: "The build is split into stages, and each stage has its own page with its expenses, documents, diary and tasks. Expenses are tracked against the planned budget, with a summary chart and a warning on every stage that goes over." },
+          { title: "Documents and construction diary", body: "Receipts, invoices and permits go straight from the browser to S3 through presigned URLs, so the API never handles the bytes. Each stage has a diary with photos from the site." },
           { title: "Bank-ready PDF reports", body: "Reports are generated in the background with Redis, BullMQ and PDFKit, so a heavy report never blocks a request. The user downloads it when it's ready." },
           { title: "Live collaboration", body: "A project can be shared with owner and editor roles. Socket.io pushes stage and expense changes to everyone who has the project open." },
           { title: "Subscriptions", body: "Stripe Checkout with a free plan limited to one project. The plan status changes only through signature-verified webhooks." },

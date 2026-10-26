@@ -5,7 +5,7 @@ export const pl: Dictionary = {
     title:
       "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
-      "Full Stack Developer z Wrocławia, ponad 4 lata doświadczenia komercyjnego. Tworzę aplikacje webowe od pierwszej rozmowy z klientem aż po produkcję.",
+      "Full Stack Developer z Wrocławia, ponad 4 lata doświadczenia komercyjnego. Tworzę aplikacje webowe od początku do końca: od warsztatów produktowych z klientem po wdrożenie na produkcję.",
   },
   nav: {
     projects: "Projekty",
@@ -23,7 +23,7 @@ export const pl: Dictionary = {
     badge: "Otwarty na nowe propozycje",
     name: "Piotr Zięcina",
     role: "Full Stack Developer",
-    lede: "Tworzę aplikacje webowe od początku do końca: od rozmowy z klientem po wdrożenie na produkcję. Na frontendzie React, Next.js i Vue; na backendzie Node.js, NestJS i SQL. **Ponad 4 lata doświadczenia komercyjnego**, ostatnio w SmartBear.",
+    lede: "Tworzę aplikacje webowe od początku do końca: od warsztatów produktowych z klientem po wdrożenie na produkcję. Na frontendzie React, Next.js i Vue; na backendzie Node.js, NestJS i SQL. **Ponad 4 lata doświadczenia komercyjnego**, ostatnio w SmartBear.",
     viewProjects: "Zobacz projekty",
     location: "Wrocław · praca zdalna lub hybrydowa",
     portraitAlt: "Zdjęcie Piotra Zięciny",
@@ -72,7 +72,7 @@ export const pl: Dictionary = {
         "Kontrola budowy domu: etapy, wydatki na tle budżetu, dokumenty i raporty PDF dla banku.",
       labels: { openSource: "Open source", liveDemo: "Demo na żywo" },
       short:
-        "Budując dom, żongluje się arkuszami, paragonami i raportami dla banku. Build Budget trzyma budżet, dokumenty i dziennik budowy w jednym miejscu i na bieżąco udostępnia je wszystkim osobom w projekcie.",
+        "Buduję własny dom i chciałem mieć wszystko o nim w jednym miejscu. Build Budget dzieli budowę na etapy i przy każdym trzyma budżet, rachunki, dokumenty i zdjęcia, na bieżąco udostępnione wszystkim osobom w projekcie.",
       highlights: [
         "Tokeny JWT (access i refresh) w ciasteczkach httpOnly z cichym odświeżaniem. Wykryłem i naprawiłem wyścig (race condition), w którym równoległe żądania jednocześnie odświeżały token.",
         "Subskrypcje Stripe z webhookami weryfikowanymi podpisem. Plan darmowy jest ograniczony do jednego projektu.",
@@ -112,50 +112,22 @@ export const pl: Dictionary = {
         period: "2024 – obecnie",
         role: "Software Developer",
         company: "SmartBear",
-        products: [
-          {
-            name: "Reflect",
-            description: "platforma do automatycznego testowania z AI",
-            duration: "15 miesięcy",
-            stack: "Vue.js · TypeScript · Scala · MySQL · AWS · Terraform",
-            bullets: [
-              "Dodałem wgrywanie plików CSV do wsadowego uruchamiania testów z podstawianiem zmiennych, dla klientów z testami opartymi na danych.",
-              "Samodzielnie zaprojektowałem i zbudowałem (frontend i backend) wyszukiwarkę danych testu, która stała się głównym narzędziem działu wsparcia klienta.",
-              "Wdrożyłem analitykę Amplitude, zbierając dane o użyciu z różnych produktów SmartBear w jednym miejscu.",
-              "Zbudowałem około 10 komponentów wielokrotnego użytku dla Reflect Design System na podstawie projektów w Figmie.",
-            ],
-          },
-          {
-            name: "Visual Test",
-            description: "narzędzie do wizualnego porównywania obrazów z AI",
-            duration: "9 miesięcy",
-            stack: "React · Next.js · NestJS · MySQL · AWS",
-            bullets: [
-              "Zmniejszyłem liczbę podatności bezpieczeństwa o 40% dzięki regularnym audytom i aktualizacjom zależności.",
-              "Dodałem testy jednostkowe obejmujące około 70% kodu, co zmniejszyło dług techniczny o 35%.",
-              "Analizowałem zgłoszenia klientów i razem z product managerami zamieniałem je w zadania w backlogu.",
-            ],
-          },
-        ],
+        summary: "Dwa produkty do testowania z AI: Reflect (Vue.js, Scala) i Visual Test (React, Next.js, NestJS).",
+        results: ["Zaprojektowałem i zbudowałem (frontend i backend) wyszukiwarkę danych testu, która stała się głównym narzędziem działu wsparcia klienta.", "Zmniejszyłem liczbę podatności bezpieczeństwa o 40% dzięki regularnym audytom i aktualizacjom zależności."],
       },
       {
         period: "2022 – 2024",
         role: "Full Stack Developer",
         company: "Ampcasd",
-        stack: "Next.js · Strapi · NestJS · GraphQL · MySQL · Tailwind CSS",
-        bullets: [
-          "Prowadziłem 4-osobowy zespół, który zbudował CMS i platformę webową dla centrum kultury w Niemczech, od analizy potrzeb do startu produkcyjnego w około rok.",
-          "Zapisy na zajęcia, karnety, rezerwacje sal i bilety na koncerty, z integracjami PayPal, polecenia zapłaty SEPA i niemieckiego systemu fiskalnego.",
-          "Platforma urosła do ponad 1600 użytkowników i ponad 1800 sprzedanych karnetów.",
-        ],
+        summary: "Prowadziłem 4-osobowy zespół, który zbudował CMS i platformę z zapisami, rezerwacjami i płatnościami dla centrum kultury w Niemczech, od analizy potrzeb do startu w około rok.",
+        results: ["Platforma urosła do ponad 1600 użytkowników i ponad 1800 sprzedanych karnetów."],
       },
       {
         period: "2019 – 2022",
         role: "Electrical Supervisor",
         company: "KNAPP",
-        bullets: [
-          "Nadzorowałem budowę zautomatyzowanych magazynów i systemów wysyłkowych dla klientów takich jak Tiffany, Kroger, Adidas i M&S.",
-        ],
+        summary: "Nadzorowałem budowę zautomatyzowanych magazynów i systemów wysyłkowych dla klientów takich jak Tiffany, Kroger, Adidas i M&S.",
+        results: [],
       },
     ],
     fullCv: "Pełne CV (PDF)",
@@ -324,13 +296,13 @@ export const pl: Dictionary = {
       meta: [{ label: "Rola", value: "Wszystko: produkt, API, frontend, infrastruktura, CI" }, { label: "Stack", value: "Next.js · NestJS · PostgreSQL · Redis" }, { label: "Hosting", value: "Vercel (web) · Railway (API)" }],
       links: [{ label: "Demo", href: "https://build-budget-app-web.vercel.app" }, { label: "GitHub", href: "https://github.com/softdevpz/build-budget-app" }],
       linksNote: "Kod jest publiczny",
-      problem: { heading: "Problem", body: "Budując dom, żongluje się arkuszami, paragonami i raportami dla banku. Budżet jest w jednym pliku, faktury w folderze zdjęć, a bank chce raportu w swoim formacie. Każda osoba w projekcie, od partnera po kierownika budowy, pracuje na innej kopii." },
+      problem: { heading: "Problem", body: "Buduję własny dom, a budowa produkuje mnóstwo informacji: telefony do wykonawców, zdjęcia z placu budowy, rachunki, faktury i pozwolenia. Każdy etap ma swój stos, a w praktyce wszystko było rozrzucone po arkuszach, galerii w telefonie i papierowych segregatorach. Chciałem jednego miejsca, w którym przechowam to wszystko, uporządkowane według etapów i obok budżetu, tak żeby znaleźć wszystko w kilka sekund i udostępnić to każdemu, kto bierze udział w budowie." },
       role: { heading: "Moja rola", body: "Wszystko od początku do końca: zakres produktu, API w NestJS, frontend w Next.js, infrastruktura i CI. Zbudowałem go jako kompletny produkt SaaS, a nie demo CRUD-a: z porządnym logowaniem, płatnościami, zadaniami w tle, przechowywaniem plików i aktualizacjami na żywo." },
       built: {
         heading: "Co zbudowałem",
         items: [
-          { title: "Budżet dla każdego etapu", body: "Projekt dzieli się na etapy z planowanym budżetem. Wydatki są liczone na tle planu, z wykresem podsumowania i ostrzeżeniem przy każdym etapie, który przekracza budżet." },
-          { title: "Dokumenty i dziennik budowy", body: "Pliki trafiają z przeglądarki prosto do S3 przez presigned URL, więc API nie przepuszcza przez siebie ich zawartości. Każdy etap ma dziennik ze zdjęciami." },
+          { title: "Budżet dla każdego etapu", body: "Budowa dzieli się na etapy, a każdy etap ma własną stronę z wydatkami, dokumentami, dziennikiem i zadaniami. Wydatki są liczone na tle planowanego budżetu, z wykresem podsumowania i ostrzeżeniem przy każdym etapie, który go przekracza." },
+          { title: "Dokumenty i dziennik budowy", body: "Rachunki, faktury i pozwolenia trafiają z przeglądarki prosto do S3 przez presigned URL, więc API nie przepuszcza przez siebie ich zawartości. Każdy etap ma dziennik ze zdjęciami z budowy." },
           { title: "Raporty PDF dla banku", body: "Raporty generują się w tle (Redis, BullMQ, PDFKit), więc ciężki raport nigdy nie blokuje zapytania. Użytkownik pobiera go, gdy jest gotowy." },
           { title: "Współpraca na żywo", body: "Projekt można udostępnić z rolą właściciela albo edytora. Socket.io wysyła zmiany etapów i wydatków do wszystkich, którzy mają projekt otwarty." },
           { title: "Subskrypcje", body: "Stripe Checkout z darmowym planem ograniczonym do jednego projektu. Plan zmienia się wyłącznie przez webhooki weryfikowane podpisem." },

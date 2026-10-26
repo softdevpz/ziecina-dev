@@ -96,20 +96,8 @@ export type Dictionary = {
   experience: {
     eyebrow: string;
     heading: string;
-    jobs: {
-      period: string;
-      role: string;
-      company: string;
-      stack?: string;
-      bullets?: string[];
-      products?: {
-        name: string;
-        description: string;
-        duration: string;
-        stack: string;
-        bullets: string[];
-      }[];
-    }[];
+    /** A compact timeline; the full details live in the CV. */
+    jobs: { period: string; role: string; company: string; summary: string; results: string[] }[];
     fullCv: string;
   };
   skills: {
