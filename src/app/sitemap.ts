@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = [
     { path: paths.home, priority: 1 },
     { path: paths.stajnia, priority: 0.8 },
+    { path: paths.buildBudget, priority: 0.8 },
   ];
   return pages.flatMap(({ path, priority }) =>
     locales.map((locale) => ({

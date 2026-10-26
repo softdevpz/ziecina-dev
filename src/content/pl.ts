@@ -6,9 +6,6 @@ export const pl: Dictionary = {
       "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
       "Full Stack Developer z Wrocławia, ponad 4 lata doświadczenia komercyjnego. Tworzę aplikacje webowe od pierwszej rozmowy z klientem aż po produkcję.",
-    caseStudyTitle: "Stajnia Lauden: case study — Piotr Zięcina",
-    caseStudyDescription:
-      "Jak zbudowałem aplikację produkcyjną, na której opiera się codzienna praca pensjonatu dla koni z ponad 60 boksami.",
   },
   nav: {
     projects: "Projekty",
@@ -33,7 +30,6 @@ export const pl: Dictionary = {
     portraitCaption: [
       "React · Next.js",
       "Node.js · NestJS",
-      "JavaScript · TypeScript",
       "MySQL · PostgreSQL",
     ],
   },
@@ -85,7 +81,6 @@ export const pl: Dictionary = {
         "Pliki wysyłane prosto do S3 przez presigned URL, do tego dziennik budowy ze zdjęciami.",
         "Interfejs po polsku i angielsku (next-intl).",
         "CI uruchamia testy jednostkowe (próg pokrycia 80% dla plików z logiką), testy e2e na prawdziwej bazie i build obu aplikacji.",
-        "W repozytorium jest opis architektury, który wyjaśnia, *dlaczego* projekt jest zbudowany właśnie tak.",
       ],
       moreHighlights: "Więcej szczegółów",
       lessHighlights: "Pokaż mniej",
@@ -223,9 +218,16 @@ export const pl: Dictionary = {
     copyFallback: "Naciśnij ⌘C / Ctrl+C, aby skopiować",
   },
   footer: { builtWith: "Zbudowane w Next.js", source: "Kod na GitHubie" },
-  caseStudy: {
-    back: "Wszystkie projekty",
-    meta: [
+  caseStudyUi: { back: "Wszystkie projekty", linksLabel: "Linki" },
+  caseStudies: {
+    stajnia: {
+      seo: { title: "Stajnia Lauden: case study — Piotr Zięcina", description: "Jak zbudowałem aplikację produkcyjną, na której opiera się codzienna praca pensjonatu dla koni z ponad 60 boksami." },
+      chips: [{ text: "Na produkcji", live: true }, { text: "Prawdziwy klient" }, { text: "2026 – obecnie" }],
+      name: "Stajnia Lauden",
+      tagline: "Aplikacja produkcyjna, na której opiera się codzienna praca pensjonatu dla koni z ponad 60 boksami.",
+      links: [{ label: "stajnialauden.pl", href: "https://stajnialauden.pl" }],
+      linksNote: "Kod jest prywatny",
+      meta: [
       {
         label: "Rola",
         value: "Wszystko: wymagania, UX, backend, frontend, wdrożenie",
@@ -236,17 +238,15 @@ export const pl: Dictionary = {
       },
       { label: "Urządzenia", value: "Telefony, tablety, ekrany na ścianach" },
     ],
-    linksLabel: "Linki",
-    codePrivate: "Kod jest prywatny",
-    problem: {
+      problem: {
       heading: "Problem",
       body: "Stajnia z ponad 60 boksami, personel i wielu właścicieli koni. Każda prośba („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez komunikatory w mediach społecznościowych i pamięć. Dodatkowe usługi rozliczano ręcznie na koniec miesiąca.",
     },
-    role: {
+      role: {
       heading: "Moja rola",
       body: "Wszystko: zbieranie wymagań z właścicielką, UX, backend, frontend, wdrożenie i utrzymanie. Regularnie spotykałem się z klientką, zamieniałem uwagi w małe iteracje i często wypuszczałem nowe wersje na produkcję.",
     },
-    built: {
+      built: {
       heading: "Co zbudowałem",
       items: [
         {
@@ -275,19 +275,11 @@ export const pl: Dictionary = {
         },
       ],
     },
-    users: {
+      users: {
       heading: "Zaprojektowane dla prawdziwych użytkowników",
-      body: "Wśród użytkowników jest wiele osób starszych, więc interfejs trzyma się ścisłych zasad. W paszarni i przy wyjściu na padoki wiszą ekrany, które bez dotykania pokazują plan na dziś.",
-      rules: [
-        { value: "18 px", label: "minimalny rozmiar tekstu" },
-        { value: "48 px", label: "minimalny rozmiar przycisku" },
-        {
-          value: "Aa",
-          label: "status zawsze opisany tekstem, a nie samym kolorem",
-        },
-      ],
+      body: "Wśród użytkowników jest wiele osób starszych, więc interfejs trzyma się ścisłych zasad: tekst ma co najmniej 18 px, przyciski i inne elementy do dotknięcia co najmniej 48 px, a status jest zawsze opisany słowami, nigdy samym kolorem. W paszarni i przy wyjściu na padoki wiszą ekrany, które bez dotykania pokazują plan na dziś.",
     },
-    engineering: {
+      engineering: {
       heading: "Inżynieria",
       items: [
         "REST API w NestJS + Prisma/PostgreSQL z weryfikacją e-mail, resetem hasła i bezpiecznym przesyłaniem zdjęć.",
@@ -296,21 +288,21 @@ export const pl: Dictionary = {
         "Dziennik decyzji: każda istotna zmiana jest zapisana razem z powodem i odrzuconymi opcjami.",
       ],
     },
-    decision: {
+      decision: {
       heading: "Kluczowa decyzja",
       from: "React Native (Expo)",
       to: "PWA do zainstalowania",
       title: "PWA zamiast aplikacji natywnej",
       body: "Zacząłem od aplikacji w React Native (Expo). Po tym, jak zobaczyłem, jak właścicielka naprawdę korzysta z telefonu, przeszliśmy na jedną aplikację webową, którą można zainstalować na ekranie głównym. Jeden kod dla każdego urządzenia, bez sklepu z aplikacjami i z natychmiastowymi aktualizacjami. To była dobra decyzja i podjąłbym ją ponownie.",
     },
-    testimonial: {
+      testimonial: {
       heading: "Opinia klientki",
       quote:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       author: "Lorem Ipsum, właścicielka, Stajnia Lauden",
       placeholder: "placeholder · prawdziwa opinia w drodze",
     },
-    screens: {
+      screens: {
       heading: "Ekrany",
       note: "Zrzuty ze środowiska demo. Imiona, e-maile, imiona koni i kwoty są zamazane.",
       items: [
@@ -322,7 +314,43 @@ export const pl: Dictionary = {
         { src: "/images/stajnia/billing.webp", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Administrator · rozliczenia klienta" },
       ],
     },
-    next: { label: "Następny projekt", name: "Build Budget" },
+      next: { label: "Następny projekt", name: "Build Budget", slug: "buildBudget" },
+    },
+    buildBudget: {
+      seo: { title: "Build Budget: case study — Piotr Zięcina", description: "Jak zbudowałem Build Budget, aplikację open source do kontroli budowy domu: budżet etapów, dokumenty, raporty PDF dla banku i współpraca na żywo." },
+      chips: [{ text: "Open source" }, { text: "Demo na żywo", live: true }, { text: "Projekt własny" }],
+      name: "Build Budget",
+      tagline: "Kontrola budowy domu: etapy, wydatki na tle budżetu, dokumenty i raporty PDF dla banku.",
+      meta: [{ label: "Rola", value: "Wszystko: produkt, API, frontend, infrastruktura, CI" }, { label: "Stack", value: "Next.js · NestJS · PostgreSQL · Redis" }, { label: "Hosting", value: "Vercel (web) · Railway (API)" }],
+      links: [{ label: "Demo", href: "https://build-budget-app-web.vercel.app" }, { label: "GitHub", href: "https://github.com/softdevpz/build-budget-app" }],
+      linksNote: "Kod jest publiczny",
+      problem: { heading: "Problem", body: "Budując dom, żongluje się arkuszami, paragonami i raportami dla banku. Budżet jest w jednym pliku, faktury w folderze zdjęć, a bank chce raportu w swoim formacie. Każda osoba w projekcie, od partnera po kierownika budowy, pracuje na innej kopii." },
+      role: { heading: "Moja rola", body: "Wszystko od początku do końca: zakres produktu, API w NestJS, frontend w Next.js, infrastruktura i CI. Zbudowałem go jako kompletny produkt SaaS, a nie demo CRUD-a: z porządnym logowaniem, płatnościami, zadaniami w tle, przechowywaniem plików i aktualizacjami na żywo." },
+      built: {
+        heading: "Co zbudowałem",
+        items: [
+          { title: "Budżet dla każdego etapu", body: "Projekt dzieli się na etapy z planowanym budżetem. Wydatki są liczone na tle planu, z wykresem podsumowania i ostrzeżeniem przy każdym etapie, który przekracza budżet." },
+          { title: "Dokumenty i dziennik budowy", body: "Pliki trafiają z przeglądarki prosto do S3 przez presigned URL, więc API nie przepuszcza przez siebie ich zawartości. Każdy etap ma dziennik ze zdjęciami." },
+          { title: "Raporty PDF dla banku", body: "Raporty generują się w tle (Redis, BullMQ, PDFKit), więc ciężki raport nigdy nie blokuje zapytania. Użytkownik pobiera go, gdy jest gotowy." },
+          { title: "Współpraca na żywo", body: "Projekt można udostępnić z rolą właściciela albo edytora. Socket.io wysyła zmiany etapów i wydatków do wszystkich, którzy mają projekt otwarty." },
+          { title: "Subskrypcje", body: "Stripe Checkout z darmowym planem ograniczonym do jednego projektu. Plan zmienia się wyłącznie przez webhooki weryfikowane podpisem." },
+          { title: "Przypomnienia i porównanie kosztów", body: "Codzienne zadanie wysyła e-mailem przypomnienia o zadaniach z terminem w ciągu trzech dni. Nocne zadanie liczy anonimowy koszt m² według regionu i etapu, trzyma go w Redisie i pokazuje na publicznej stronie." },
+        ],
+      },
+      engineering: {
+        heading: "Inżynieria",
+        items: [
+          "Monorepo: aplikacja Next.js (App Router), API w NestJS i wspólna paczka, dzięki której zasady haseł są zdefiniowane raz dla obu stron.",
+          "Tokeny JWT (access i refresh) w ciasteczkach httpOnly ustawianych przez route handlery Next.js. Uwierzytelniony proxy po cichu odświeża sesję, a przed pierwszym logowaniem trzeba potwierdzić e-mail.",
+          "**Testy jednostkowe z progiem pokrycia 80%** dla plików z logiką oraz **testy end-to-end**, które uruchamiają prawdziwą aplikację na osobnej bazie. CI odpala jedne i drugie oraz buduje obie aplikacje przy każdym pushu, z Postgresem i Redisem jako kontenerami usług.",
+          "Wieloetapowy obraz Dockera na node:20-slim, a nie Alpine, bo silnik zapytań Prismy potrzebuje glibc i OpenSSL. Obraz zawiera tylko API.",
+          "E-maile idą lokalnie przez Mailpit, a na produkcji przez HTTPS API Resend, bo Railway blokuje wychodzący SMTP.",
+          "Interfejs po polsku i angielsku (next-intl).",
+        ],
+      },
+      decision: { heading: "Kluczowa decyzja", from: "Rotacja przy każdym odświeżeniu", to: "Idempotentne odświeżanie", title: "Naprawa wyścigu przy odświeżaniu tokenu", body: "Każdy panel na stronie projektu pobiera własne dane, więc gdy token dostępu wygasa, kilka zapytań próbuje go odświeżyć w tej samej chwili. Przy rotacji przy każdym odświeżeniu pierwsze zapytanie unieważniało token, którego pozostałe jeszcze używały, i użytkownik był wylogowywany w trakcie pracy. Odświeżanie jest teraz idempotentne: refresh token zmienia się tylko na początku nowej sesji (logowanie, potwierdzenie e-maila), więc równoległe odświeżenia kończą się sukcesem na tym samym tokenie." },
+      next: { label: "Następny projekt", name: "Stajnia Lauden", slug: "stajnia" },
+    },
   },
   easterEgg: { toast: "Poziom mocy: ponad 9000!" },
 };

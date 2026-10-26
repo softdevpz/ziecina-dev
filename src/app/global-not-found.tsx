@@ -29,11 +29,9 @@ export default function GlobalNotFound() {
               Ta strona zniknęła jak planeta Namek.
             </p>
             <div className="mt-2 flex flex-wrap gap-2.5">
-              <Link href="/en/" className="btn btn-primary">
-                Back to the homepage <span className="arrow">→</span>
-              </Link>
-              <Link href="/pl/" lang="pl" className="btn">
-                Strona główna
+              {/* "/" sends the visitor to /en/ or /pl/ based on the browser language. */}
+              <Link href="/" className="btn btn-primary">
+                Homepage · <span lang="pl">Strona główna</span> <span className="arrow">→</span>
               </Link>
             </div>
           </div>

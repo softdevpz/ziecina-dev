@@ -1,6 +1,6 @@
 import { en } from "@/content/en";
 import { pl } from "@/content/pl";
-import type { Dictionary } from "@/content/types";
+import type { CaseStudySlug, Dictionary } from "@/content/types";
 
 export const locales = ["en", "pl"] as const;
 export type Locale = (typeof locales)[number];
@@ -25,7 +25,14 @@ export const site = {
 } as const;
 
 /** Site-relative paths, with the trailing slash the static export uses. */
+const caseStudySlugs: Record<CaseStudySlug, string> = {
+  stajnia: "stajnia-lauden",
+  buildBudget: "build-budget",
+};
+
 export const paths = {
   home: (locale: Locale) => `/${locale}/`,
-  stajnia: (locale: Locale) => `/${locale}/projects/stajnia-lauden/`,
+  caseStudy: (slug: CaseStudySlug, locale: Locale) => `/${locale}/projects/${caseStudySlugs[slug]}/`,
+  stajnia: (locale: Locale) => paths.caseStudy("stajnia", locale),
+  buildBudget: (locale: Locale) => paths.caseStudy("buildBudget", locale),
 };

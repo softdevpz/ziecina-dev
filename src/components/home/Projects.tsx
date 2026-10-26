@@ -51,7 +51,7 @@ export function Projects({ dict, locale }: { dict: Dictionary; locale: Locale })
         <ScreenshotFrame {...s.screenshot} />
       </article>
 
-      <article className={`${projectRow} border-t border-dashed border-line`}>
+      <article id="build-budget" className={`${projectRow} border-t border-dashed border-line`}>
         <div className="min-[900px]:order-last">
           <div className="flex flex-wrap gap-1.5">
             <span className="chip">{b.labels.openSource}</span>
@@ -82,7 +82,10 @@ export function Projects({ dict, locale }: { dict: Dictionary; locale: Locale })
           </details>
           <p className="mt-5 font-mono text-[12.5px] leading-[1.9] text-muted">{b.stack}</p>
           <div className="mt-6.5 flex flex-wrap gap-2.5">
-            <a href={site.buildBudgetDemo} target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <Link href={paths.buildBudget(locale)} className="btn btn-primary">
+              {s.readCaseStudy} <span className="arrow">→</span>
+            </Link>
+            <a href={site.buildBudgetDemo} target="_blank" rel="noopener noreferrer" className="btn">
               {b.demoButton} ↗
             </a>
             <a href={site.buildBudgetRepo} target="_blank" rel="noopener noreferrer" className="btn">

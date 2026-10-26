@@ -40,6 +40,11 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - Commands: `npm run dev`, `npm run build` (→ `out/`), `npm run preview` (serves `out/` on :4173), `npm run lint`.
 - Public assets: `public/images/portrait.png` (cutout), `og-avatar.jpg`, `icon.svg`, `public/cv/Piotr-Ziecina-CV.pdf` (latest CV as of 2026-10-16, source: `~/Desktop/CV/Proby/Piotr_Ziecina.pdf`; one English CV for both languages).
 - CV links: sticky header + "Full CV" under Experience (removed from Contact on 2026-10-22).
+- Hero on phones: intro → photo → buttons/location (2026-10-26). Case study accessibility rules are plain text (tiles removed).
+- Case studies (2026-10-26): one shared layout `CaseStudyView` + `caseStudyRoute(slug)`; content in `dict.caseStudies.{stajnia,buildBudget}` (type `CaseStudy`, optional sections: users, testimonial, screens). Routes `/[lang]/projects/stajnia-lauden/` and `/[lang]/projects/build-budget/`; "Next project" links cycle between them.
+- Build Budget case study content comes from the public repo's README and code (e.g. idempotent refresh in `apps/api/src/auth/auth.service.ts`). No screenshots yet: the demo needs a login, so Piotr will send them; the screens section stays hidden until then.
+- build-budget-app's README links to ARCHITECTURE.md, which exists on no branch (checked 2026-10-26). The "architecture write-up" highlight was removed from the site; re-add it once the file is in the repo.
+- Portrait caption is 3 lines: React · Next.js / Node.js · NestJS / MySQL · PostgreSQL (SQL/NoSQL suggestion rejected). 404 has a single button to "/" (language auto-detected).
 - Open TODOs in code: real testimonial; the portrait PNG is 450 KB (optimise in stage 5).
 
 ## Stage 5 (SEO & performance), 2026-10-22
@@ -49,8 +54,10 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - `PersonJsonLd` on the home page (schema.org Person, sameAs GitHub/LinkedIn).
 - `public/_headers`: nosniff, referrer policy, permissions policy, X-Frame-Options DENY, immutable cache for `/_next/static/*`. Verified on `wrangler dev`.
 - Lighthouse mobile, local: home 92/100/100/100, case study 96/100/100/100. LCP element is the hero portrait (render delay under simulated throttling).
-- Pending on Piotr's side: Cloudflare Web Analytics (cookieless) and Google Search Console (DNS TXT verification + submit sitemap).
+- Cloudflare Web Analytics is on (automatic setup, 2026-10-22): the beacon is injected at the edge, no code in the repo. Verified on /en/, /pl/ and the case study.
+- Google Search Console: domain property verified by a separate `google-site-verification` TXT record on the apex (SPF untouched); sitemap submitted (2026-10-22). Keep the TXT record, Google re-checks it.
+- LinkedIn Post Inspector run for /en/ on 2026-10-22: the OG card shows correctly. "No author / publish date" warnings are article-only fields, ignored on purpose.
 
 ## Plan
 0. Decisions ✅ · 1. Copy ✅ (v1 approved) · 2. Visual mockup ✅ (further changes happen in code) · 3. Implementation (v1 built, builds clean) ·
-4. Deploy + DNS ✅ (ziecina.dev, www → apex) · 5. SEO/OG/Lighthouse ✅, analytics + Search Console pending · 6. Link the site from the CV, LinkedIn and GitHub profile
+4. Deploy + DNS ✅ (ziecina.dev, www → apex) · 5. SEO/OG/Lighthouse/analytics/Search Console ✅ · 6. Link the site from the CV, LinkedIn and GitHub profile

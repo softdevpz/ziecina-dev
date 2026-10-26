@@ -7,8 +7,9 @@ export function Hero({ dict }: { dict: Dictionary }) {
   const t = dict.hero;
   return (
     <section id="top">
-      <div className="wrap grid items-center gap-12 py-12 pb-18 min-[820px]:grid-cols-[minmax(0,1fr)_320px] min-[820px]:gap-18 min-[820px]:py-20 min-[820px]:pb-24">
-        <div>
+      {/* Phones: intro, photo, actions. Desktop: intro and actions on the left, photo spanning both rows on the right. */}
+      <div className="wrap grid gap-y-10 py-12 pb-18 min-[820px]:grid-cols-[minmax(0,1fr)_320px] min-[820px]:gap-x-18 min-[820px]:gap-y-8 min-[820px]:py-20 min-[820px]:pb-24">
+        <div className="min-[820px]:self-end">
           <span className="inline-flex items-center gap-2.5 rounded-full border border-line py-1.5 pr-3.5 pl-3 text-sm text-muted">
             <span className="status-dot" aria-hidden="true" />
             {t.badge}
@@ -18,7 +19,10 @@ export function Hero({ dict }: { dict: Dictionary }) {
           <p className="mt-6 max-w-[58ch] text-lede">
             <Rich text={t.lede} />
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-2.5">
+        </div>
+
+        <div className="min-[820px]:col-start-1 min-[820px]:row-start-2">
+          <div className="flex flex-wrap items-center gap-2.5">
             <a href="#projects" className="btn btn-primary">
               {t.viewProjects} <span className="arrow">→</span>
             </a>
@@ -40,7 +44,7 @@ export function Hero({ dict }: { dict: Dictionary }) {
           </p>
         </div>
 
-        <figure className="portrait relative order-first mr-[22px] mb-[22px] w-full max-w-[240px] justify-self-start min-[820px]:order-none min-[820px]:max-w-[320px] min-[820px]:justify-self-end">
+        <figure className="portrait relative row-start-2 mr-[22px] mb-[22px] w-full max-w-[240px] justify-self-start min-[820px]:col-start-2 min-[820px]:row-span-2 min-[820px]:row-start-1 min-[820px]:max-w-[320px] min-[820px]:self-center min-[820px]:justify-self-end">
           {/* eslint-disable-next-line @next/next/no-img-element -- static export, image is pre-sized */}
           <img
             src="/images/portrait.webp"

@@ -6,9 +6,6 @@ export const en: Dictionary = {
       "Piotr Zięcina — Full Stack Developer (React, Next.js, NestJS, TypeScript)",
     description:
       "Full Stack Developer from Wrocław with 4+ years of commercial experience. I build web apps end to end, from the first client conversation to production.",
-    caseStudyTitle: "Stajnia Lauden case study — Piotr Zięcina",
-    caseStudyDescription:
-      "How I built a production web app that runs the daily work of a horse boarding stable with 60+ boxes.",
   },
   nav: {
     projects: "Projects",
@@ -33,7 +30,6 @@ export const en: Dictionary = {
     portraitCaption: [
       "React · Next.js",
       "Node.js · NestJS",
-      "JavaScript · TypeScript",
       "MySQL · PostgreSQL",
     ],
   },
@@ -85,7 +81,6 @@ export const en: Dictionary = {
         "Document uploads straight to S3 with presigned URLs, plus a construction diary with photos.",
         "Bilingual UI (PL/EN) with next-intl.",
         "CI runs unit tests (80% coverage thresholds on files with logic), end-to-end tests against a real database, and builds both apps.",
-        "An architecture write-up in the repo explains *why* things are built the way they are.",
       ],
       moreHighlights: "More highlights",
       lessHighlights: "Show less",
@@ -224,9 +219,16 @@ export const en: Dictionary = {
     copyFallback: "Press ⌘C / Ctrl+C to copy",
   },
   footer: { builtWith: "Built with Next.js", source: "Source on GitHub" },
-  caseStudy: {
-    back: "All projects",
-    meta: [
+  caseStudyUi: { back: "All projects", linksLabel: "Links" },
+  caseStudies: {
+    stajnia: {
+      seo: { title: "Stajnia Lauden case study — Piotr Zięcina", description: "How I built a production web app that runs the daily work of a horse boarding stable with 60+ boxes." },
+      chips: [{ text: "In production", live: true }, { text: "Real client" }, { text: "2026 – present" }],
+      name: "Stajnia Lauden",
+      tagline: "A production web app that runs the daily work of a horse boarding stable with 60+ boxes.",
+      links: [{ label: "stajnialauden.pl", href: "https://stajnialauden.pl" }],
+      linksNote: "Code is private",
+      meta: [
       {
         label: "Role",
         value: "Everything: requirements, UX, backend, frontend, deploy",
@@ -237,17 +239,15 @@ export const en: Dictionary = {
       },
       { label: "Devices", value: "Phones, tablets, wall-mounted screens" },
     ],
-    linksLabel: "Links",
-    codePrivate: "Code is private",
-    problem: {
+      problem: {
       heading: "The problem",
       body: "A stable with 60+ boxes, its staff and many horse owners. Every request (“extra hay for box 12”, “turn him out at 10 tomorrow”) went through social media messengers and memory. Billing for extra services was done by hand at the end of the month.",
     },
-    role: {
+      role: {
       heading: "My role",
       body: "Everything: requirements gathering with the owner, UX, backend, frontend, deployment and support. I met the client regularly, turned feedback into small iterations and shipped frequent production releases.",
     },
-    built: {
+      built: {
       heading: "What I built",
       items: [
         {
@@ -276,16 +276,11 @@ export const en: Dictionary = {
         },
       ],
     },
-    users: {
+      users: {
       heading: "Designed for real users",
-      body: "Many users are older people, so the UI follows strict rules. Feed rooms and paddock exits have wall-mounted screens that show today's plan without anyone touching them.",
-      rules: [
-        { value: "18 px", label: "minimum text size" },
-        { value: "48 px", label: "minimum touch target" },
-        { value: "Aa", label: "status always shown as text, not just colour" },
-      ],
+      body: "Many users are older people, so the UI follows strict rules: text is at least 18 px, buttons and other touch targets are at least 48 px, and a status is always written out, never shown by colour alone. Feed rooms and paddock exits have wall-mounted screens that show today's plan without anyone touching them.",
     },
-    engineering: {
+      engineering: {
       heading: "Engineering",
       items: [
         "REST API in NestJS + Prisma/PostgreSQL with email verification, password reset and secure photo uploads.",
@@ -294,21 +289,21 @@ export const en: Dictionary = {
         "A decision log: every significant change is written down with the reason behind it and the options that were rejected.",
       ],
     },
-    decision: {
+      decision: {
       heading: "Key decision",
       from: "React Native (Expo)",
       to: "Installable PWA",
       title: "A PWA instead of a native app",
       body: "I started with a React Native (Expo) app. After watching how the owner actually used her phone, we switched to a single installable web app. It's one codebase for every device, needs no app store, and updates instantly. That was the right call, and I'd make it again.",
     },
-    testimonial: {
+      testimonial: {
       heading: "Client",
       quote:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       author: "Lorem Ipsum, owner, Stajnia Lauden",
       placeholder: "placeholder · real testimonial pending",
     },
-    screens: {
+      screens: {
       heading: "Screens",
       note: "Screenshots from the demo environment. Names, e-mails, horse names and amounts are blurred.",
       items: [
@@ -320,7 +315,43 @@ export const en: Dictionary = {
         { src: "/images/stajnia/billing.webp", alt: "Billing view for one client with balances and payment history", caption: "Admin · billing for one client" },
       ],
     },
-    next: { label: "Next project", name: "Build Budget" },
+      next: { label: "Next project", name: "Build Budget", slug: "buildBudget" },
+    },
+    buildBudget: {
+      seo: { title: "Build Budget case study — Piotr Zięcina", description: "How I built Build Budget, an open-source app for tracking a house build: budget per stage, documents, PDF bank reports and live collaboration." },
+      chips: [{ text: "Open source" }, { text: "Live demo", live: true }, { text: "Personal project" }],
+      name: "Build Budget",
+      tagline: "Track a house build: stages, expenses against budget, documents and bank-ready PDF reports.",
+      meta: [{ label: "Role", value: "Everything: product, API, frontend, infrastructure, CI" }, { label: "Stack", value: "Next.js · NestJS · PostgreSQL · Redis" }, { label: "Hosting", value: "Vercel (web) · Railway (API)" }],
+      links: [{ label: "Live demo", href: "https://build-budget-app-web.vercel.app" }, { label: "GitHub", href: "https://github.com/softdevpz/build-budget-app" }],
+      linksNote: "Code is public",
+      problem: { heading: "The problem", body: "People building a house juggle spreadsheets, receipts and bank reports. The budget lives in one file, invoices in a folder of photos, and the bank wants its own report format. Everyone on the project, from a partner to the site manager, works from a different copy." },
+      role: { heading: "My role", body: "Everything, end to end: product scope, the NestJS API, the Next.js frontend, infrastructure and CI. I built it as a complete SaaS product rather than a CRUD demo, with proper auth, payments, background jobs, file storage and real-time updates." },
+      built: {
+        heading: "What I built",
+        items: [
+          { title: "Budget per stage", body: "Projects split into stages with a planned budget. Expenses are tracked against the plan, with a summary chart and a warning on every stage that goes over." },
+          { title: "Documents and construction diary", body: "Files go straight from the browser to S3 through presigned URLs, so the API never handles the bytes. Each stage has a diary with photos." },
+          { title: "Bank-ready PDF reports", body: "Reports are generated in the background with Redis, BullMQ and PDFKit, so a heavy report never blocks a request. The user downloads it when it's ready." },
+          { title: "Live collaboration", body: "A project can be shared with owner and editor roles. Socket.io pushes stage and expense changes to everyone who has the project open." },
+          { title: "Subscriptions", body: "Stripe Checkout with a free plan limited to one project. The plan status changes only through signature-verified webhooks." },
+          { title: "Reminders and cost benchmark", body: "A daily job e-mails reminders for tasks due within three days. A nightly job computes anonymised cost per m² by region and stage, cached in Redis and shown on a public page." },
+        ],
+      },
+      engineering: {
+        heading: "Engineering",
+        items: [
+          "Monorepo: Next.js (App Router) web app, NestJS API and a shared package, so the password policy is defined once for both.",
+          "JWT access and refresh tokens in httpOnly cookies set by Next.js route handlers. An authenticated proxy refreshes the session silently, and e-mail verification is required before the first login.",
+          "**Unit tests with 80% coverage thresholds** on logic-heavy files, plus **end-to-end tests** that boot the real app against a separate database. CI runs both and builds both apps on every push, with Postgres and Redis as service containers.",
+          "Multi-stage Docker image on node:20-slim rather than Alpine, because Prisma's query engine needs glibc and OpenSSL. The image contains only the API workspace.",
+          "E-mail goes through Mailpit locally and Resend's HTTPS API in production, because Railway blocks outbound SMTP.",
+          "Bilingual UI (PL/EN) with next-intl.",
+        ],
+      },
+      decision: { heading: "Key decision", from: "Rotate on every refresh", to: "Idempotent refresh", title: "Fixing a refresh-token race condition", body: "Every panel on the project page fetches its own data, so when the access token expires several requests try to refresh it at the same moment. With rotation on every refresh, the first request to land invalidated the token the others were still holding, and the user was logged out mid-session. I made refresh idempotent: the refresh token is rotated only when a new session starts (login or e-mail verification), so parallel refreshes all succeed against the same token." },
+      next: { label: "Next project", name: "Stajnia Lauden", slug: "stajnia" },
+    },
   },
   easterEgg: { toast: "Power level: over 9000!" },
 };

@@ -2,12 +2,37 @@
  * Shape of the site copy. `en.ts` and `pl.ts` must both satisfy it, so a missing
  * translation is a type error. Strings may use **bold** markup (see <Rich>).
  */
+export type CaseStudySlug = "stajnia" | "buildBudget";
+
+/** One project case study page. Optional sections are simply not rendered. */
+export type CaseStudy = {
+  seo: { title: string; description: string };
+  chips: { text: string; live?: boolean }[];
+  name: string;
+  tagline: string;
+  meta: { label: string; value: string }[];
+  links: { label: string; href: string }[];
+  linksNote?: string;
+  problem: { heading: string; body: string };
+  role: { heading: string; body: string };
+  built: { heading: string; items: { title: string; body: string }[] };
+  users?: { heading: string; body: string };
+  engineering: { heading: string; items: string[] };
+  decision: { heading: string; from: string; to: string; title: string; body: string };
+  testimonial?: { heading: string; quote: string; author: string; placeholder?: string };
+  screens?: {
+    heading: string;
+    note: string;
+    /** `wide` items span the full width of the gallery. */
+    items: { src: string; alt: string; caption: string; wide?: boolean }[];
+  };
+  next: { label: string; name: string; slug: CaseStudySlug };
+};
+
 export type Dictionary = {
   meta: {
     title: string;
     description: string;
-    caseStudyTitle: string;
-    caseStudyDescription: string;
   };
   nav: {
     projects: string;
@@ -107,40 +132,7 @@ export type Dictionary = {
     copyFallback: string;
   };
   footer: { builtWith: string; source: string };
-  caseStudy: {
-    back: string;
-    meta: { label: string; value: string }[];
-    linksLabel: string;
-    codePrivate: string;
-    problem: { heading: string; body: string };
-    role: { heading: string; body: string };
-    built: { heading: string; items: { title: string; body: string }[] };
-    users: {
-      heading: string;
-      body: string;
-      rules: { value: string; label: string }[];
-    };
-    engineering: { heading: string; items: string[] };
-    decision: {
-      heading: string;
-      from: string;
-      to: string;
-      title: string;
-      body: string;
-    };
-    testimonial: {
-      heading: string;
-      quote: string;
-      author: string;
-      placeholder?: string;
-    };
-    screens: {
-      heading: string;
-      note: string;
-      /** `wide` items span the full width of the gallery. */
-      items: { src: string; alt: string; caption: string; wide?: boolean }[];
-    };
-    next: { label: string; name: string };
-  };
+  caseStudyUi: { back: string; linksLabel: string };
+  caseStudies: Record<CaseStudySlug, CaseStudy>;
   easterEgg: { toast: string };
 };
