@@ -18,6 +18,9 @@ export function pageMetadata({
     metadataBase: new URL(site.url),
     title,
     description,
+    authors: [{ name: "Piotr Zięcina", url: site.url }],
+    // LinkedIn's Post Inspector reads the publish date from this tag.
+    other: { publish_date: site.launched },
     alternates: {
       canonical: path(locale),
       languages: { ...languages, "x-default": path("en") },

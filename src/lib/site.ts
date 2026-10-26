@@ -22,6 +22,8 @@ export const site = {
   stajnia: "https://stajnialauden.pl",
   buildBudgetDemo: "https://build-budget-app-web.vercel.app",
   buildBudgetRepo: "https://github.com/softdevpz/build-budget-app",
+  /** First public release, used as the publish date in page metadata. */
+  launched: "2026-10-22T00:00:00+02:00",
 } as const;
 
 /** Site-relative paths, with the trailing slash the static export uses. */

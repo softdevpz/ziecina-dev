@@ -60,7 +60,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - Lighthouse mobile, local: home 92/100/100/100, case study 96/100/100/100. LCP element is the hero portrait (render delay under simulated throttling).
 - Cloudflare Web Analytics is on (automatic setup, 2026-10-22): the beacon is injected at the edge, no code in the repo. Verified on /en/, /pl/ and the case study.
 - Google Search Console: domain property verified by a separate `google-site-verification` TXT record on the apex (SPF untouched); sitemap submitted (2026-10-22). Keep the TXT record, Google re-checks it.
-- LinkedIn Post Inspector run for /en/ on 2026-10-22: the OG card shows correctly. "No author / publish date" warnings are article-only fields, ignored on purpose.
+- LinkedIn Post Inspector run for /en/ on 2026-10-22: the OG card shows correctly. Since 2026-10-26 every page also has `<meta name="author">` and `<meta name="publish_date">` (= `site.launched`, 2026-10-22) so the inspector shows no missing fields.
 
 ## Plan
 0. Decisions ✅ · 1. Copy ✅ (v1 approved) · 2. Visual mockup ✅ (further changes happen in code) · 3. Implementation (v1 built, builds clean) ·
