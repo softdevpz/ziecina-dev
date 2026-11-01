@@ -15,6 +15,10 @@ export const otherLocale = (locale: Locale): Locale => (locale === "en" ? "pl" :
 export const site = {
   url: "https://ziecina.dev",
   email: "piotr@ziecina.dev",
+  /** Shown on the business page only; the portfolio pages stay without a phone number. */
+  phone: { href: "tel:+48725696313", label: "725 696 313" },
+  /** Google Calendar booking page for the 15-minute demo. Until it is set, the button opens an e-mail. */
+  booking: "https://calendar.app.google/2XzfSBLGVgsZMKwL9",
   github: "https://github.com/softdevpz",
   linkedin: "https://www.linkedin.com/in/piotr-ziecina",
   sourceRepo: "https://github.com/softdevpz/ziecina-dev",
@@ -37,4 +41,6 @@ export const paths = {
   caseStudy: (slug: CaseStudySlug, locale: Locale) => `/${locale}/projects/${caseStudySlugs[slug]}/`,
   stajnia: (locale: Locale) => paths.caseStudy("stajnia", locale),
   buildBudget: (locale: Locale) => paths.caseStudy("buildBudget", locale),
+  /** Polish only: the offer is for Polish businesses. */
+  forBusiness: "/pl/dla-firm/",
 };

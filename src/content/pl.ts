@@ -188,6 +188,7 @@ export const pl: Dictionary = {
     copy: "Kopiuj",
     copied: "Skopiowano",
     copyFallback: "Naciśnij ⌘C / Ctrl+C, aby skopiować",
+    business: { text: "Prowadzisz firmę? Tworzę też systemy szyte na miarę dla małych firm.", link: "Zobacz ofertę" },
   },
   footer: { builtWith: "Zbudowane w Next.js", source: "Kod na GitHubie" },
   caseStudyUi: { back: "Wszystkie projekty", linksLabel: "Linki" },

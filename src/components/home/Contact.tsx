@@ -1,5 +1,6 @@
+import Link from "next/link";
 import type { Dictionary } from "@/content/types";
-import { site } from "@/lib/site";
+import { paths, site } from "@/lib/site";
 import { CopyEmail } from "../CopyEmail";
 import { Section } from "./SectionHead";
 
@@ -19,6 +20,14 @@ export function Contact({ dict }: { dict: Dictionary }) {
           GitHub ↗
         </a>
       </div>
+      {t.business && (
+        <p className="mt-12 text-[15px] text-muted">
+          {t.business.text}{" "}
+          <Link href={paths.forBusiness} className="text-fg underline underline-offset-4 hover:text-accent">
+            {t.business.link} →
+          </Link>
+        </p>
+      )}
     </Section>
   );
 }

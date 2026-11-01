@@ -2,6 +2,10 @@
  * Shape of the site copy. `en.ts` and `pl.ts` must both satisfy it, so a missing
  * translation is a type error. Strings may use **bold** markup (see <Rich>).
  */
+
+/** A screenshot in a gallery; `wide` ones span the full width. */
+export type Screenshot = { src: string; alt: string; caption: string; wide?: boolean };
+
 export type CaseStudySlug = "stajnia" | "buildBudget";
 
 /** One project case study page. Optional sections are simply not rendered. */
@@ -24,7 +28,7 @@ export type CaseStudy = {
     heading: string;
     note: string;
     /** `wide` items span the full width of the gallery. */
-    items: { src: string; alt: string; caption: string; wide?: boolean }[];
+    items: Screenshot[];
   };
   next: { label: string; name: string; slug: CaseStudySlug };
 };
@@ -118,9 +122,45 @@ export type Dictionary = {
     copy: string;
     copied: string;
     copyFallback: string;
+    /** A low-key link to the business page; Polish only. */
+    business?: { text: string; link: string };
   };
   footer: { builtWith: string; source: string };
   caseStudyUi: { back: string; linksLabel: string };
   caseStudies: Record<CaseStudySlug, CaseStudy>;
   easterEgg: { toast: string };
+};
+
+/** The Polish-only page for small businesses (/pl/dla-firm/), written for owners, not recruiters. */
+export type ForBusiness = {
+  seo: { title: string; description: string };
+  hero: { eyebrow: string; heading: string; lede: string; book: string; example: string; call: string };
+  problems: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    items: { title: string; body: string }[];
+    outcome: { label: string; body: string };
+  };
+  audience: { eyebrow: string; heading: string; intro: string; items: string[]; note: string };
+  example: {
+    eyebrow: string;
+    heading: string;
+    before: { label: string; body: string };
+    changesLabel: string;
+    changes: { title: string; body: string }[];
+    screensNote: string;
+    screens: Screenshot[];
+    caseStudy: string;
+    tech: { label: string; body: string };
+  };
+  process: { eyebrow: string; heading: string; steps: { title: string; body: string }[] };
+  pricing: {
+    eyebrow: string;
+    heading: string;
+    rows: { item: string; price: string; includes: string }[];
+    note: string;
+  };
+  faq: { eyebrow: string; heading: string; items: { q: string; a: string }[] };
+  contact: { eyebrow: string; heading: string; lead: string; book: string; call: string; write: string; area: string };
 };

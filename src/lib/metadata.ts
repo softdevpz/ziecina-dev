@@ -7,13 +7,18 @@ export function pageMetadata({
   path,
   title,
   description,
+  only,
 }: {
   locale: Locale;
   path: (l: Locale) => string;
   title: string;
   description: string;
+  /** Set for a page that exists in one language only: no hreflang alternates then. */
+  only?: Locale;
 }): Metadata {
-  const languages = Object.fromEntries(locales.map((l) => [l, path(l)]));
+  const languages = only
+    ? undefined
+    : { ...Object.fromEntries(locales.map((l) => [l, path(l)])), "x-default": path("en") };
   return {
     metadataBase: new URL(site.url),
     title,
@@ -23,7 +28,7 @@ export function pageMetadata({
     other: { publish_date: site.launched },
     alternates: {
       canonical: path(locale),
-      languages: { ...languages, "x-default": path("en") },
+      languages,
     },
     openGraph: {
       type: "website",

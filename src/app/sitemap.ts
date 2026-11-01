@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
 import { locales, paths, site } from "@/lib/site";
 
-// Pre-rendered to out/sitemap.xml. Each page lists its other-language version.
+// Pre-rendered to out/sitemap.xml. Each page lists its other-language version;
+// the business page exists in Polish only.
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -10,7 +11,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: paths.stajnia, priority: 0.8 },
     { path: paths.buildBudget, priority: 0.8 },
   ];
-  return pages.flatMap(({ path, priority }) =>
+  const translated: MetadataRoute.Sitemap = pages.flatMap(({ path, priority }) =>
     locales.map((locale) => ({
       url: `${site.url}${path(locale)}`,
       changeFrequency: "monthly" as const,
@@ -20,4 +21,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
+  return [...translated, { url: `${site.url}${paths.forBusiness}`, changeFrequency: "monthly", priority: 0.8 }];
 }

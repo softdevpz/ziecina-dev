@@ -8,9 +8,11 @@ type Props = {
   dict: Dictionary;
   /** The same page in each language, for the switcher. */
   alternates: Record<Locale, string>;
+  /** Replaces the portfolio menu and the CV button, e.g. on the business page. */
+  cta?: { href: string; label: string };
 };
 
-export function Header({ locale, dict, alternates }: Props) {
+export function Header({ locale, dict, alternates, cta }: Props) {
   const home = paths.home(locale);
   const links = [
     { href: `${home}#projects`, label: dict.nav.projects },
@@ -28,15 +30,17 @@ export function Header({ locale, dict, alternates }: Props) {
       <div className="wrap flex items-center gap-5 py-3.5">
         <Logo href={home} />
 
-        <nav aria-label="Main" className="ml-auto hidden gap-[22px] min-[900px]:flex">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-[15px] text-muted transition-colors hover:text-fg">
-              {l.label}
-            </a>
-          ))}
-        </nav>
+        {!cta && (
+          <nav aria-label="Main" className="ml-auto hidden gap-[22px] min-[900px]:flex">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} className="text-[15px] text-muted transition-colors hover:text-fg">
+                {l.label}
+              </a>
+            ))}
+          </nav>
+        )}
 
-        <div className="ml-auto flex items-center gap-2.5 min-[900px]:ml-0">
+        <div className={`ml-auto flex items-center gap-2.5 ${cta ? "" : "min-[900px]:ml-0"}`}>
           <div
             role="group"
             aria-label={dict.nav.languageLabel}
@@ -62,35 +66,43 @@ export function Header({ locale, dict, alternates }: Props) {
             )}
           </div>
           <ThemeToggle label={dict.nav.themeToggle} />
-          <a href={site.cv} download className="btn btn-sm btn-primary max-[480px]:hidden">
-            {dict.nav.downloadCv}
-          </a>
-
-          {/* Mobile menu without JavaScript. */}
-          <details className="group relative min-[900px]:hidden">
-            <summary
-              aria-label={dict.nav.menu}
-              className="icon-btn cursor-pointer list-none [&::-webkit-details-marker]:hidden"
-            >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="size-[17px]">
-                <path d="M4 7h16M4 12h16M4 17h16" className="group-open:hidden" />
-                <path d="M6 6l12 12M18 6L6 18" className="hidden group-open:block" />
-              </svg>
-            </summary>
-            <nav
-              aria-label="Mobile"
-              className="absolute right-0 mt-3 grid w-56 gap-1 rounded-xl border border-line bg-bg p-2 shadow-xl"
-            >
-              {links.map((l) => (
-                <a key={l.href} href={l.href} className="rounded-lg px-3 py-2.5 hover:bg-surface">
-                  {l.label}
-                </a>
-              ))}
-              <a href={site.cv} download className="btn btn-primary mt-1 justify-center">
+          {cta ? (
+            <a href={cta.href} className="btn btn-sm btn-primary max-[480px]:hidden">
+              {cta.label}
+            </a>
+          ) : (
+            <>
+              <a href={site.cv} download className="btn btn-sm btn-primary max-[480px]:hidden">
                 {dict.nav.downloadCv}
               </a>
-            </nav>
-          </details>
+
+              {/* Mobile menu without JavaScript. */}
+              <details className="group relative min-[900px]:hidden">
+                <summary
+                  aria-label={dict.nav.menu}
+                  className="icon-btn cursor-pointer list-none [&::-webkit-details-marker]:hidden"
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true" className="size-[17px]">
+                    <path d="M4 7h16M4 12h16M4 17h16" className="group-open:hidden" />
+                    <path d="M6 6l12 12M18 6L6 18" className="hidden group-open:block" />
+                  </svg>
+                </summary>
+                <nav
+                  aria-label="Mobile"
+                  className="absolute right-0 mt-3 grid w-56 gap-1 rounded-xl border border-line bg-bg p-2 shadow-xl"
+                >
+                  {links.map((l) => (
+                    <a key={l.href} href={l.href} className="rounded-lg px-3 py-2.5 hover:bg-surface">
+                      {l.label}
+                    </a>
+                  ))}
+                  <a href={site.cv} download className="btn btn-primary mt-1 justify-center">
+                    {dict.nav.downloadCv}
+                  </a>
+                </nav>
+              </details>
+            </>
+          )}
         </div>
       </div>
     </header>
