@@ -268,13 +268,6 @@ export const en: Dictionary = {
       title: "A PWA instead of a native app",
       body: "I started with a React Native (Expo) app. After watching how the owner actually used her phone, we switched to a single installable web app. It's one codebase for every device, needs no app store, and updates instantly. That was the right call, and I'd make it again.",
     },
-      testimonial: {
-      heading: "Client",
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      author: "Lorem Ipsum, owner, Stajnia Lauden",
-      placeholder: "placeholder · real testimonial pending",
-    },
       screens: {
       heading: "Screens",
       note: "Screenshots from the demo environment. Names, e-mails, horse names and amounts are blurred.",

@@ -267,13 +267,6 @@ export const pl: Dictionary = {
       title: "PWA zamiast aplikacji natywnej",
       body: "Zacząłem od aplikacji w React Native (Expo). Po tym, jak zobaczyłem, jak właścicielka naprawdę korzysta z telefonu, przeszliśmy na jedną aplikację webową, którą można zainstalować na ekranie głównym. Jeden kod dla każdego urządzenia, bez sklepu z aplikacjami i z natychmiastowymi aktualizacjami. To była dobra decyzja i podjąłbym ją ponownie.",
     },
-      testimonial: {
-      heading: "Opinia klientki",
-      quote:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      author: "Lorem Ipsum, właścicielka, Stajnia Lauden",
-      placeholder: "placeholder · prawdziwa opinia w drodze",
-    },
       screens: {
       heading: "Ekrany",
       note: "Zrzuty ze środowiska demo. Imiona, e-maile, imiona koni i kwoty są zamazane.",

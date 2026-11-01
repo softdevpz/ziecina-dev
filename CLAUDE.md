@@ -11,10 +11,11 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - **DNS:** add only records for `ziecina.dev` / `www`. NEVER touch MX/SPF/DKIM/DMARC, because piotr@ziecina.dev depends on them.
 - **Sections:** hero → projects (case studies) → experience → skills → about → contact. No skill bars.
 - **Experience** is a compact timeline (2026-10-26, after feedback that copying the CV onto the site feels redundant): per job only role, company, period, one sentence and up to two results; details stay in the CV.
+- **"Dla firm" page (planned 2026-11-01):** a PL-only page for small businesses (problems custom systems solve, Stajnia Lauden as the example, how we work, pricing "od…", FAQ, CTA "Umów 15-minutowe demo"). Content draft in a Claude Docs doc from a browser session. Piotr's phone number may appear ON THIS PAGE ONLY (still not on the portfolio pages). Open: prices, backup promise, travel range, Lauden numbers after the first month. Homepage gets one line linking to it.
 - **Blog:** postponed (2026-10-26). Plan when revisited: Piotr first writes 2–3 LinkedIn posts; if it sticks, add a "Notes" section (MDX in the repo, no CMS). Topic ideas: refresh-token race, PWA vs native for Stajnia, UI for older users, Prisma on Alpine, Next.js 16 static site on Cloudflare Workers.
 - **Stajnia Lauden** (~/Projects/stadnina-app): may be shown publicly, but the **owner must approve the content before publishing**. The repo is **private** (kept as a product), so never link to the code. Screenshots use demo data only.
   - Linking https://stajnialauden.pl is confirmed (2026-10-16).
-  - Testimonial: lorem ipsum placeholder until the owner sends the real one.
+  - Testimonial: section hidden (removed from `caseStudies.stajnia`, 2026-11-01) until the owner sends a real one; the owner has agreed to the name and screenshots in general, but sensitive data still needs her OK.
   - Screenshots are live (2026-10-22) in `public/images/stajnia/`: task board, owner boxes, ordering, admin users, billing. Taken from the demo environment, with names, e-mails, horse names, herd numbers and amounts pixelated (script: blur rectangles, then resize to 1400 px). Any new screenshot must be redacted the same way before it goes into the public repo. No feed-room screen screenshot yet.
   - Users of the app are described as "owners (admins)" and "older people" (no exact age), per Piotr.
 - **Build Budget** is public: github.com/softdevpz/build-budget-app, demo at build-budget-app-web.vercel.app.
