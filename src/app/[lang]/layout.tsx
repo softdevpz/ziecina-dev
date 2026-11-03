@@ -19,7 +19,7 @@ export default async function LangLayout({ children, params }: LayoutProps<"/[la
   const dict = getDictionary(lang);
 
   return (
-    <html lang={lang} className={fontVariables} suppressHydrationWarning>
+    <html lang={lang} className={fontVariables} data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
