@@ -41,7 +41,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - Theme: inline `themeScript` in `<head>` (no flash) + `ThemeToggle` (localStorage `theme`).
 - Easter egg `PowerLevel`: Konami code or 7 quick clicks on the logo → orange aura on the portrait + "Power level: over 9000!".
 - Commands: `npm run dev`, `npm run build` (→ `out/`), `npm run preview` (serves `out/` on :4173), `npm run lint`.
-- Public assets: `public/images/portrait.png` (cutout), `og-avatar.jpg`, `icon.svg`, `public/cv/Piotr-Ziecina-CV.pdf` (latest CV as of 2026-10-16, source: `~/Desktop/CV/Proby/Piotr_Ziecina.pdf`; one English CV for both languages).
+- Public assets: `public/images/portrait.png` (cutout), `og-avatar.jpg`, `icon.svg`, `public/cv/Piotr-Ziecina-CV.pdf` (latest CV as of 2026-11-06, source: `~/Desktop/CV/Proby/Piotr_Ziecina.pdf`; one English CV for both languages).
 - CV links: sticky header + "Full CV" under Experience (removed from Contact on 2026-10-22).
 - Hero on phones: intro → photo → buttons/location (2026-10-26). Case study accessibility rules are plain text (tiles removed).
 - Case studies (2026-10-26): one shared layout `CaseStudyView` + `caseStudyRoute(slug)`; content in `dict.caseStudies.{stajnia,buildBudget}` (type `CaseStudy`, optional sections: users, testimonial, screens). Routes `/[lang]/projects/stajnia-lauden/` and `/[lang]/projects/build-budget/`; "Next project" links cycle between them.
