@@ -91,7 +91,8 @@ export const pl: Dictionary = {
       budget: {
         title: "Dom w Sobótce",
         meta: "budżet · PLN",
-        spentOf: "Wydano z 780 000",
+        spentOf: "Wydano z 780\u00a0000 zł",
+        spent: "512\u00a0340",
         stages: [
           { name: "Fundamenty", percent: 98 },
           { name: "Ściany", percent: 107 },
@@ -112,7 +113,7 @@ export const pl: Dictionary = {
         period: "2024 – obecnie",
         role: "Software Developer",
         company: "SmartBear",
-        summary: "Dwa produkty do testowania z AI: Reflect (Vue.js, Scala) i Visual Test (React, Next.js, NestJS).",
+        summary: "Dwa produkty do testowania z AI: Reflect (Vue.js, Scala) i Visual Test (React, Next.js, NestJS). Budowałem funkcje oparte na wewnętrznym modelu LLM firmy: zapytania do jego API i obsługa odpowiedzi w produkcie.",
         results: ["Zaprojektowałem i zbudowałem (frontend i backend) wyszukiwarkę danych testu, która stała się głównym narzędziem działu wsparcia klienta.", "Zmniejszyłem liczbę podatności bezpieczeństwa o 40% dzięki regularnym audytom i aktualizacjom zależności."],
       },
       {
@@ -146,18 +147,22 @@ export const pl: Dictionary = {
           "Node.js, NestJS, Prisma, TypeORM, PostgreSQL, MySQL, REST, GraphQL, WebSockets, Redis, BullMQ, Scala (komercyjnie)",
       },
       {
+        name: "AI",
+        items:
+          "Integracja z wewnętrznym modelem LLM przez API (SmartBear), agenci AI w Claude: tryb planowania, praca agentowa, spec-driven development, własne skille i wymagania w plikach Markdown",
+      },
+      {
         name: "Chmura i DevOps",
         items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS",
       },
       {
         name: "Jakość",
-        items: "Jest, Supertest, testy jednostkowe i e2e, audyt zależności",
+        items: "Jest, Vitest, React Testing Library, Playwright, Supertest, testy jednostkowe i e2e, audyt zależności",
       },
       {
-        name: "Integracje",
-        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push",
+        name: "Integracje i narzędzia",
+        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push, Figma, Jira, Git",
       },
-      { name: "Narzędzia", items: "Figma, Jira, Git" },
     ],
   },
   about: {
@@ -174,7 +179,7 @@ export const pl: Dictionary = {
         value:
           "Inżynier elektroniki i telekomunikacji, Politechnika Wrocławska",
       },
-      { label: "Języki", value: "polski (ojczysty) · angielski (B2)" },
+      { label: "Języki", value: "polski (ojczysty) · angielski (B2), na co dzień w międzynarodowym zespole" },
       {
         label: "Szukam",
         value: "Roli full stack lub frontend, zdalnie lub hybrydowo",

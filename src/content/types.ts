@@ -91,6 +91,8 @@ export type Dictionary = {
         title: string;
         meta: string;
         spentOf: string;
+        /** Formatted for the language ("512,340" / "512 340"). */
+        spent: string;
         stages: { name: string; percent: number }[];
         presence: string;
       };

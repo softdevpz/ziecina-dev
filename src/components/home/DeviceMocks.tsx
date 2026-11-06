@@ -46,7 +46,7 @@ export function BudgetMock({ budget, demoLabel }: { budget: Dictionary["projects
       <div className="grid gap-3 p-3.5">
         <div className="flex items-baseline justify-between">
           <span className="text-muted">{budget.spentOf}</span>
-          <strong className="font-display text-2xl font-bold tabular-nums">512 340</strong>
+          <strong className="font-display text-2xl font-bold tabular-nums">{budget.spent}</strong>
         </div>
         {budget.stages.map((stage) => (
           <div key={stage.name} className="grid grid-cols-[110px_minmax(0,1fr)_54px] items-center gap-2.5 tabular-nums">

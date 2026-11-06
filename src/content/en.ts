@@ -91,7 +91,8 @@ export const en: Dictionary = {
       budget: {
         title: "House in Sobótka",
         meta: "budget · PLN",
-        spentOf: "Spent of 780,000",
+        spentOf: "Spent of 780,000 PLN",
+        spent: "512,340",
         stages: [
           { name: "Foundations", percent: 98 },
           { name: "Walls", percent: 107 },
@@ -112,7 +113,7 @@ export const en: Dictionary = {
         period: "2024 – present",
         role: "Software Developer",
         company: "SmartBear",
-        summary: "Two AI-powered testing products: Reflect (Vue.js, Scala) and Visual Test (React, Next.js, NestJS).",
+        summary: "Two AI-powered testing products: Reflect (Vue.js, Scala) and Visual Test (React, Next.js, NestJS). Built features on the company's in-house LLM: requests to its API and handling the responses in the product.",
         results: ["Designed and built a test-data lookup, frontend and backend, that became the customer support team's main tool.", "Cut security vulnerabilities by 40% through systematic dependency audits and upgrades."],
       },
       {
@@ -146,19 +147,23 @@ export const en: Dictionary = {
           "Node.js, NestJS, Prisma, TypeORM, PostgreSQL, MySQL, REST, GraphQL, WebSockets, Redis, BullMQ, Scala (commercial)",
       },
       {
+        name: "AI",
+        items:
+          "In-house LLM integration via API (SmartBear), AI agents in Claude: plan mode, agentic workflows, spec-driven development, custom skills and requirements in Markdown",
+      },
+      {
         name: "Cloud & DevOps",
         items: "AWS, Docker, Terraform, GitHub Actions, Caddy, VPS",
       },
       {
         name: "Quality",
         items:
-          "Jest, Supertest, unit and end-to-end testing, dependency auditing",
+          "Jest, Vitest, React Testing Library, Playwright, Supertest, unit and end-to-end testing, dependency auditing",
       },
       {
-        name: "Integrations",
-        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push",
+        name: "Integrations & tools",
+        items: "Stripe, PayPal, SEPA Direct Debit, Amplitude, Web Push, Figma, Jira, Git",
       },
-      { name: "Tools", items: "Figma, Jira, Git" },
     ],
   },
   about: {
@@ -173,9 +178,9 @@ export const en: Dictionary = {
       {
         label: "Education",
         value:
-          "BSc, Electronics and Telecommunications, Wrocław University of Technology",
+          "BSc, Electronics and Telecommunications, Wrocław University of Science and Technology",
       },
-      { label: "Languages", value: "Polish (native) · English (B2)" },
+      { label: "Languages", value: "Polish (native) · English (B2), used daily in an international team" },
       {
         label: "Looking for",
         value: "Full stack or frontend role, remote or hybrid",
