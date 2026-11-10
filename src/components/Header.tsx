@@ -6,8 +6,8 @@ import { ThemeToggle } from "./ThemeToggle";
 type Props = {
   locale: Locale;
   dict: Dictionary;
-  /** The same page in each language, for the switcher. */
-  alternates: Record<Locale, string>;
+  /** The same page in each language, for the switcher. A page that exists in one language only hides it. */
+  alternates: Partial<Record<Locale, string>>;
   /** Replaces the portfolio menu and the CV button, e.g. on the business page. */
   cta?: { href: string; label: string };
 };
@@ -21,6 +21,7 @@ export function Header({ locale, dict, alternates, cta }: Props) {
     { href: `${home}#about`, label: dict.nav.about },
     { href: `${home}#contact`, label: dict.nav.contact },
   ];
+  const translated = locales.every((l) => alternates[l]);
 
   return (
     <header
@@ -41,30 +42,32 @@ export function Header({ locale, dict, alternates, cta }: Props) {
         )}
 
         <div className={`ml-auto flex items-center gap-2.5 ${cta ? "" : "min-[900px]:ml-0"}`}>
-          <div
-            role="group"
-            aria-label={dict.nav.languageLabel}
-            className="flex rounded-full border border-line p-0.5 font-mono text-xs"
-          >
-            {locales.map((l) =>
-              l === locale ? (
-                <span key={l} aria-current="true" className="rounded-full bg-fg px-2.5 py-1 text-bg uppercase">
-                  {l}
-                </span>
-              ) : (
-                <a
-                  key={l}
-                  href={alternates[l]}
-                  hrefLang={l}
-                  lang={l}
-                  title={dict.nav.otherLanguageName}
-                  className="rounded-full px-2.5 py-1 text-muted uppercase hover:text-fg"
-                >
-                  {l}
-                </a>
-              ),
-            )}
-          </div>
+          {translated && (
+            <div
+              role="group"
+              aria-label={dict.nav.languageLabel}
+              className="flex rounded-full border border-line p-0.5 font-mono text-xs"
+            >
+              {locales.map((l) =>
+                l === locale ? (
+                  <span key={l} aria-current="true" className="rounded-full bg-fg px-2.5 py-1 text-bg uppercase">
+                    {l}
+                  </span>
+                ) : (
+                  <a
+                    key={l}
+                    href={alternates[l]}
+                    hrefLang={l}
+                    lang={l}
+                    title={dict.nav.otherLanguageName}
+                    className="rounded-full px-2.5 py-1 text-muted uppercase hover:text-fg"
+                  >
+                    {l}
+                  </a>
+                ),
+              )}
+            </div>
+          )}
           <ThemeToggle label={dict.nav.themeToggle} />
           {cta ? (
             <a href={cta.href} className="btn btn-sm btn-primary max-[480px]:hidden">

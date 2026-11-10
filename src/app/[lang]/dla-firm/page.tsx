@@ -24,7 +24,7 @@ export default function ForBusinessPage() {
       <Header
         locale="pl"
         dict={getDictionary("pl")}
-        alternates={{ en: paths.home("en"), pl: paths.forBusiness }}
+        alternates={{ pl: paths.forBusiness }}
         cta={{ href: bookingHref, label: "Umów demo" }}
       />
       <main>
