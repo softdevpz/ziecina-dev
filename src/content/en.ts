@@ -275,10 +275,13 @@ export const en: Dictionary = {
     },
       screens: {
       heading: "Screens",
-      note: "Screenshots from the demo environment. Names, e-mails, horse names and amounts are blurred.",
+      note: "Screenshots from the demo environment and the live app. Names, e-mails, horse names and amounts are blurred.",
       items: [
         { src: "/images/stajnia/task-board.webp", alt: "Staff task board with numbered boxes and open tasks", caption: "Staff · task board on a tablet", wide: true },
         { src: "/images/stajnia/feed-room.webp", alt: "Wall-mounted feed-room screen with breakfast, lunch and dinner changes per box", caption: "Feed room · wall screen with today's feeding changes", wide: true },
+        { src: "/images/stajnia/walk-out.webp", alt: "Screen by the paddock exit with owner requests for individual boxes", caption: "Paddock exit · which horses stay in, which the owner turns out", wide: true },
+        { src: "/images/stajnia/stable-tablet.webp", alt: "Locked stable tablet with the box board, new messages and announced visits", caption: "Stable tablet · task board, tap to unlock" },
+        { src: "/images/stajnia/service-catalog.webp", alt: "Stable service catalogue with price, VAT, billing type, time of day and time window", caption: "Admin · service catalogue with billing rules" },
         { src: "/images/stajnia/owner-boxes.webp", alt: "Horse owner's home screen with stable announcements, leases and boxes", caption: "Horse owner · boxes and announcements" },
         { src: "/images/stajnia/order-service.webp", alt: "Ordering a one-off service from the catalogue", caption: "Horse owner · ordering a service" },
         { src: "/images/stajnia/admin-users.webp", alt: "Admin list of users with roles and balances", caption: "Admin · users and balances" },

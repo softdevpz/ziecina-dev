@@ -275,10 +275,13 @@ export const pl: Dictionary = {
     },
       screens: {
       heading: "Ekrany",
-      note: "Zrzuty ze środowiska demo. Imiona, e-maile, imiona koni i kwoty są zamazane.",
+      note: "Zrzuty ze środowiska demo i z działającej aplikacji. Imiona, e-maile, imiona koni i kwoty są zamazane.",
       items: [
         { src: "/images/stajnia/task-board.webp", alt: "Tablica zadań personelu z ponumerowanymi boksami i zadaniami", caption: "Personel · tablica zadań na tablecie", wide: true },
         { src: "/images/stajnia/feed-room.webp", alt: "Ekran w paszarni ze zmianami w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · ekran ścienny ze zmianami w karmieniu na dziś", wide: true },
+        { src: "/images/stajnia/walk-out.webp", alt: "Ekran przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · kto zostaje w boksie, kogo właściciel wypuści sam", wide: true },
+        { src: "/images/stajnia/stable-tablet.webp", alt: "Zablokowany tablet w stajni z tablicą boksów, nowymi wiadomościami i zapowiedzianymi wizytami", caption: "Tablet w stajni · tablica zadań, dotknięcie odblokowuje pracę" },
+        { src: "/images/stajnia/service-catalog.webp", alt: "Katalog usług stajni z ceną, VAT, typem rozliczenia, porą i oknem czasowym", caption: "Administrator · katalog usług z zasadami rozliczeń" },
         { src: "/images/stajnia/owner-boxes.webp", alt: "Ekran główny właściciela konia z ogłoszeniami, dzierżawami i boksami", caption: "Właściciel konia · boksy i ogłoszenia" },
         { src: "/images/stajnia/order-service.webp", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Właściciel konia · zamawianie usługi" },
         { src: "/images/stajnia/admin-users.webp", alt: "Lista użytkowników w panelu administratora z rolami i saldami", caption: "Administrator · użytkownicy i salda" },
