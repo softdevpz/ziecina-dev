@@ -54,7 +54,8 @@ export function Hero({ dict }: { dict: Dictionary }) {
             width={640}
             height={800}
             fetchPriority="high"
-            className="relative block aspect-[4/5] h-auto w-full rounded-[10px] border border-line bg-photo-bg object-cover transition-colors"
+            // Mirrored on phones: the photo sits at the left edge there, so he faces into the page, not off it.
+            className="relative block aspect-[4/5] h-auto w-full rounded-[10px] border border-line bg-photo-bg object-cover transition-colors max-[819px]:-scale-x-100"
           />
           <figcaption className="absolute right-[-8px] bottom-6.5 rounded-lg border border-line bg-bg px-3 py-2 font-mono text-xs leading-normal shadow-[0_6px_24px_rgb(0_0_0/0.08)] min-[820px]:right-auto min-[820px]:left-[-14px]">
             {t.portraitCaption.map((line) => (
