@@ -1,6 +1,7 @@
 import type { Dictionary } from "@/content/types";
 import { type Locale, locales, paths, site } from "@/lib/site";
 import { Logo } from "./Logo";
+import { MobileMenuCloser } from "./MobileMenuCloser";
 import { ThemeToggle } from "./ThemeToggle";
 
 type Props = {
@@ -80,7 +81,7 @@ export function Header({ locale, dict, alternates, cta }: Props) {
               </a>
 
               {/* Mobile menu without JavaScript. */}
-              <details className="group relative min-[900px]:hidden">
+              <details data-mobile-menu className="group relative min-[900px]:hidden">
                 <summary
                   aria-label={dict.nav.menu}
                   className="icon-btn cursor-pointer list-none [&::-webkit-details-marker]:hidden"
@@ -104,6 +105,7 @@ export function Header({ locale, dict, alternates, cta }: Props) {
                   </a>
                 </nav>
               </details>
+              <MobileMenuCloser />
             </>
           )}
         </div>
