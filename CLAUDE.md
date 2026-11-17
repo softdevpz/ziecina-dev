@@ -34,7 +34,7 @@ session id `79ada3ba-86d6-4d63-98ed-a04536124c38`.
 - CV PDF: `~/Desktop/Piotr Ziecina CV.pdf` (the latest version may be elsewhere; ask the user).
 
 ## Code (stage 3, started 2026-10-16)
-- **Next.js 16.4** (App Router, Turbopack) + React 19 + Tailwind v4 + TypeScript. This is newer than the model's training data: read `node_modules/next/dist/docs/` before using a Next API.
+- **Next.js 16.4** (16.4.6 since 2026-11-17, security patch) (App Router, Turbopack) + React 19 + Tailwind v4 + TypeScript. This is newer than the model's training data: read `node_modules/next/dist/docs/` before using a Next API.
 - `next.config.ts`: `output: "export"`, `trailingSlash`, `experimental.globalNotFound`, `turbopack.root` (a stray `~/package-lock.json` exists).
 - Routes: `src/app/[lang]/` (root layout with `<html lang>`, home page, `projects/stajnia-lauden/`), `src/app/(root)/page.tsx` (`/` → JS redirect to /pl/ or /en/ by browser language), `src/app/global-not-found.tsx` (bilingual "Namek" 404 with `NamekExplosion`: a canvas-drawn green planet that cracks, explodes and re-forms on a 7.5 s loop; static planet with reduced motion).
 - `src/lib/site.ts`: locales, links (email, GitHub, LinkedIn, CV path), paths. `src/lib/metadata.ts`: canonical + hreflang + OG.
