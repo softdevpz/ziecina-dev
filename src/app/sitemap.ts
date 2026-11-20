@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { locales, paths, site } from "@/lib/site";
 
 // Pre-rendered to out/sitemap.xml. Each page lists its other-language version;
-// the business page exists in Polish only.
+// the business pages exist in Polish only.
 export const dynamic = "force-static";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -21,5 +21,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     })),
   );
-  return [...translated, { url: `${site.url}${paths.forBusiness}`, changeFrequency: "monthly", priority: 0.8 }];
+  const business: MetadataRoute.Sitemap = [
+    { url: `${site.url}${paths.forBusiness}`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${site.url}${paths.forProduction}`, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${site.url}${paths.forPartners}`, changeFrequency: "monthly", priority: 0.5 },
+  ];
+  return [...translated, ...business];
 }

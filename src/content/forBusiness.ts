@@ -1,121 +1,142 @@
 import type { ForBusiness } from "./types";
 
-// Prices use non-breaking spaces so "12 000 zł" never wraps.
+// Written for owners and managers of firms with roughly 10–100 people: concrete
+// effects (goods, people, time, money), no tech jargon outside the "Technicznie" note.
+// Prices use non-breaking spaces so "1 000 zł" never wraps.
 export const forBusiness: ForBusiness = {
   seo: {
-    title: "Systemy dla firm szyte na miarę — Piotr Zięcina",
+    title: "Automatyzacja procesów i systemy dla firm — Piotr Zięcina",
     description:
-      "Zamówienia, grafiki, rozliczenia i kontakt z klientami w jednej aplikacji. Projektuję, buduję i utrzymuję systemy dla małych i średnich firm. Umów 15-minutowe demo.",
+      "Systemy dopasowane do procesów firmy: obieg materiałów, zlecenia, rozliczenia i raporty w jednym miejscu, zintegrowane z programem księgowym. Bezpłatna rozmowa, 15–30 minut.",
   },
   hero: {
     eyebrow: "Dla firm",
-    heading: "Twoja firma działa na Messengerze, Excelu i pamięci? Zrobię dla niej jedną aplikację.",
-    lede: "Projektuję, buduję i utrzymuję systemy szyte na miarę dla małych i średnich firm: zamówienia, grafiki, rozliczenia i komunikacja z klientami w jednym miejscu. Na telefonie, tablecie i komputerze, bez instalowania niczego ze sklepu.",
-    book: "Umów 15-minutowe demo",
-    example: "Zobacz przykład wdrożenia ↓",
+    heading: "Dane z hali, magazynu i biura w jednym systemie.",
+    lede: "Projektuję i wdrażam systemy dopasowane do procesów Twojej firmy. Pracownik wpisuje dane raz, w miejscu, w którym pracuje, a stany, raporty i rozliczenia liczą się same.",
+    points: [
+      "Mniej ręcznego przepisywania między działami",
+      "Aktualny obraz stanów, zleceń i wysyłek",
+      "Integracja z programem, którego już używasz",
+    ],
+    book: "Umów bezpłatną rozmowę",
     call: "albo zadzwoń:",
+    secondary: { label: "Zobacz przykłady ↓", href: "#przyklady" },
   },
   problems: {
-    eyebrow: "Jakie problemy rozwiązuję",
-    heading: "Brzmi znajomo?",
-    intro:
-      "Gotowe programy pasują do wszystkich po trochu, a do Ciebie w ogóle. Jeśli rozpoznajesz u siebie choć dwa z tych punktów, system szyty na miarę prawdopodobnie zwróci się szybciej, niż myślisz.",
+    eyebrow: "Problemy, które rozwiązuję",
+    heading: "Gdzie firma traci czas i pieniądze",
     items: [
       {
-        title: "Ustalenia giną w komunikatorach",
-        body: "Prośby klientów i polecenia dla pracowników przychodzą przez Messengera, SMS-y i telefony. Coś się zawsze zgubi, a potem nikt nie wie, kto co obiecał.",
+        title: "Te same dane wpisywane kilka razy",
+        body: "Magazyn, produkcja, biuro i księgowość prowadzą własne arkusze i przepisują je między sobą.",
       },
       {
-        title: "Koniec miesiąca to dzień liczenia",
-        body: "Abonamenty, usługi dodatkowe i dopłaty zbierasz ręcznie z zeszytu i Excela, a potem tłumaczysz klientom każdą pozycję.",
+        title: "Brak aktualnego obrazu",
+        body: "Żeby wiedzieć, co jest na stanie, co w realizacji i co wyjechało, trzeba kogoś zapytać.",
       },
       {
-        title: "Pracownicy pytają, co dziś trzeba zrobić",
-        body: "Plan dnia jest w głowie właściciela albo na kartce, która nie nadąża za zmianami.",
+        title: "Raporty składane ręcznie",
+        body: "Zużycie, wydajność, odpad i rozliczenia klientów liczy się pod koniec miesiąca z notatek.",
       },
       {
-        title: "Klient nie wie, na czym stoi",
-        body: "Nie widzi swoich zamówień, salda ani historii płatności, więc pyta o to Ciebie.",
+        title: "Informacja ginie między działami",
+        body: "Zlecenia i zmiany krążą mailem i telefonem, a błędy wychodzą dopiero u klienta.",
       },
       {
-        title: "Kilka programów, które się nie dogadują",
-        body: "Osobno grafik, osobno rozliczenia, osobno kontakt z klientami, a dane przepisujesz ręcznie.",
+        title: "Proces zależy od jednej osoby",
+        body: "Kiedy jej nie ma, nikt nie wie, jak coś policzyć albo gdzie szukać.",
       },
       {
-        title: "Gotowy program wymusza cudzy sposób pracy",
-        body: "Nie da się w nim ustawić Twoich cen, Twoich usług ani Twoich zasad.",
+        title: "Gotowy program nie pasuje",
+        body: "Firma dopasowuje się do programu albo obchodzi go w Excelu.",
       },
     ],
-    outcome: {
-      label: "Co dostajesz w zamian",
-      body: "Jedną aplikację, w której każdy (właściciel, pracownik, klient) widzi tylko to, czego potrzebuje. Zamówienia trafiają od razu na listę zadań, rozliczenia liczą się same, a powiadomienia przychodzą na telefon.",
-    },
+  },
+  services: {
+    eyebrow: "Co robię",
+    heading: "Trzy obszary, w których pomagam",
+    items: [
+      {
+        title: "Obieg materiałów i produkcji",
+        body: "Przyjęcie dostawy, zużycie i wyprodukowana ilość na każdym etapie, odpad, wydanie do klienta. Stany na bieżąco i śledzenie partii: wiesz, z której dostawy powstał towar, który pojechał do klienta. Na hali działa na tablecie lub telefonie, z kodami QR i dużymi przyciskami.",
+        more: "Więcej o systemach dla produkcji",
+      },
+      {
+        title: "Zlecenia, grafiki i rozliczenia",
+        body: "Zamówienia od klientów trafiają od razu na listę zadań zespołu. Grafiki, abonamenty i usługi dodatkowe rozliczają się automatycznie, a klient widzi swoje saldo i historię.",
+      },
+      {
+        title: "Integracje i automatyzacja",
+        body: "Połączenie z programem księgowym lub magazynowym, eksport dokumentów dla biura rachunkowego, automatyczne raporty i powiadomienia. Nie zastępuję tego, co działa, tylko dokładam to, czego brakuje.",
+      },
+    ],
   },
   audience: {
     eyebrow: "Dla kogo",
-    heading: "Dla firm, które obsługują stałych klientów",
+    heading: "Z kim pracuję",
     intro:
-      "Najlepiej sprawdzam się tam, gdzie są stali klienci, cykliczne opłaty, usługi dodatkowe i kilka osób, które muszą wiedzieć, co się dzieje. Na przykład:",
-    items: [
-      "stajnie i pensjonaty dla koni",
-      "hotele dla psów i kotów",
-      "szkółki sportowe",
-      "szkoły tańca, pływania i języków",
-      "prywatne żłobki i przedszkola",
-      "ośrodki z noclegami i zajęciami",
-      "wypożyczalnie sprzętu",
+      "Z firmami produkcyjnymi, handlowymi i usługowymi, zwykle od 10 do 100 osób, w których o zmianach decyduje właściciel albo kierownik.",
+    columns: ["Branża", "Typowy problem, który rozwiązuję"],
+    rows: [
+      { industry: "Produkcja i przetwórstwo", problem: "Ile materiału weszło, ile wyszło wyrobu, gdzie jest odpad" },
+      {
+        industry: "Hurtownie, dystrybucja, magazyny",
+        problem: "Stany, przyjęcia i wydania widoczne na bieżąco dla biura i handlowców",
+      },
+      {
+        industry: "Firmy instalacyjne i budowlane",
+        problem: "Zlecenia, ekipy, materiały i protokoły w jednym miejscu zamiast w arkuszu",
+      },
+      {
+        industry: "Firmy usługowe z abonamentami",
+        problem: "Grafiki, usługi dodatkowe i miesięczne rozliczenia klientów liczone automatycznie",
+      },
     ],
-    note: "Nie widzisz swojej branży? Opisz mi, jak dziś wygląda Twój dzień pracy. W 15 minut powiem, czy system ma sens i ile mniej więcej będzie kosztował.",
+    note: "Nie widzisz swojej branży? Opowiedz, jak wygląda Twój proces. W rozmowie ocenimy, czy własny system ma sens.",
   },
   example: {
-    eyebrow: "Przykład wdrożenia · Stajnia Lauden",
-    heading: "Pensjonat dla koni z ponad 60 boksami: właściciele, personel, trenerzy i klienci w jednej aplikacji",
-    before: {
-      label: "Jak było",
-      body: "Każda prośba właściciela konia („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez Messengera i pamięć personelu. Usługi dodatkowe właścicielka liczyła ręcznie na koniec miesiąca.",
+    eyebrow: "Przykłady",
+    heading: "Jak to wygląda w praktyce",
+    scenario: {
+      label: "Scenariusz demonstracyjny",
+      title: "Obieg materiałów w zakładzie",
+      intro: "Tak może wyglądać dzień pracy z systemem:",
+      steps: [
+        "Przyjeżdża dostawa. Magazynier wybiera dostawcę i materiał z listy, wpisuje ilość i robi zdjęcie dokumentu. System nadaje numer partii.",
+        "Pracownik na stanowisku skanuje kod partii, wpisuje, ile materiału pobrał, ile wyrobu powstało i ile jest odpadu.",
+        "Przy wysyłce wybiera klienta i towar, a system drukuje dokument wydania i zdejmuje towar ze stanu.",
+        "Właściciel widzi na bieżąco stany, wydajność i odpad, a przy reklamacji w minutę sprawdza, z której dostawy pochodził towar.",
+      ],
+      more: "Więcej o systemach dla produkcji",
     },
-    changesLabel: "Co się zmieniło",
-    changes: [
-      {
-        title: "Zamówienia bez telefonów",
-        body: "Właściciele koni zamawiają usługi w aplikacji, jednorazowo albo w abonamencie. Personel widzi je od razu na tablicy zadań i odhacza po wykonaniu.",
+    stajnia: {
+      label: "Wdrożenie · Stajnia Lauden",
+      title: "Pensjonat dla koni, ponad 60 boksów",
+      before: {
+        label: "Było",
+        body: "Prośby klientów przez Messengera i pamięć personelu, usługi dodatkowe liczone ręcznie na koniec miesiąca.",
       },
-      {
-        title: "Plan dnia na ścianie",
-        body: "W paszarni i przy wyjściu na padoki wiszą ekrany z planem karmienia i wyprowadzania na dziś. Nikt nie musi dopytywać.",
+      now: {
+        label: "Jest",
+        body: "Klienci zamawiają usługi w aplikacji, personel pracuje z tablicy zadań i ekranów w budynku, rozliczenia i salda liczą się automatycznie.",
       },
-      {
-        title: "Rozliczenia liczą się same",
-        body: "Pensjonat, dzierżawy i usługi trafiają na konto klienta automatycznie. Każdy właściciel konia widzi swoje saldo i historię płatności.",
+      photosNote:
+        "Tak to działa w stajni: tablet dla personelu i telewizory, na których każdy od razu widzi, co się zmieniło. Imiona koni są zamazane.",
+      photos: [
+        { src: "/images/stajnia/photo-tablet.webp", alt: "Tablet przymocowany do ściany w stajni z tablicą zadań personelu", caption: "Tablet na ścianie w stajni · tablica zadań dla personelu", wide: true },
+        { src: "/images/stajnia/photo-feed-room.webp", alt: "Telewizor w paszarni z planem zmian w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · zmiany w karmieniu na dziś" },
+        { src: "/images/stajnia/photo-walk-out.webp", alt: "Telewizor przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · prośby właścicieli" },
+      ],
+      screensNote: "Zrzuty ze środowiska demo i z działającej aplikacji. Dane osobowe i kwoty są zamazane.",
+      screens: [
+        { src: "/images/stajnia/order-service.webp", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Klient · zamawianie usługi" },
+        { src: "/images/stajnia/billing.webp", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Właścicielka · rozliczenia klienta" },
+      ],
+      caseStudy: "Przeczytaj pełne case study",
+      tech: {
+        label: "Technicznie",
+        body: "Aplikacja webowa PWA (Next.js, NestJS, PostgreSQL), pięć ról z uprawnieniami pilnowanymi po stronie serwera, ponad 230 testów automatycznych, automatyczna kopia bazy przed każdą aktualizacją, szyfrowane połączenie HTTPS.",
       },
-      {
-        title: "Powiadomienia na telefon",
-        body: "Personel i właściciele koni dostają powiadomienia, także przy zamkniętej aplikacji, a system sam przypomina o płatnościach.",
-      },
-      {
-        title: "Proste dla każdego",
-        body: "Duży tekst, duże przyciski, statusy opisane słowami. Z aplikacji bez problemu korzystają także starsze osoby.",
-      },
-      {
-        title: "Bez sklepu z aplikacjami",
-        body: "System instaluje się na ekranie telefonu prosto ze strony i aktualizuje się sam.",
-      },
-    ],
-    photosNote: "Tak to działa w stajni: tablet dla personelu i telewizory, na których każdy od razu widzi, co się zmieniło. Imiona koni są zamazane.",
-    photos: [
-      { src: "/images/stajnia/photo-tablet.webp", alt: "Tablet przymocowany do ściany w stajni z tablicą zadań personelu", caption: "Tablet na ścianie w stajni · tablica zadań dla personelu", wide: true },
-      { src: "/images/stajnia/photo-feed-room.webp", alt: "Telewizor w paszarni z planem zmian w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · zmiany w karmieniu na dziś" },
-      { src: "/images/stajnia/photo-walk-out.webp", alt: "Telewizor przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · prośby właścicieli" },
-    ],
-    screensNote: "Zrzuty ze środowiska demo i z działającej aplikacji. Dane osobowe i kwoty są zamazane.",
-    screens: [
-      { src: "/images/stajnia/order-service.webp", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Klient · zamawianie usługi" },
-      { src: "/images/stajnia/billing.webp", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Właścicielka · rozliczenia klienta" },
-    ],
-    caseStudy: "Przeczytaj pełne case study",
-    tech: {
-      label: "Technicznie",
-      body: "Aplikacja webowa PWA (Next.js, NestJS, PostgreSQL), pięć ról z uprawnieniami pilnowanymi po stronie serwera, ponad 230 testów automatycznych, automatyczna kopia bazy przed każdą aktualizacją, szyfrowane połączenie HTTPS.",
     },
   },
   process: {
@@ -123,90 +144,122 @@ export const forBusiness: ForBusiness = {
     heading: "Od rozmowy do działającego systemu",
     steps: [
       {
-        title: "Bezpłatna rozmowa (15–30 minut)",
-        body: "Opowiadasz, jak dziś wygląda praca w firmie i co najbardziej uwiera. Mówię wprost, czy system ma sens.",
+        title: "Bezpłatna rozmowa, 15–30 minut",
+        body: "Mówię wprost, czy własny system ma sens, czy wystarczy gotowy program.",
       },
       {
-        title: "Analiza",
-        body: "Przyjeżdżam albo spotykamy się online. Rozmawiam z Tobą i z pracownikami, bo to oni będą z systemu korzystać na co dzień.",
+        title: "Analiza procesu, od 1 000 zł netto",
+        body: "Na miejscu lub online, razem z osobami, które wykonują pracę. Dostajesz opis procesu, zakres, cenę i termin na piśmie. Koszt analizy odliczam od wdrożenia.",
       },
       {
-        title: "Wycena i plan",
-        body: "Dostajesz zakres, cenę i termin na piśmie. Bez niespodzianek po drodze.",
+        title: "Pilotaż jednego procesu",
+        body: "Zaczynamy od tego, co daje najwięcej. Pierwsza działająca wersja po kilku tygodniach.",
       },
       {
-        title: "Budowa w małych krokach",
-        body: "Co tydzień lub dwa pokazuję postęp. Możesz zmieniać zdanie, zanim coś zostanie „zabetonowane”.",
+        title: "Budowa małymi krokami",
+        body: "Pokaz postępów co 1–2 tygodnie, zmiany na bieżąco.",
       },
       {
-        title: "Wdrożenie i szkolenie",
-        body: "Przenoszę dane, uczę zespół i jestem pod telefonem w pierwszych tygodniach.",
+        title: "Wdrożenie",
+        body: "Przeniesienie danych, szkolenie zespołu, wsparcie w pierwszych tygodniach.",
       },
       {
-        title: "Opieka",
-        body: "Serwer, kopie zapasowe, aktualizacje i poprawki są po mojej stronie. Rozwijamy system razem z firmą.",
+        title: "Utrzymanie i rozwój",
+        body: "Serwer, kopie zapasowe, poprawki i kolejne funkcje, gdy firma ich potrzebuje.",
       },
     ],
   },
   pricing: {
     eyebrow: "Ile to kosztuje",
-    heading: "Jasny model: wdrożenie plus miesięczna opieka",
+    heading: "Najpierw analiza, potem cena na piśmie",
     rows: [
+      { item: "Rozmowa wstępna", price: "bezpłatnie", includes: "15–30 minut, telefonicznie lub online" },
       {
-        item: "Wdrożenie (jednorazowo)",
-        price: "od 12 000 zł netto",
-        includes: "analiza, budowa systemu, przeniesienie danych, szkolenie zespołu",
+        item: "Analiza procesu i wycena",
+        price: "od 1 000 zł",
+        includes: "opis procesu, zakres, cena i termin na piśmie; koszt odliczam od wdrożenia",
       },
       {
-        item: "Opieka (co miesiąc)",
-        price: "od 400 zł netto",
-        includes: "serwer, kopie zapasowe, aktualizacje, poprawki błędów, wsparcie",
+        item: "Wdrożenie",
+        price: "po analizie",
+        includes: "cenę ustalamy podczas planowania systemu, na podstawie zakresu z analizy",
+      },
+      { item: "Utrzymanie", price: "od 400 zł / mies.", includes: "serwer, kopie zapasowe, poprawki i wsparcie" },
+      { item: "Rozbudowa", price: "150 zł / h", includes: "nowe funkcje; większe zmiany wyceniam z góry" },
+    ],
+    note: "Ceny netto. Cenę wdrożenia dostajesz na piśmie, zanim cokolwiek zaczniemy.",
+  },
+  security: {
+    eyebrow: "Bezpieczeństwo i formalności",
+    heading: "System należy do Twojej firmy",
+    items: [
+      {
+        title: "Prawa autorskie",
+        body: "Umowa przenosi je na firmę, a kod jest w repozytorium, do którego masz dostęp.",
       },
       {
-        item: "Rozbudowa",
-        price: "150 zł netto/h",
-        includes: "nowe funkcje, gdy firma ich potrzebuje; większe wyceniam z góry",
+        title: "Dane",
+        body: "Serwer w Unii Europejskiej, szyfrowane połączenie, automatyczne kopie zapasowe. Podpisujemy umowę powierzenia przetwarzania danych (RODO).",
+      },
+      {
+        title: "Dostępy",
+        body: "Każdy pracownik widzi tylko to, czego potrzebuje. Uprawnienia są sprawdzane po stronie serwera.",
+      },
+      {
+        title: "Jakość",
+        body: "Testy automatyczne przed każdą aktualizacją i kopia bazy przed wdrożeniem zmian.",
+      },
+      {
+        title: "Ciągłość",
+        body: "Dokumentacja i testy pozwalają przejąć system innemu programiście. Dane możesz wyeksportować w każdej chwili.",
+      },
+      {
+        title: "Reakcja na awarię",
+        body: "Zgłaszasz awarię telefonicznie lub mailowo, a ja zajmuję się nią od razu.",
       },
     ],
-    note: "Dokładną cenę podaję po bezpłatnej rozmowie, na piśmie, zanim cokolwiek zaczniemy.",
   },
   faq: {
     eyebrow: "Najczęstsze pytania",
     heading: "Zanim zadzwonisz",
     items: [
       {
-        q: "Czy to nie za drogie dla małej firmy?",
-        a: "System ma sens, gdy oszczędza czas Twój i pracowników albo zmniejsza liczbę pomyłek w rozliczeniach. Na pierwszej rozmowie policzymy to razem. Jeśli wyjdzie, że gotowy program wystarczy, powiem to wprost.",
+        q: "Mamy już program księgowy lub magazynowy. Musimy go wymienić?",
+        a: "Nie. Zwykle dokładam to, czego brakuje, i przekazuję dane do programu, którego używacie.",
       },
       {
-        q: "Czym to się różni od gotowego programu?",
-        a: "Gotowy program trzeba dopasować do siebie. Ten jest zbudowany pod Twoje usługi, ceny i sposób pracy, a gdy firma się zmienia, system zmienia się razem z nią.",
+        q: "Czy to się opłaca?",
+        a: "Opłaca się, gdy oszczędza godziny pracy co miesiąc albo ogranicza kosztowne błędy. Liczymy to w analizie. Jeśli wystarczy gotowy program, powiem to wprost.",
       },
       {
-        q: "Co jeśli przestaniesz się tym zajmować?",
-        a: "Dane są Twoje i w każdej chwili możesz dostać ich kopię. Kod jest uporządkowany, opisany i pokryty testami, więc inny programista może przejąć utrzymanie.",
+        q: "Ile trwa wdrożenie?",
+        a: "Pilotaż jednego procesu zwykle kilka tygodni. Czas pełnego systemu zależy od zakresu i ustalamy go na piśmie po analizie.",
       },
       {
-        q: "Czy pracownicy sobie poradzą?",
-        a: "Projektuję z myślą o osobach, które nie lubią komputerów: duży tekst, mało przycisków, wszystko opisane słowami. Szkolenie zespołu jest częścią wdrożenia.",
+        q: "Czy pracownicy na hali sobie poradzą?",
+        a: "Tak. Ekrany projektuję pod szybką pracę: duże przyciski, listy wyboru, skanowanie kodów zamiast pisania. Szkolenie zespołu jest w cenie.",
+      },
+      {
+        q: "Co, jeśli przestaniesz się tym zajmować?",
+        a: "Kod i dane należą do firmy, są udokumentowane i przetestowane, więc system może przejąć inny programista.",
       },
       {
         q: "Czy trzeba coś instalować?",
-        a: "Nie. System działa w przeglądarce i można go dodać do ekranu telefonu jak zwykłą aplikację.",
-      },
-      {
-        q: "Gdzie są moje dane?",
-        a: "Na serwerze w Unii Europejskiej, z kopiami zapasowymi. Ich częstotliwość dobieramy do systemu: od kopii przed każdą aktualizacją po codzienne.",
+        a: "Nie. System działa w przeglądarce na komputerze, tablecie i telefonie i można go dodać do ekranu głównego.",
       },
     ],
   },
   contact: {
     eyebrow: "Kontakt",
-    heading: "Porozmawiajmy o Twojej firmie",
-    lead: "Opowiedz mi w 15 minut, jak wygląda Twój dzień pracy. Powiem, co da się uprościć i ile by to kosztowało. Bez zobowiązań.",
-    book: "Umów 15-minutowe demo",
+    heading: "Porozmawiajmy o Twoim procesie",
+    lead: "Opowiedz, jak dziś przepływają dane w Twojej firmie. W 15–30 minut powiem, co da się skrócić i ile może to kosztować.",
+    book: "Umów bezpłatną rozmowę",
     call: "Zadzwoń",
     write: "Napisz",
-    area: "Piotr Zięcina, Wrocław. Pracuję zdalnie z firmami z całej Polski, a na miejsce przyjeżdżam, gdy jest taka potrzeba.",
+    area: "Piotr Zięcina, Wrocław. Pracuję z firmami z całej Polski, a na miejsce przyjeżdżam, gdy proces trzeba zobaczyć.",
+    partners: {
+      text: "Prowadzisz biuro rachunkowe albo obsługujesz innych przedsiębiorców?",
+      link: "Zobacz współpracę dla partnerów",
+    },
   },
 };

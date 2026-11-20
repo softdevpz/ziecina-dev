@@ -135,38 +135,107 @@ export type Dictionary = {
   easterEgg: { toast: string };
 };
 
-/** The Polish-only page for small businesses (/pl/dla-firm/), written for owners, not recruiters. */
+/** A title with a short body: problems, services, steps, guarantees. */
+export type TitledText = { title: string; body: string };
+
+/** Hero shared by the business pages. */
+export type BusinessHero = {
+  eyebrow: string;
+  heading: string;
+  lede: string;
+  /** Short benefits under the lede. */
+  points: string[];
+  book: string;
+  call: string;
+  /** Optional second button, e.g. a jump to the examples. */
+  secondary?: { label: string; href: string };
+};
+
+/** Closing contact section shared by the business pages. */
+export type BusinessContact = {
+  eyebrow: string;
+  heading: string;
+  lead: string;
+  book: string;
+  call: string;
+  write: string;
+  area: string;
+};
+
+/** Polish-only business pages, written for owners and managers, not recruiters. */
+export type BusinessSeo = { title: string; description: string };
+
+/** /pl/dla-firm/: the general offer (process automation and data flow). */
 export type ForBusiness = {
-  seo: { title: string; description: string };
-  hero: { eyebrow: string; heading: string; lede: string; book: string; example: string; call: string };
-  problems: {
+  seo: BusinessSeo;
+  hero: BusinessHero;
+  problems: { eyebrow: string; heading: string; items: TitledText[] };
+  services: { eyebrow: string; heading: string; items: (TitledText & { more?: string })[] };
+  audience: {
     eyebrow: string;
     heading: string;
     intro: string;
-    items: { title: string; body: string }[];
-    outcome: { label: string; body: string };
+    columns: [string, string];
+    rows: { industry: string; problem: string }[];
+    note: string;
   };
-  audience: { eyebrow: string; heading: string; intro: string; items: string[]; note: string };
   example: {
     eyebrow: string;
     heading: string;
-    before: { label: string; body: string };
-    changesLabel: string;
-    changes: { title: string; body: string }[];
-    photosNote: string;
-    photos: Screenshot[];
-    screensNote: string;
-    screens: Screenshot[];
-    caseStudy: string;
-    tech: { label: string; body: string };
+    scenario: { label: string; title: string; intro: string; steps: string[]; more: string };
+    stajnia: {
+      label: string;
+      title: string;
+      before: { label: string; body: string };
+      now: { label: string; body: string };
+      /** Hidden until there is a real number from the stable. */
+      result?: { label: string; body: string };
+      photosNote: string;
+      photos: Screenshot[];
+      screensNote: string;
+      screens: Screenshot[];
+      caseStudy: string;
+      tech: { label: string; body: string };
+    };
   };
-  process: { eyebrow: string; heading: string; steps: { title: string; body: string }[] };
+  process: { eyebrow: string; heading: string; steps: TitledText[] };
   pricing: {
     eyebrow: string;
     heading: string;
     rows: { item: string; price: string; includes: string }[];
     note: string;
   };
+  security: { eyebrow: string; heading: string; items: TitledText[] };
   faq: { eyebrow: string; heading: string; items: { q: string; a: string }[] };
-  contact: { eyebrow: string; heading: string; lead: string; book: string; call: string; write: string; area: string };
+  contact: BusinessContact & { partners: { text: string; link: string } };
+};
+
+/** /pl/dla-produkcji/: material flow for manufacturers. Filled in step by step. */
+export type ForProduction = {
+  seo: BusinessSeo;
+  hero: BusinessHero;
+  flow: { eyebrow: string; heading: string; intro: string; steps: TitledText[] };
+  traceability: { eyebrow: string; heading: string; body: string };
+  floor: { eyebrow: string; heading: string; items: TitledText[] };
+  fit: { eyebrow: string; heading: string; items: TitledText[] };
+  more: { text: string; link: string };
+  contact: BusinessContact;
+};
+
+/** /pl/dla-partnerow/: referrals from accountants and others who serve businesses. */
+export type ForPartners = {
+  seo: BusinessSeo;
+  hero: BusinessHero;
+  who: { eyebrow: string; heading: string; items: string[]; note: string };
+  signals: { eyebrow: string; heading: string; intro: string; items: string[] };
+  steps: { eyebrow: string; heading: string; steps: TitledText[] };
+  commission: { eyebrow: string; heading: string; body: string };
+  pitch: {
+    eyebrow: string;
+    heading: string;
+    intro: string;
+    text: string;
+    labels: { copy: string; copied: string; copyFallback: string };
+  };
+  contact: BusinessContact;
 };
