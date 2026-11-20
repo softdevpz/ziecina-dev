@@ -68,6 +68,10 @@ export const forProduction: ForProduction = {
     heading: "Uzupełnia to, co już masz",
     items: [
       {
+        title: "Pod Twój proces",
+        body: "Etapy produkcji, normy zużycia, rodzaje odpadu i dokumenty ustawiamy tak, jak działa Twój zakład. Listy materiałów i dostawców zmieniasz sam w panelu.",
+      },
+      {
         title: "Obok Twojego programu",
         body: "Nie wymieniasz programu księgowego ani magazynowego, który działa. Dokładam to, czego brakuje na hali, i przekazuję do niego dane.",
       },

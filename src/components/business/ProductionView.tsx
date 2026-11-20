@@ -38,7 +38,7 @@ export function ProductionView({ t }: { t: ForProduction }) {
 
       <Section id="bez-rewolucji">
         <SectionHead eyebrow={t.fit.eyebrow} heading={t.fit.heading} />
-        <Cards items={t.fit.items} />
+        <Cards items={t.fit.items} cols={2} />
         <p className="mt-8 max-w-[62ch] text-[17.5px]">
           {t.more.text}{" "}
           <Link href={paths.forBusiness} className="font-medium text-accent underline-offset-4 hover:underline">

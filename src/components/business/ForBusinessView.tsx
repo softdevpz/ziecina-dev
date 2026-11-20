@@ -37,6 +37,21 @@ export function ForBusinessView({ t }: { t: ForBusiness }) {
         </div>
       </Section>
 
+      <Section id="na-miare">
+        <div className="rounded-[10px] bg-surface p-7 min-[820px]:p-10">
+          <SectionHead eyebrow={t.tailored.eyebrow} heading={t.tailored.heading} intro={t.tailored.intro} />
+          <div className="grid gap-x-10 gap-y-7 min-[640px]:grid-cols-2 min-[980px]:grid-cols-3">
+            {t.tailored.items.map((item) => (
+              <div key={item.title} className="border-t-2 border-accent pt-4">
+                <h3 className="font-sans text-[17px] font-semibold tracking-normal">{item.title}</h3>
+                <p className="mt-2 text-[15.5px] text-muted">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-9 max-w-[66ch] text-[16.5px]">{t.tailored.example}</p>
+        </div>
+      </Section>
+
       <Section id="dla-kogo">
         <SectionHead eyebrow={t.audience.eyebrow} heading={t.audience.heading} intro={t.audience.intro} />
         <div className="max-w-[880px] overflow-hidden rounded-[10px] border border-line">

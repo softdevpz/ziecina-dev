@@ -12,8 +12,9 @@ export const forBusiness: ForBusiness = {
   hero: {
     eyebrow: "Dla firm",
     heading: "Dane z hali, magazynu i biura w jednym systemie.",
-    lede: "Projektuję i wdrażam systemy dopasowane do procesów Twojej firmy. Pracownik wpisuje dane raz, w miejscu, w którym pracuje, a stany, raporty i rozliczenia liczą się same.",
+    lede: "Projektuję i wdrażam systemy szyte na miarę Twojej firmy: to system dopasowuje się do tego, jak pracujecie, a nie odwrotnie. Pracownik wpisuje dane raz, w miejscu, w którym pracuje, a stany, raporty i rozliczenia liczą się same.",
     points: [
+      "Etapy, pola, dokumenty i raporty ustawione pod Twój proces",
       "Mniej ręcznego przepisywania między działami",
       "Aktualny obraz stanów, zleceń i wysyłek",
       "Integracja z programem, którego już używasz",
@@ -70,6 +71,40 @@ export const forBusiness: ForBusiness = {
         body: "Połączenie z programem księgowym lub magazynowym, eksport dokumentów dla biura rachunkowego, automatyczne raporty i powiadomienia. Nie zastępuję tego, co działa, tylko dokładam to, czego brakuje.",
       },
     ],
+  },
+  tailored: {
+    eyebrow: "Szyte na miarę",
+    heading: "System dopasowany do firmy, nie firma do systemu",
+    intro:
+      "Gotowy program zakłada, że każda firma pracuje tak samo. Ja zaczynam od tego, jak pracuje Twoja, i prawie każdy element ustawiamy pod Wasze warunki.",
+    items: [
+      {
+        title: "Twoje etapy i nazwy",
+        body: "Kolejne kroki procesu, statusy i nazewnictwo takie, jakich używacie na co dzień, a nie wymyślone przez producenta programu.",
+      },
+      {
+        title: "Twoje dokumenty i pola",
+        body: "Formularze mają tylko te pola, których potrzebujecie. Dokumenty wydania, protokoły i zestawienia wyglądają tak, jak Wasze dziś.",
+      },
+      {
+        title: "Twoje zasady liczenia",
+        body: "Cenniki, rabaty, normy zużycia i sposób rozliczania klientów działają według Waszych reguł, także tych nietypowych.",
+      },
+      {
+        title: "Twoje role i ekrany",
+        body: "Magazynier, brygadzista, biuro i właściciel widzą każdy swój ekran, z tym, czego naprawdę potrzebują.",
+      },
+      {
+        title: "Ustawienia w Twoich rękach",
+        body: "To, co często się zmienia, na przykład ceny, listy materiałów, usługi czy pracowników, zmieniasz sam w panelu, bez dzwonienia do mnie.",
+      },
+      {
+        title: "Rośnie razem z firmą",
+        body: "Nowy produkt, nowy dział, inny sposób pracy? System zmienia się razem z Wami, zamiast blokować zmiany.",
+      },
+    ],
+    example:
+      "Przykład: w Stajni Lauden zmiany w karmieniu pokazują się na telewizorze w paszarni, a prośby właścicieli na ekranie przy wyjściu na padok, bo tam personel ich potrzebuje. Takich ekranów nie ma żaden gotowy program dla stajni.",
   },
   audience: {
     eyebrow: "Dla kogo",
@@ -226,6 +261,10 @@ export const forBusiness: ForBusiness = {
       {
         q: "Mamy już program księgowy lub magazynowy. Musimy go wymienić?",
         a: "Nie. Zwykle dokładam to, czego brakuje, i przekazuję dane do programu, którego używacie.",
+      },
+      {
+        q: "Czym to się różni od gotowego programu?",
+        a: "Gotowy program ma z góry ustalone etapy, pola i raporty, więc to firma musi się do niego dopasować. Tu jest odwrotnie: system powstaje pod Wasz proces, a to, co często się zmienia, ustawiacie sami w panelu.",
       },
       {
         q: "Czy to się opłaca?",

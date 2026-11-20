@@ -171,6 +171,8 @@ export type ForBusiness = {
   hero: BusinessHero;
   problems: { eyebrow: string; heading: string; items: TitledText[] };
   services: { eyebrow: string; heading: string; items: (TitledText & { more?: string })[] };
+  /** The main selling point: the system is built around the firm's process. */
+  tailored: { eyebrow: string; heading: string; intro: string; items: TitledText[]; example: string };
   audience: {
     eyebrow: string;
     heading: string;
