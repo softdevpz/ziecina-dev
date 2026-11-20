@@ -24,6 +24,8 @@ export type CaseStudy = {
   engineering: { heading: string; items: string[] };
   decision: { heading: string; from: string; to: string; title: string; body: string };
   testimonial?: { heading: string; quote: string; author: string; placeholder?: string };
+  /** Photos of the app in use on site (not screenshots). */
+  photos?: { heading: string; note: string; items: Screenshot[] };
   screens?: {
     heading: string;
     note: string;
@@ -151,6 +153,8 @@ export type ForBusiness = {
     before: { label: string; body: string };
     changesLabel: string;
     changes: { title: string; body: string }[];
+    photosNote: string;
+    photos: Screenshot[];
     screensNote: string;
     screens: Screenshot[];
     caseStudy: string;

@@ -273,6 +273,15 @@ export const en: Dictionary = {
       title: "A PWA instead of a native app",
       body: "I started with a React Native (Expo) app. After watching how the owner actually used her phone, we switched to a single installable web app. It's one codebase for every device, needs no app store, and updates instantly. That was the right call, and I'd make it again.",
     },
+    photos: {
+      heading: "In the stable",
+      note: "What it looks like day to day: a tablet for staff and TVs in the feed rooms and by the paddock exit. Horse names are blurred.",
+      items: [
+        { src: "/images/stajnia/photo-tablet.webp", alt: "Tablet mounted on the stable wall showing the staff task board", caption: "Tablet on the stable wall · staff task board", wide: true },
+        { src: "/images/stajnia/photo-feed-room.webp", alt: "TV in the feed room with feeding changes for breakfast, lunch and dinner", caption: "Feed room · today's feeding changes" },
+        { src: "/images/stajnia/photo-walk-out.webp", alt: "TV by the paddock exit with owner requests for individual boxes", caption: "Paddock exit · owner requests" },
+      ],
+    },
       screens: {
       heading: "Screens",
       note: "Screenshots from the demo environment and the live app. Names, e-mails, horse names and amounts are blurred.",

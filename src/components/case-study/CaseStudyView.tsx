@@ -130,6 +130,13 @@ export function CaseStudyView({ c, dict, locale }: { c: CaseStudy; dict: Diction
             </CsSection>
           )}
 
+          {c.photos && (
+            <CsSection heading={c.photos.heading}>
+              <p className="text-[15px] text-muted">{c.photos.note}</p>
+              <ScreenshotGallery items={c.photos.items} />
+            </CsSection>
+          )}
+
           {c.screens && (
             <CsSection heading={c.screens.heading}>
               <p className="text-[15px] text-muted">{c.screens.note}</p>

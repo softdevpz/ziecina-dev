@@ -14,6 +14,9 @@ const sizes: Record<string, [number, number]> = {
   "/images/stajnia/stable-tablet.webp": [780, 1347],
   "/images/stajnia/service-catalog.webp": [1015, 1348],
   "/images/stajnia/walk-out.webp": [1400, 272],
+  "/images/stajnia/photo-tablet.webp": [1400, 982],
+  "/images/stajnia/photo-feed-room.webp": [1400, 820],
+  "/images/stajnia/photo-walk-out.webp": [1400, 820],
 };
 
 /** width, height and srcSet attributes for a screenshot. */

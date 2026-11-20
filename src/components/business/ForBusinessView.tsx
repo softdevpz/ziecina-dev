@@ -85,6 +85,10 @@ export function ForBusinessView({ t }: { t: ForBusiness }) {
             </div>
           </div>
           <div className="grid gap-4.5">
+            <p className="text-[15px] text-muted">{t.example.photosNote}</p>
+            <ScreenshotGallery items={t.example.photos} />
+          </div>
+          <div className="grid gap-4.5">
             <p className="text-[15px] text-muted">{t.example.screensNote}</p>
             <ScreenshotGallery items={t.example.screens} />
           </div>

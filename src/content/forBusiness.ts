@@ -101,11 +101,14 @@ export const forBusiness: ForBusiness = {
         body: "System instaluje się na ekranie telefonu prosto ze strony i aktualizuje się sam.",
       },
     ],
+    photosNote: "Tak to działa w stajni: tablet dla personelu i telewizory, na których każdy od razu widzi, co się zmieniło. Imiona koni są zamazane.",
+    photos: [
+      { src: "/images/stajnia/photo-tablet.webp", alt: "Tablet przymocowany do ściany w stajni z tablicą zadań personelu", caption: "Tablet na ścianie w stajni · tablica zadań dla personelu", wide: true },
+      { src: "/images/stajnia/photo-feed-room.webp", alt: "Telewizor w paszarni z planem zmian w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · zmiany w karmieniu na dziś" },
+      { src: "/images/stajnia/photo-walk-out.webp", alt: "Telewizor przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · prośby właścicieli" },
+    ],
     screensNote: "Zrzuty ze środowiska demo i z działającej aplikacji. Dane osobowe i kwoty są zamazane.",
     screens: [
-      { src: "/images/stajnia/task-board.webp", alt: "Tablica zadań personelu z ponumerowanymi boksami i zadaniami", caption: "Personel · tablica zadań na tablecie", wide: true },
-      { src: "/images/stajnia/feed-room.webp", alt: "Ekran w paszarni ze zmianami w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · ekran ścienny z planem karmienia na dziś", wide: true },
-      { src: "/images/stajnia/walk-out.webp", alt: "Ekran przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · prośby właścicieli widać od razu, bez dzwonienia", wide: true },
       { src: "/images/stajnia/order-service.webp", alt: "Zamawianie jednorazowej usługi z katalogu", caption: "Klient · zamawianie usługi" },
       { src: "/images/stajnia/billing.webp", alt: "Rozliczenia jednego klienta z saldem i historią wpłat", caption: "Właścicielka · rozliczenia klienta" },
     ],

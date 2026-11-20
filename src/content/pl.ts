@@ -273,6 +273,15 @@ export const pl: Dictionary = {
       title: "PWA zamiast aplikacji natywnej",
       body: "Zacząłem od aplikacji w React Native (Expo). Po tym, jak zobaczyłem, jak właścicielka naprawdę korzysta z telefonu, przeszliśmy na jedną aplikację webową, którą można zainstalować na ekranie głównym. Jeden kod dla każdego urządzenia, bez sklepu z aplikacjami i z natychmiastowymi aktualizacjami. To była dobra decyzja i podjąłbym ją ponownie.",
     },
+    photos: {
+      heading: "W stajni",
+      note: "Tak to wygląda na co dzień: tablet dla personelu i telewizory w paszarniach i przy wyjściu na padok. Imiona koni są zamazane.",
+      items: [
+        { src: "/images/stajnia/photo-tablet.webp", alt: "Tablet przymocowany do ściany w stajni z tablicą zadań personelu", caption: "Tablet na ścianie w stajni · tablica zadań dla personelu", wide: true },
+        { src: "/images/stajnia/photo-feed-room.webp", alt: "Telewizor w paszarni z planem zmian w karmieniu na śniadanie, obiad i kolację", caption: "Paszarnia · zmiany w karmieniu na dziś" },
+        { src: "/images/stajnia/photo-walk-out.webp", alt: "Telewizor przy wyjściu na padok z prośbami właścicieli dla poszczególnych boksów", caption: "Wyjście na padok · prośby właścicieli" },
+      ],
+    },
       screens: {
       heading: "Ekrany",
       note: "Zrzuty ze środowiska demo i z działającej aplikacji. Imiona, e-maile, imiona koni i kwoty są zamazane.",
