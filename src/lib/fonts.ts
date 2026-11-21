@@ -11,6 +11,8 @@ const bricolage = Bricolage_Grotesque({
 const instrument = Instrument_Sans({
   subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600"],
+  // Italic only for client quotes; Bricolage has no italic.
+  style: ["normal", "italic"],
   variable: "--font-instrument",
   display: "swap",
 });

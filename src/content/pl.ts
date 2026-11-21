@@ -218,7 +218,7 @@ export const pl: Dictionary = {
     ],
       problem: {
       heading: "Problem",
-      body: "Stajnia z ponad 60 boksami, personel i wielu właścicieli koni. Każda prośba („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez komunikatory w mediach społecznościowych i pamięć. Dodatkowe usługi rozliczano ręcznie na koniec miesiąca.",
+      body: "Stajnia z ponad 60 boksami, personel i wielu właścicieli koni. Grafiki i rozliczenia prowadzono w Excelu i na papierze, a każda prośba („dodatkowe siano dla boksu 12”, „jutro wyprowadzić o 10”) szła przez Messengera i pamięć personelu. Wiadomości ginęły w rozmowach, a dodatkowe usługi rozliczano ręcznie na koniec miesiąca. Od tej uciążliwej komunikacji zaczęła się aplikacja.",
     },
       role: {
       heading: "Moja rola",

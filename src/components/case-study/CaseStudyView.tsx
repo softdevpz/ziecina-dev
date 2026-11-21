@@ -122,7 +122,7 @@ export function CaseStudyView({ c, dict, locale }: { c: CaseStudy; dict: Diction
             <CsSection id="opinia" heading={c.testimonial.heading}>
               <div>
                 <blockquote className="border-l-[3px] border-accent-fill py-1 pl-6">
-                  <div className="grid gap-4 text-[18px] leading-[1.6]">
+                  <div className="grid gap-4 text-[18px] leading-[1.6] italic">
                     {c.testimonial.quote.map((para) => (
                       <p key={para}>{para}</p>
                     ))}

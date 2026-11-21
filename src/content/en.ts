@@ -218,7 +218,7 @@ export const en: Dictionary = {
     ],
       problem: {
       heading: "The problem",
-      body: "A stable with 60+ boxes, its staff and many horse owners. Every request (“extra hay for box 12”, “turn him out at 10 tomorrow”) went through social media messengers and memory. Billing for extra services was done by hand at the end of the month.",
+      body: "A stable with 60+ boxes, its staff and many horse owners. Schedules and billing lived in Excel and on paper, and every request (“extra hay for box 12”, “turn him out at 10 tomorrow”) went through Facebook Messenger and the staff's memory. Messages got lost in chat threads, and extra services were billed by hand at the end of the month. That messy communication is where the app began.",
     },
       role: {
       heading: "My role",
