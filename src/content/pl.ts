@@ -273,6 +273,15 @@ export const pl: Dictionary = {
       title: "PWA zamiast aplikacji natywnej",
       body: "Zacząłem od aplikacji w React Native (Expo). Po tym, jak zobaczyłem, jak właścicielka naprawdę korzysta z telefonu, przeszliśmy na jedną aplikację webową, którą można zainstalować na ekranie głównym. Jeden kod dla każdego urządzenia, bez sklepu z aplikacjami i z natychmiastowymi aktualizacjami. To była dobra decyzja i podjąłbym ją ponownie.",
     },
+    testimonial: {
+      heading: "Opinia właścicielki",
+      quote: [
+        "Piotr stworzył dla naszej stajni dedykowany system, który naprawdę ułatwia nam codzienną pracę i organizację całej działalności. Wcześniej działaliśmy w Excelu i na papierze, a teraz mamy wszystko w jednym miejscu. Od początku rozumiał nasze potrzeby i potrafił przełożyć je na konkretne, praktyczne rozwiązania. Teraz wszystkie nieścisłości widzimy na bieżąco i możemy spokojnie się nimi zająć. Pensjonariusze nie muszą już zawracać nam głowy wieloma pytaniami, ponieważ strona odpowiada na większość z nich. Obecnie pracownicy korzystają z tablicy zadań, a ja, jako właściciel, z panelu użytkownika i modułu rozliczeń.",
+        "Zarówno stajenni, jak i pensjonariusze bardzo szybko odnaleźli się w nowym systemie. W niecałe dwa tygodnie udało nam się w pełni przestawić na pracę przez aplikację. Co ciekawe, z systemu korzystają osoby w wieku od 12 do 82 lat, więc jego obsługa jest naprawdę intuicyjna.",
+        "Najbardziej doceniam zaangażowanie Piotra, otwartość na nasze pomysły i cierpliwość przy dopracowywaniu szczegółów. Nie chodziło tylko o stworzenie strony czy aplikacji, ale o rozwiązanie, które faktycznie odpowiada na nasze potrzeby i usprawnia funkcjonowanie firmy. Wszystko jest przemyślane, wygodne i dopasowane do specyfiki naszej działalności. Sama współpraca przebiegała bardzo sprawnie.",
+      ],
+      author: "Właścicielka, Stajnia Lauden",
+    },
     photos: {
       heading: "W stajni",
       note: "Tak to wygląda na co dzień: tablet dla personelu i telewizory w paszarniach i przy wyjściu na padok. Imiona koni są zamazane.",

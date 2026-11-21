@@ -273,6 +273,16 @@ export const en: Dictionary = {
       title: "A PWA instead of a native app",
       body: "I started with a React Native (Expo) app. After watching how the owner actually used her phone, we switched to a single installable web app. It's one codebase for every device, needs no app store, and updates instantly. That was the right call, and I'd make it again.",
     },
+    testimonial: {
+      heading: "What the owner says",
+      quote: [
+        "Piotr built a dedicated system for our stable that genuinely makes our daily work and the organisation of the whole business easier. We used to run things in Excel and on paper; now we have everything in one place. From the start he understood our needs and knew how to turn them into concrete, practical solutions. We now see every discrepancy as it happens and can deal with it calmly. Boarders no longer have to bother us with lots of questions, because the app answers most of them. The staff use the task board, and I, as the owner, use the user panel and the billing module.",
+        "Both the grooms and the boarders found their way around the new system very quickly. In under two weeks we had fully switched to working through the app. Interestingly, the system is used by people aged 12 to 82, so it really is intuitive.",
+        "What I value most is Piotr's commitment, his openness to our ideas and his patience in fine-tuning the details. It wasn't just about building a website or an app, but a solution that truly meets our needs and improves how the business runs. Everything is well thought out, convenient and tailored to the specifics of our business. Working together went very smoothly.",
+      ],
+      author: "Owner, Stajnia Lauden",
+      note: "Translated from Polish",
+    },
     photos: {
       heading: "In the stable",
       note: "What it looks like day to day: a tablet for staff and TVs in the feed rooms and by the paddock exit. Horse names are blurred.",

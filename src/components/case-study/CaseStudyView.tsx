@@ -4,9 +4,9 @@ import { type Locale, paths } from "@/lib/site";
 import { Rich } from "../Rich";
 import { ScreenshotGallery } from "../ScreenshotGallery";
 
-function CsSection({ heading, children }: { heading: string; children: React.ReactNode }) {
+function CsSection({ id, heading, children }: { id?: string; heading: string; children: React.ReactNode }) {
   return (
-    <section className="grid gap-4.5">
+    <section id={id} className="grid gap-4.5">
       <h2 className="text-h3 font-bold">{heading}</h2>
       {children}
     </section>
@@ -119,11 +119,18 @@ export function CaseStudyView({ c, dict, locale }: { c: CaseStudy; dict: Diction
           </CsSection>
 
           {c.testimonial && (
-            <CsSection heading={c.testimonial.heading}>
+            <CsSection id="opinia" heading={c.testimonial.heading}>
               <div>
                 <blockquote className="border-l-[3px] border-accent-fill py-1 pl-6">
-                  <p className="font-display text-h4 leading-[1.45] font-medium tracking-[-0.01em]">{c.testimonial.quote}</p>
-                  <cite className="mt-3.5 block text-[15px] text-muted not-italic">{c.testimonial.author}</cite>
+                  <div className="grid gap-4 text-[18px] leading-[1.6]">
+                    {c.testimonial.quote.map((para) => (
+                      <p key={para}>{para}</p>
+                    ))}
+                  </div>
+                  <cite className="mt-4 block text-[15px] text-muted not-italic">
+                    {c.testimonial.author}
+                    {c.testimonial.note && <span className="block text-[13.5px]">{c.testimonial.note}</span>}
+                  </cite>
                 </blockquote>
                 {c.testimonial.placeholder && <Placeholder text={c.testimonial.placeholder} />}
               </div>

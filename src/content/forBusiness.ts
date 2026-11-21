@@ -149,11 +149,21 @@ export const forBusiness: ForBusiness = {
       title: "Pensjonat dla koni, ponad 60 boksów",
       before: {
         label: "Było",
-        body: "Prośby klientów przez Messengera i pamięć personelu, usługi dodatkowe liczone ręcznie na koniec miesiąca.",
+        body: "Excel, papier, prośby klientów przez Messengera i pamięć personelu, usługi dodatkowe liczone ręcznie na koniec miesiąca.",
       },
       now: {
         label: "Jest",
         body: "Klienci zamawiają usługi w aplikacji, personel pracuje z tablicy zadań i ekranów w budynku, rozliczenia i salda liczą się automatycznie.",
+      },
+      result: {
+        label: "Efekt",
+        body: "Cała stajnia przeszła na pracę w aplikacji w niecałe dwa tygodnie. Korzystają z niej osoby w wieku od 12 do 82 lat.",
+      },
+      testimonial: {
+        quote:
+          "Wcześniej działaliśmy w Excelu i na papierze, a teraz mamy wszystko w jednym miejscu. Od początku rozumiał nasze potrzeby i potrafił przełożyć je na konkretne, praktyczne rozwiązania. […] Wszystko jest przemyślane, wygodne i dopasowane do specyfiki naszej działalności.",
+        author: "Właścicielka, Stajnia Lauden",
+        link: "Przeczytaj całą opinię",
       },
       photosNote:
         "Tak to działa w stajni: tablet dla personelu i telewizory, na których każdy od razu widzi, co się zmieniło. Imiona koni są zamazane.",

@@ -112,6 +112,22 @@ export function ForBusinessView({ t }: { t: ForBusiness }) {
                   </div>
                 ))}
               </dl>
+              {stajnia.testimonial && (
+                <blockquote className="mt-8 border-l-[3px] border-accent-fill py-1 pl-6">
+                  <p className="font-display text-h4 leading-[1.45] font-medium tracking-[-0.01em]">
+                    „{stajnia.testimonial.quote}”
+                  </p>
+                  <footer className="mt-3.5 text-[15px] text-muted">
+                    {stajnia.testimonial.author} ·{" "}
+                    <Link
+                      href={`${paths.stajnia("pl")}#opinia`}
+                      className="font-medium text-fg underline underline-offset-4 hover:text-accent"
+                    >
+                      {stajnia.testimonial.link} →
+                    </Link>
+                  </footer>
+                </blockquote>
+              )}
             </div>
             <div className="grid gap-4.5">
               <p className="text-[15px] text-muted">{stajnia.photosNote}</p>

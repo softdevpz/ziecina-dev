@@ -23,7 +23,8 @@ export type CaseStudy = {
   users?: { heading: string; body: string };
   engineering: { heading: string; items: string[] };
   decision: { heading: string; from: string; to: string; title: string; body: string };
-  testimonial?: { heading: string; quote: string; author: string; placeholder?: string };
+  /** `quote` is a list of paragraphs, word for word from the client; `note` e.g. "translated from Polish". */
+  testimonial?: { heading: string; quote: string[]; author: string; note?: string; placeholder?: string };
   /** Photos of the app in use on site (not screenshots). */
   photos?: { heading: string; note: string; items: Screenshot[] };
   screens?: {
@@ -190,8 +191,9 @@ export type ForBusiness = {
       title: string;
       before: { label: string; body: string };
       now: { label: string; body: string };
-      /** Hidden until there is a real number from the stable. */
       result?: { label: string; body: string };
+      /** A short excerpt of the owner's testimonial; the full one is in the case study. */
+      testimonial?: { quote: string; author: string; link: string };
       photosNote: string;
       photos: Screenshot[];
       screensNote: string;
